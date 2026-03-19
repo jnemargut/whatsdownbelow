@@ -104,7 +104,9 @@ export async function fetchFlightPosition(flightNumber) {
 
     if (!flight) return null;
 
-    const route = KNOWN_ROUTES[callsign] || guessRoute(callsign);
+    const route = KNOWN_ROUTES[callsign]
+      || guessRoute(callsign)
+      || guessRouteFromPosition(flight[6], flight[5], flight[10]);
 
     return {
       icao24: flight[0],
@@ -127,6 +129,54 @@ export async function fetchFlightPosition(flightNumber) {
 
 function guessRoute(callsign) {
   return KNOWN_ROUTES[callsign] || null;
+}
+
+/**
+ * Guess origin and destination airports from position and heading.
+ * Finds the nearest major airport behind the plane (origin) and
+ * the nearest major airport ahead of the plane (destination).
+ */
+export function guessRouteFromPosition(lat, lng, heading) {
+  if (lat == null || lng == null || heading == null) return null;
+
+  const airportList = Object.entries(AIRPORTS);
+  const behind = []; // airports roughly behind the plane
+  const ahead = [];  // airports roughly ahead of the plane
+
+  for (const [code, airport] of airportList) {
+    const dLat = airport.lat - lat;
+    const dLng = airport.lng - lng;
+    const dist = Math.sqrt(dLat * dLat + dLng * dLng); // rough distance in degrees
+    if (dist < 0.5) continue; // skip airports we're right on top of
+
+    // Bearing from plane to airport
+    const bearingToAirport = (Math.atan2(dLng, dLat) * 180 / Math.PI + 360) % 360;
+
+    // Angle difference between heading and bearing to this airport
+    let diff = bearingToAirport - heading;
+    if (diff > 180) diff -= 360;
+    if (diff < -180) diff += 360;
+
+    if (Math.abs(diff) < 70) {
+      // Airport is roughly ahead
+      ahead.push({ code, dist, angleDiff: Math.abs(diff) });
+    } else if (Math.abs(diff) > 110) {
+      // Airport is roughly behind
+      behind.push({ code, dist, angleDiff: Math.abs(diff) });
+    }
+  }
+
+  // Sort by distance, pick closest
+  behind.sort((a, b) => a.dist - b.dist);
+  ahead.sort((a, b) => a.dist - b.dist);
+
+  const origin = behind.length > 0 ? behind[0].code : null;
+  const dest = ahead.length > 0 ? ahead[0].code : null;
+
+  if (origin && dest) {
+    return { origin, dest };
+  }
+  return null;
 }
 
 /**
