@@ -1,5 +1,7 @@
 // OpenSky Network flight tracker with callsign-based lookup
 
+import routesDB from './routes-db.js';
+
 const OPENSKY_BASE = 'https://opensky-network.org/api';
 
 // Common airline ICAO prefixes mapped from IATA codes
@@ -104,8 +106,8 @@ export async function fetchFlightPosition(flightNumber) {
 
     if (!flight) return null;
 
-    const route = KNOWN_ROUTES[callsign]
-      || guessRoute(callsign)
+    const route = routesDB[callsign]
+      || KNOWN_ROUTES[callsign]
       || guessRouteFromPosition(flight[6], flight[5], flight[10]);
 
     return {
