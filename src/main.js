@@ -2,6 +2,7 @@ import mapboxgl from 'mapbox-gl';
 import { fetchFlightPosition, getSimulatedPosition, resetSimulation, AIRPORTS, iataToIcaoCallsign } from './flight-tracker.js';
 import { findNearbyFacts, greatCircleArc, distanceMiles } from './geo-utils.js';
 import factsDB from './facts-db.js';
+import routesDB from './routes-db.js';
 
 // --- CONFIG ---
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN || '';
@@ -856,63 +857,84 @@ async function fetchLiveFlightSuggestions() {
   const container = document.getElementById('suggested-flights');
 
   try {
-    const res = await fetch('https://opensky-network.org/api/states/all?lamin=28&lamax=45&lomin=-125&lomax=-70');
+    const res = await fetch('https://opensky-network.org/api/states/all?lamin=25&lamax=50&lomin=-130&lomax=-65');
     if (!res.ok) throw new Error('API error');
     const data = await res.json();
     if (!data.states) throw new Error('No data');
 
-    // Find flights at cruise altitude with known airline prefixes
     const knownPrefixes = Object.keys(ICAO_TO_IATA);
     const cruiseFlights = data.states.filter(s => {
       const cs = (s[1] || '').trim();
       const alt = s[7] ? s[7] * 3.28084 : 0;
-      return cs && !s[8] && alt > 25000 && s[6] && s[5] && s[2] === 'United States'
+      return cs && !s[8] && alt > 25000 && s[6] && s[5]
         && knownPrefixes.some(p => cs.startsWith(p));
     });
 
-    // Pick ~6 diverse flights (spread geographically)
-    const selected = [];
-    const usedLons = [];
-    const shuffled = cruiseFlights.sort(() => Math.random() - 0.5);
+    // Prioritize flights we have route data for
+    const withRoutes = [];
+    const withoutRoutes = [];
 
-    for (const s of shuffled) {
-      if (selected.length >= 6) break;
-      const lon = s[5];
-      // Ensure geographic spread
-      if (usedLons.some(l => Math.abs(l - lon) < 8)) continue;
-      usedLons.push(lon);
-
+    for (const s of cruiseFlights) {
       const callsign = (s[1] || '').trim();
       const prefix = knownPrefixes.find(p => callsign.startsWith(p));
       const iataAirline = ICAO_TO_IATA[prefix];
       const flightNum = callsign.replace(prefix, '');
       const iataFlight = iataAirline + flightNum;
-      const heading = s[10] || 0;
-      const dir = heading > 180 ? 'westbound' : 'eastbound';
+      const route = routesDB[callsign];
 
-      selected.push({
+      const entry = {
         iata: iataFlight,
-        callsign: callsign,
-        dir: dir,
-        lat: s[6].toFixed(0),
-      });
+        callsign,
+        route: route ? `${route.origin}-${route.dest}` : null,
+        lon: s[5],
+      };
+
+      if (route) {
+        withRoutes.push(entry);
+      } else {
+        withoutRoutes.push(entry);
+      }
+    }
+
+    // Shuffle and pick geographically spread flights -- prefer ones with known routes
+    const pool = [...withRoutes.sort(() => Math.random() - 0.5), ...withoutRoutes.sort(() => Math.random() - 0.5)];
+    const selected = [];
+    const usedLons = [];
+
+    for (const f of pool) {
+      if (selected.length >= 8) break;
+      if (usedLons.some(l => Math.abs(l - f.lon) < 6)) continue;
+      usedLons.push(f.lon);
+      selected.push(f);
     }
 
     if (selected.length > 0) {
-      // Add live flight chips (keep the DL843 demo chip)
       selected.forEach(f => {
         const chip = document.createElement('button');
         chip.className = 'flight-chip';
         chip.dataset.flight = f.iata;
-        chip.innerHTML = `${f.iata} <span>${f.dir}</span>`;
+        chip.innerHTML = f.route
+          ? `${f.iata} <span>${f.route}</span>`
+          : `${f.iata} <span>live</span>`;
         container.appendChild(chip);
       });
-      hint.textContent = `Found ${cruiseFlights.length} flights in the air right now`;
+      hint.textContent = `${cruiseFlights.length} flights in the air -- pick one or enter your own`;
     } else {
-      hint.textContent = 'Use DL843 for a demo flight';
+      // Fallback if OpenSky is down
+      container.innerHTML = `
+        <button class="flight-chip" data-flight="DL843">DL843 <span>ATL-SAN</span></button>
+        <button class="flight-chip" data-flight="AA100">AA100 <span>JFK-LAX</span></button>
+        <button class="flight-chip" data-flight="UA1">UA1 <span>SFO-EWR</span></button>
+      `;
+      hint.textContent = 'Could not check live flights -- try these or enter your own';
     }
   } catch(e) {
     console.warn('Could not fetch live flights:', e);
-    hint.textContent = 'Use DL843 for a demo flight (ATL to SAN)';
+    container.innerHTML = `
+      <button class="flight-chip" data-flight="DL843">DL843 <span>ATL-SAN</span></button>
+      <button class="flight-chip" data-flight="AA100">AA100 <span>JFK-LAX</span></button>
+      <button class="flight-chip" data-flight="UA1">UA1 <span>SFO-EWR</span></button>
+    `;
+    hint.textContent = 'Could not check live flights -- try these or enter your own';
   }
 }
