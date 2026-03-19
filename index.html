@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>What's Down Below</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <!-- FLIGHT INPUT SCREEN -->
+  <div id="input-screen" class="screen active">
+    <div class="input-container">
+      <h1 class="app-title">What's Down Below</h1>
+      <p class="app-subtitle">Enter your flight number and discover the amazing, weird, and wonderful things beneath you right now.</p>
+      <div class="input-group">
+        <input type="text" id="flight-input" placeholder="e.g. DL843" maxlength="10" autocomplete="off" spellcheck="false">
+        <button id="track-btn">Let's Fly</button>
+      </div>
+      <p class="input-hint">US flights only for now. Try one of these or enter your own:</p>
+      <div class="suggested-flights" id="suggested-flights">
+        <button class="flight-chip" data-flight="DL843">DL843 <span>ATL-SAN</span></button>
+      </div>
+      <div id="input-error" class="input-error"></div>
+      <p class="loading-flights-hint" id="loading-flights-hint">Checking for live flights...</p>
+    </div>
+  </div>
+
+  <!-- MAP SCREEN -->
+  <div id="map-screen" class="screen">
+    <!-- Flight status bar -->
+    <div id="flight-bar" class="flight-bar">
+      <div class="flight-bar-inner">
+        <div class="flight-bar-top">
+          <span id="flight-id" class="flight-id">DL843</span>
+          <span class="flight-route">
+            <span id="flight-origin">ATL</span>
+            <span class="route-arrow">&rarr;</span>
+            <span id="flight-dest">SAN</span>
+          </span>
+          <div class="flight-stats-row">
+            <span id="flight-alt" class="flight-stat">35,000 ft</span>
+            <span id="flight-speed" class="flight-stat">456 kts</span>
+            <span id="flight-eta" class="flight-stat">ETA --:--</span>
+          </div>
+        </div>
+        <!-- Progress bar -->
+        <div class="flight-progress">
+          <span class="progress-time" id="progress-depart">--:--</span>
+          <div class="progress-track">
+            <div class="progress-fill-bar" id="progress-fill" style="width: 0%"></div>
+            <div class="progress-plane" id="progress-plane" style="left: 0%"><svg viewBox="0 0 24 24" fill="#fefae0"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div>
+          </div>
+          <span class="progress-time" id="progress-arrive">--:--</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expanded flight stats panel (shown on click) -->
+    <div id="stats-panel" class="stats-panel">
+      <div class="stats-panel-inner">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-label">Altitude</span>
+            <span class="stat-value" id="stat-altitude">35,000 ft</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Ground Speed</span>
+            <span class="stat-value" id="stat-speed">456 kts</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Distance Flown</span>
+            <span class="stat-value" id="stat-flown">-- mi</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Distance Remaining</span>
+            <span class="stat-value" id="stat-remaining">-- mi</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Est. Departure</span>
+            <span class="stat-value" id="stat-departed">--:--</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Est. Arrival</span>
+            <span class="stat-value" id="stat-arrival">--:--</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Heading</span>
+            <span class="stat-value" id="stat-heading">--</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Position</span>
+            <span class="stat-value" id="stat-position">--</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- Postcard container (slides up from bottom) -->
+    <div id="postcard-container" class="postcard-container">
+      <div id="postcard" class="postcard">
+        <div class="postcard-image" id="postcard-image">
+          <span class="postcard-category" id="postcard-category">Unexplained</span>
+          <span class="postcard-distance" id="postcard-distance">31.9mi below you</span>
+        </div>
+        <div class="postcard-body">
+          <h2 class="postcard-title" id="postcard-title">The Marfa Lights Mystery</h2>
+          <p class="postcard-text" id="postcard-text">Loading...</p>
+          <div class="postcard-footer">
+            <span class="postcard-swipe-hint">Swipe up for the full story</span>
+            <span class="postcard-era" id="postcard-era">1883 - present</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expanded postcard overlay -->
+    <div id="postcard-expanded" class="postcard-expanded">
+      <div class="expanded-inner">
+        <button class="expanded-close" id="expanded-close">Close</button>
+        <div class="expanded-image" id="expanded-image"></div>
+        <div class="expanded-body">
+          <span class="expanded-category" id="expanded-category">Unexplained</span>
+          <h1 class="expanded-title" id="expanded-title">The Marfa Lights Mystery</h1>
+          <p class="expanded-location" id="expanded-location">Marfa, Texas -- 31.9mi below you</p>
+          <div class="expanded-text" id="expanded-text">Full story here...</div>
+          <div class="expanded-media" id="expanded-media"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pin counter -->
+    <div id="pin-counter" class="pin-counter">
+      <span id="pin-count">0</span> discoveries so far
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
