@@ -1,58 +1,36 @@
-// OpenSky Network flight tracker with OAuth2 authentication
+// OpenSky Network flight tracker -- anonymous API (400 credits/day)
+// Be smart about credit usage: cache aggressively, small queries only
 
 import routesDB from './routes-db.js';
 
 const OPENSKY_BASE = 'https://opensky-network.org/api';
-const OPENSKY_AUTH_URL = 'https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token';
-const OPENSKY_CLIENT_ID = import.meta.env.VITE_OPENSKY_CLIENT_ID || '';
-const OPENSKY_CLIENT_SECRET = import.meta.env.VITE_OPENSKY_CLIENT_SECRET || '';
 
-// OAuth2 token management
-let accessToken = null;
-let tokenExpiresAt = 0;
-
-async function getAuthToken() {
-  // Return cached token if still valid (with 60s buffer)
-  if (accessToken && Date.now() < tokenExpiresAt - 60000) {
-    return accessToken;
-  }
-
-  if (!OPENSKY_CLIENT_ID || !OPENSKY_CLIENT_SECRET) {
-    return null; // No credentials, fall back to anonymous
-  }
-
-  try {
-    const res = await fetch(OPENSKY_AUTH_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: `grant_type=client_credentials&client_id=${OPENSKY_CLIENT_ID}&client_secret=${OPENSKY_CLIENT_SECRET}`,
-    });
-    if (!res.ok) return null;
-    const data = await res.json();
-    accessToken = data.access_token;
-    tokenExpiresAt = Date.now() + (data.expires_in * 1000);
-    console.log('OpenSky auth: got token, expires in', data.expires_in, 'seconds');
-    return accessToken;
-  } catch (e) {
-    console.warn('OpenSky auth failed:', e.message);
-    return null;
-  }
-}
+// Cache to avoid burning credits on repeat queries
+const statesCache = { data: null, timestamp: 0 };
+const CACHE_TTL = 10000; // 10 seconds -- OpenSky updates every 10s anyway
 
 export async function openskyFetch(url) {
-  const token = await getAuthToken();
-  const headers = token ? { 'Authorization': `Bearer ${token}` } : {};
-
-  for (let attempt = 0; attempt < 3; attempt++) {
-    const response = await fetch(url, { headers });
-    if (response.status === 429) {
-      await new Promise(r => setTimeout(r, 3000 * (attempt + 1)));
-      continue;
+  // Check cache for states/all requests
+  if (url.includes('/states/all')) {
+    if (statesCache.data && Date.now() - statesCache.timestamp < CACHE_TTL) {
+      return statesCache.data;
     }
-    if (!response.ok) throw new Error(`OpenSky API returned ${response.status}`);
-    return await response.json();
   }
-  throw new Error('Max retries exceeded');
+
+  const response = await fetch(url);
+  if (response.status === 429) {
+    throw new Error('Rate limited');
+  }
+  if (!response.ok) throw new Error(`OpenSky API returned ${response.status}`);
+  const data = await response.json();
+
+  // Cache states responses
+  if (url.includes('/states/all')) {
+    statesCache.data = data;
+    statesCache.timestamp = Date.now();
+  }
+
+  return data;
 }
 
 // Common airline ICAO prefixes mapped from IATA codes
@@ -156,6 +134,10 @@ export function iataToIcaoCallsign(flightNumber) {
   return icao + num;
 }
 
+// Track last known position so we can make tiny queries after the first one
+let lastKnownLat = null;
+let lastKnownLng = null;
+
 /**
  * Fetch all current flights from OpenSky and find ours by callsign
  */
@@ -164,7 +146,17 @@ export async function fetchFlightPosition(flightNumber) {
   const paddedCallsign = callsign.padEnd(8, ' ');
 
   try {
-    const data = await openskyFetch(`${OPENSKY_BASE}/states/all`);
+    // If we know where the plane is, query a tiny box around it (1 credit)
+    // Otherwise query the full US (4 credits) for the initial lookup
+    let queryUrl;
+    if (lastKnownLat && lastKnownLng) {
+      // 5-degree box around last known position = ~25 sq degrees = 1 credit
+      const pad = 2.5;
+      queryUrl = `${OPENSKY_BASE}/states/all?lamin=${lastKnownLat-pad}&lamax=${lastKnownLat+pad}&lomin=${lastKnownLng-pad}&lomax=${lastKnownLng+pad}`;
+    } else {
+      queryUrl = `${OPENSKY_BASE}/states/all?lamin=24&lamax=50&lomin=-130&lomax=-65`;
+    }
+    const data = await openskyFetch(queryUrl);
     if (!data || !data.states || data.states.length === 0) {
       return null;
     }
@@ -181,6 +173,12 @@ export async function fetchFlightPosition(flightNumber) {
     });
 
     if (!flight) return null;
+
+    // Cache position for smaller subsequent queries
+    if (flight[6] && flight[5]) {
+      lastKnownLat = flight[6];
+      lastKnownLng = flight[5];
+    }
 
     // Try known routes first, then heading-based guess as fallback
     const knownRoute = routesDB[callsign] || KNOWN_ROUTES[callsign];
@@ -201,16 +199,9 @@ export async function fetchFlightPosition(flightNumber) {
       destination: route?.dest || null,
     };
 
-    // Try to get real route from OpenSky flights/aircraft endpoint (async, updates later)
-    if (!knownRoute && flight[0]) {
-      fetchRealRoute(flight[0]).then(realRoute => {
-        if (realRoute) {
-          result.origin = realRoute.origin;
-          result.destination = realRoute.dest;
-          // Cache it so we don't keep querying
-          KNOWN_ROUTES[callsign] = realRoute;
-        }
-      }).catch(() => {});
+    // Cache the guessed route so we don't re-guess every poll
+    if (!knownRoute && route) {
+      KNOWN_ROUTES[callsign] = route;
     }
 
     return result;
