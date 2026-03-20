@@ -760,27 +760,15 @@ function setFactImage(el, fact) {
 }
 
 async function resolveImage(fact) {
-  // 1. Try the provided imageUrl directly
+  // Only use explicitly provided images -- no guessing.
+  // A clean gradient is better than a wrong image.
   if (fact.imageUrl) {
     const works = await testImage(fact.imageUrl);
     if (works) return fact.imageUrl;
   }
 
-  // 2. Try Wikipedia API with the fact title
-  const wikiUrl = await fetchWikipediaImage(fact.title);
-  if (wikiUrl) return wikiUrl;
-
-  // 3. Try Wikipedia API with the location name
-  const wikiLocUrl = await fetchWikipediaImage(fact.location);
-  if (wikiLocUrl) return wikiLocUrl;
-
-  // 4. Use Unsplash Source as category-based fallback (no API key needed)
-  // Use a deterministic seed from the fact id so the same fact always gets the same photo
-  const seed = hashCode(fact.id);
-  const searchTerms = CATEGORY_SEARCH_TERMS[fact.category] || 'landscape america';
-  const locationTerm = fact.location.split(',')[1]?.trim() || 'america';
-  const unsplashUrl = `https://source.unsplash.com/600x400/?${encodeURIComponent(locationTerm + ' ' + searchTerms)}&sig=${seed}`;
-  return unsplashUrl;
+  // No image provided or it failed -- return null, the gradient fallback will show
+  return null;
 }
 
 function testImage(url) {
