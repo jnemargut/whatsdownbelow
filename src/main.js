@@ -52,6 +52,10 @@ document.getElementById('suggested-flights').addEventListener('click', (e) => {
 });
 
 // Fetch live flights for suggestions
+// Randomize placeholder
+const placeholders = ['e.g. AA100', 'e.g. DL401', 'e.g. UA1', 'e.g. WN1724', 'e.g. B6123', 'e.g. AS558'];
+flightInput.placeholder = placeholders[Math.floor(Math.random() * placeholders.length)];
+
 fetchLiveFlightSuggestions();
 
 // Postcard click to expand
@@ -434,8 +438,12 @@ function updateTraveledPath(pos) {
 // --- FLIGHT BAR ---
 function updateFlightBar() {
   document.getElementById('flight-id').textContent = flightNumber.toUpperCase();
-  document.getElementById('flight-origin').textContent = currentPosition.origin || '???';
-  document.getElementById('flight-dest').textContent = currentPosition.destination || '???';
+  const originAp = AIRPORTS[currentPosition.origin];
+  const destAp = AIRPORTS[currentPosition.destination];
+  document.getElementById('flight-origin').textContent = originAp
+    ? `${originAp.name}, ${originAp.state}` : (currentPosition.origin || '???');
+  document.getElementById('flight-dest').textContent = destAp
+    ? `${destAp.name}, ${destAp.state}` : (currentPosition.destination || '???');
   document.getElementById('flight-alt').textContent = currentPosition.altitude
     ? `${currentPosition.altitude.toLocaleString()} ft`
     : '-- ft';
