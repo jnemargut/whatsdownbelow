@@ -2,7 +2,8 @@
 // Handles OAuth2 token exchange server-side (no CORS issues)
 
 export const config = {
-  runtime: 'edge', // Edge runtime has native fetch
+  runtime: 'edge',
+  maxDuration: 30, // Allow up to 30 seconds for OpenSky response
 };
 
 const TOKEN_URL = 'https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token';
