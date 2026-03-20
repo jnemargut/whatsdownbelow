@@ -55,8 +55,17 @@ document.getElementById('suggested-flights').addEventListener('click', (e) => {
 fetchLiveFlightSuggestions();
 
 // Postcard click to expand
-document.getElementById('postcard').addEventListener('click', () => {
+document.getElementById('postcard').addEventListener('click', (e) => {
+  // Don't expand if clicking the close button
+  if (e.target.id === 'postcard-close-btn') return;
   if (currentFact) showExpandedPostcard(currentFact);
+});
+
+// Close button on mini postcard
+document.getElementById('postcard-close-btn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  postcardContainer.classList.remove('visible');
+  if (postcardTimeout) clearTimeout(postcardTimeout);
 });
 
 // Expanded close
@@ -207,11 +216,10 @@ function initMap() {
             map.setPaintProperty(layer.id, 'line-opacity', 0.9);
           }
         }
-        // Tone down road colors to be warmer
+        // Tone down road colors -- muted grey-tan so they don't compete with state borders
         if (layer.id.includes('road') && layer.type === 'line') {
-          if (layer.id.includes('major') || layer.id.includes('motorway') || layer.id.includes('trunk')) {
-            map.setPaintProperty(layer.id, 'line-color', '#d4a373');
-          }
+          map.setPaintProperty(layer.id, 'line-color', '#c4b99a');
+          map.setPaintProperty(layer.id, 'line-opacity', 0.5);
         }
       } catch(e) { /* layer might not support the property */ }
     });
@@ -229,10 +237,9 @@ function initMap() {
           ['==', ['get', 'maritime'], 0],
         ],
         paint: {
-          'line-color': '#9a5b1e',
-          'line-width': 2,
-          'line-opacity': 0.7,
-          'line-dasharray': [5, 3],
+          'line-color': '#5c3d1a',
+          'line-width': 2.5,
+          'line-opacity': 0.8,
         },
       });
     } catch(e) {
@@ -791,7 +798,9 @@ function showPostcard(fact) {
   // Update postcard content
   document.getElementById('postcard-title').textContent = fact.title;
   document.getElementById('postcard-text').textContent = fact.summary;
-  document.getElementById('postcard-category').textContent = fact.category;
+  const catEl = document.getElementById('postcard-category');
+  catEl.textContent = fact.category;
+  catEl.className = 'postcard-category cat-' + fact.category;
   document.getElementById('postcard-distance').textContent = `${dist}mi below you`;
   document.getElementById('postcard-era').textContent = fact.year;
 
@@ -825,7 +834,9 @@ function showExpandedPostcard(fact) {
     : '??';
 
   document.getElementById('expanded-title').textContent = fact.title;
-  document.getElementById('expanded-category').textContent = fact.category;
+  const expCatEl = document.getElementById('expanded-category');
+  expCatEl.textContent = fact.category;
+  expCatEl.className = 'expanded-category cat-' + fact.category;
   document.getElementById('expanded-location').textContent = `${fact.location} -- ${dist}mi below you`;
   document.getElementById('expanded-text').textContent = fact.fullText;
 

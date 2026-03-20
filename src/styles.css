@@ -420,6 +420,7 @@ html, body {
   margin: 0 auto;
   cursor: pointer;
   transition: transform 0.2s;
+  position: relative;
 }
 
 .postcard:hover {
@@ -471,6 +472,32 @@ html, body {
   100% { left: 200%; }
 }
 
+/* Close button on mini postcard */
+.postcard-close {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 26px;
+  height: 26px;
+  background: rgba(40, 54, 24, 0.7);
+  color: var(--cream);
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  backdrop-filter: blur(4px);
+}
+
+.postcard-close:hover {
+  background: rgba(40, 54, 24, 0.9);
+}
+
 .postcard-category {
   position: absolute;
   top: 10px;
@@ -485,6 +512,18 @@ html, body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+
+/* Category tag colors matching pin colors */
+.postcard-category.cat-landmark, .expanded-category.cat-landmark { background: #2d6a8f; }
+.postcard-category.cat-event, .expanded-category.cat-event { background: #bc6c25; }
+.postcard-category.cat-weird, .expanded-category.cat-weird { background: #7c3aed; }
+.postcard-category.cat-people, .expanded-category.cat-people { background: #059669; }
+.postcard-category.cat-nature, .expanded-category.cat-nature { background: #16a34a; }
+.postcard-category.cat-sighting, .expanded-category.cat-sighting { background: #dc2626; }
+.postcard-category.cat-history, .expanded-category.cat-history { background: #b45309; }
+.postcard-category.cat-crime, .expanded-category.cat-crime { background: #991b1b; }
+.postcard-category.cat-science, .expanded-category.cat-science { background: #0369a1; }
+.postcard-category.cat-culture, .expanded-category.cat-culture { background: #7e22ce; }
 
 .postcard-distance {
   font-family: var(--font-display);

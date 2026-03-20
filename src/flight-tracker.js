@@ -106,9 +106,11 @@ export async function fetchFlightPosition(flightNumber) {
 
     if (!flight) return null;
 
-    const route = routesDB[callsign]
-      || KNOWN_ROUTES[callsign]
-      || guessRouteFromPosition(flight[6], flight[5], flight[10]);
+    // Use heading-based guess first (it uses the actual plane position/direction),
+    // fall back to known routes DB for well-known flights
+    const route = guessRouteFromPosition(flight[6], flight[5], flight[10])
+      || routesDB[callsign]
+      || KNOWN_ROUTES[callsign];
 
     return {
       icao24: flight[0],
