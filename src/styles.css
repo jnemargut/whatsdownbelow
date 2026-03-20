@@ -613,9 +613,10 @@ html, body {
 }
 
 .expanded-close {
-  position: absolute;
+  position: sticky;
   top: 12px;
-  right: 12px;
+  float: right;
+  margin: 12px 12px 0 0;
   padding: 8px 16px;
   font-family: var(--font-display);
   font-size: 0.75rem;
