@@ -1,23 +1,36 @@
-// OpenSky Network flight tracker -- anonymous API (400 credits/day)
-// Be smart about credit usage: cache aggressively, small queries only
+// OpenSky Network flight tracker
+// Uses /api/opensky proxy on Vercel (authenticated, 4000 credits/day)
+// Falls back to direct anonymous API for local dev
 
 import routesDB from './routes-db.js';
 
 const OPENSKY_BASE = 'https://opensky-network.org/api';
+const USE_PROXY = window.location.hostname !== 'localhost';
 
-// Cache to avoid burning credits on repeat queries
+// Cache to avoid repeat queries
 const statesCache = { data: null, timestamp: 0 };
-const CACHE_TTL = 10000; // 10 seconds -- OpenSky updates every 10s anyway
+const CACHE_TTL = 8000; // 8 seconds
 
 export async function openskyFetch(url) {
   // Check cache for states/all requests
-  if (url.includes('/states/all')) {
+  if (url.includes('/states/all') || url.includes('endpoint=states')) {
     if (statesCache.data && Date.now() - statesCache.timestamp < CACHE_TTL) {
       return statesCache.data;
     }
   }
 
-  const response = await fetch(url);
+  let fetchUrl = url;
+
+  // On deployed site, route through our proxy for authenticated access
+  if (USE_PROXY && url.includes('opensky-network.org')) {
+    const parsed = new URL(url);
+    const endpoint = parsed.pathname.replace('/api/', '');
+    const params = parsed.searchParams;
+    params.set('endpoint', endpoint);
+    fetchUrl = `/api/opensky?${params.toString()}`;
+  }
+
+  const response = await fetch(fetchUrl);
   if (response.status === 429) {
     throw new Error('Rate limited');
   }
@@ -25,7 +38,7 @@ export async function openskyFetch(url) {
   const data = await response.json();
 
   // Cache states responses
-  if (url.includes('/states/all')) {
+  if (url.includes('/states/all') || url.includes('endpoint=states')) {
     statesCache.data = data;
     statesCache.timestamp = Date.now();
   }
@@ -199,9 +212,20 @@ export async function fetchFlightPosition(flightNumber) {
       destination: route?.dest || null,
     };
 
-    // Cache the guessed route so we don't re-guess every poll
+    // Cache the route so we don't re-guess every poll
     if (!knownRoute && route) {
       KNOWN_ROUTES[callsign] = route;
+    }
+
+    // On deployed site (with proxy), try to get real route from flights/aircraft
+    if (USE_PROXY && !knownRoute && flight[0]) {
+      fetchRealRoute(flight[0]).then(realRoute => {
+        if (realRoute) {
+          result.origin = realRoute.origin;
+          result.destination = realRoute.dest;
+          KNOWN_ROUTES[callsign] = realRoute;
+        }
+      }).catch(() => {});
     }
 
     return result;
