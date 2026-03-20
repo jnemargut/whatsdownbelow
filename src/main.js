@@ -125,14 +125,11 @@ async function startTracking() {
       useSimulation = false;
       currentPosition = position;
     } else {
-      // Fall back to simulation -- always use ATL->SAN demo route
-      useSimulation = true;
-      resetSimulation();
-      currentPosition = getSimulatedPosition();
-      // Override display to show the entered flight number
-      currentPosition.origin = currentPosition.origin || 'ATL';
-      currentPosition.destination = currentPosition.destination || 'SAN';
-      console.log('Using simulated ATL->SAN flight path for demo');
+      // Flight not found -- show error, don't fake it
+      inputError.textContent = `Could not find flight ${flightNumber}. Make sure it's currently in the air and try again.`;
+      trackBtn.textContent = "Let's Fly";
+      trackBtn.classList.remove('loading');
+      return;
     }
 
     // Transition to map
@@ -839,13 +836,8 @@ function showPostcard(fact) {
   const rotation = (Math.random() - 0.5) * 4;
   document.getElementById('postcard').style.transform = `rotate(${rotation}deg)`;
 
-  // Show
+  // Show -- stays until user closes it or a new fact appears
   postcardContainer.classList.add('visible');
-
-  // Auto-hide after display time
-  postcardTimeout = setTimeout(() => {
-    postcardContainer.classList.remove('visible');
-  }, POSTCARD_DISPLAY_TIME);
 }
 
 // --- EXPANDED POSTCARD ---
