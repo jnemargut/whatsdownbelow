@@ -1,5 +1,5 @@
 import mapboxgl from 'mapbox-gl';
-import { fetchFlightPosition, getSimulatedPosition, resetSimulation, AIRPORTS, iataToIcaoCallsign, openskyFetch } from './flight-tracker.js';
+import { fetchFlightPosition, getSimulatedPosition, resetSimulation, AIRPORTS, iataToIcaoCallsign, openskyFetch, guessRouteFromPosition } from './flight-tracker.js';
 import { findNearbyFacts, greatCircleArc, distanceMiles } from './geo-utils.js';
 import factsDB from './facts-db.js';
 import routesDB from './routes-db.js';
@@ -931,12 +931,16 @@ async function fetchLiveFlightSuggestions() {
       const iataAirline = ICAO_TO_IATA[prefix];
       const flightNum = callsign.replace(prefix, '');
       const iataFlight = iataAirline + flightNum;
-      const route = routesDB[callsign];
+      // Guess route from the plane's actual position and heading
+      const guessed = guessRouteFromPosition(s[6], s[5], s[10]);
+      const routeLabel = guessed
+        ? `${AIRPORTS[guessed.origin]?.name || guessed.origin} to ${AIRPORTS[guessed.dest]?.name || guessed.dest}`
+        : null;
 
       const entry = {
         iata: iataFlight,
         callsign,
-        route: route ? `${route.origin}-${route.dest}` : null,
+        route: routeLabel,
         lon: s[5],
       };
 
