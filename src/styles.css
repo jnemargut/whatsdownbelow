@@ -642,11 +642,15 @@ html, body {
 }
 
 .expanded-category {
+  display: inline-block;
   font-family: var(--font-display);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 800;
-  color: var(--brown);
-  letter-spacing: 0.15em;
+  color: var(--cream);
+  background: var(--brown);
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 

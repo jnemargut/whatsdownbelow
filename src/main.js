@@ -441,9 +441,9 @@ function updateFlightBar() {
   const originAp = AIRPORTS[currentPosition.origin];
   const destAp = AIRPORTS[currentPosition.destination];
   document.getElementById('flight-origin').textContent = originAp
-    ? `${originAp.name}, ${originAp.state}` : (currentPosition.origin || '???');
+    ? `${originAp.name}, ${originAp.state} (${currentPosition.origin})` : (currentPosition.origin || '???');
   document.getElementById('flight-dest').textContent = destAp
-    ? `${destAp.name}, ${destAp.state}` : (currentPosition.destination || '???');
+    ? `${destAp.name}, ${destAp.state} (${currentPosition.destination})` : (currentPosition.destination || '???');
   document.getElementById('flight-alt').textContent = currentPosition.altitude
     ? `${currentPosition.altitude.toLocaleString()} ft`
     : '-- ft';
@@ -826,7 +826,7 @@ function showPostcard(fact) {
   const catEl = document.getElementById('postcard-category');
   catEl.textContent = fact.category;
   catEl.className = 'postcard-category cat-' + fact.category;
-  document.getElementById('postcard-distance').textContent = `${dist}mi below you`;
+  document.getElementById('postcard-distance').textContent = `${fact.location} -- ${dist}mi below you`;
   document.getElementById('postcard-era').textContent = fact.year;
 
   // Set image (reset shimmer state)
