@@ -19,22 +19,34 @@ export async function openskyFetch(url) {
     }
   }
 
-  // Route through Cloudflare proxy for authenticated access
-  let fetchUrl = url;
+  // Try Cloudflare proxy first (authenticated, 4000 credits/day)
+  // Falls back to direct browser request if proxy fails
+  let data = null;
+
   if (url.includes('opensky-network.org')) {
-    const parsed = new URL(url);
-    const endpoint = parsed.pathname.replace('/api/', '');
-    const params = new URLSearchParams(parsed.searchParams);
-    params.set('endpoint', endpoint);
-    fetchUrl = `${PROXY_BASE}/?${params.toString()}`;
+    try {
+      const parsed = new URL(url);
+      const endpoint = parsed.pathname.replace('/api/', '');
+      const params = new URLSearchParams(parsed.searchParams);
+      params.set('endpoint', endpoint);
+      const proxyRes = await fetch(`${PROXY_BASE}/?${params.toString()}`);
+      if (proxyRes.ok) {
+        data = await proxyRes.json();
+      }
+    } catch (e) {
+      console.warn('Proxy unavailable, trying direct:', e.message);
+    }
   }
 
-  const response = await fetch(fetchUrl);
-  if (response.status === 429) {
-    throw new Error('Rate limited -- try again in a moment');
+  // Fallback: direct browser request (anonymous, 400 credits/day)
+  if (!data) {
+    const response = await fetch(url);
+    if (response.status === 429) {
+      throw new Error('Rate limited -- try again in a moment');
+    }
+    if (!response.ok) throw new Error(`OpenSky API returned ${response.status}`);
+    data = await response.json();
   }
-  if (!response.ok) throw new Error(`OpenSky API returned ${response.status}`);
-  const data = await response.json();
 
   if (url.includes('/states/all')) {
     statesCache.data = data;
