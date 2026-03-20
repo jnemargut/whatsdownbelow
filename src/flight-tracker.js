@@ -113,6 +113,14 @@ export const AIRPORTS = {
   'RIC': { lat: 37.5052, lng: -77.3197, name: 'Richmond', state: 'VA', tz: 'America/New_York' },
   'ONT': { lat: 34.0560, lng: -117.6012, name: 'Ontario', state: 'CA', tz: 'America/Los_Angeles' },
   'BOI': { lat: 43.5644, lng: -116.2228, name: 'Boise', state: 'ID', tz: 'America/Boise' },
+  'CVG': { lat: 39.0489, lng: -84.6678, name: 'Cincinnati', state: 'OH', tz: 'America/New_York' },
+  'SNA': { lat: 33.6757, lng: -117.8678, name: 'Orange County', state: 'CA', tz: 'America/Los_Angeles' },
+  'BDL': { lat: 41.9389, lng: -72.6832, name: 'Hartford', state: 'CT', tz: 'America/New_York' },
+  'SDF': { lat: 38.1744, lng: -85.7360, name: 'Louisville', state: 'KY', tz: 'America/New_York' },
+  'PBI': { lat: 26.6832, lng: -80.0956, name: 'West Palm Beach', state: 'FL', tz: 'America/New_York' },
+  'OKC': { lat: 35.3931, lng: -97.6007, name: 'Oklahoma City', state: 'OK', tz: 'America/Chicago' },
+  'SJU': { lat: 18.4394, lng: -66.0018, name: 'San Juan', state: 'PR', tz: 'America/Puerto_Rico' },
+  'ANC': { lat: 61.1743, lng: -149.9963, name: 'Anchorage', state: 'AK', tz: 'America/Anchorage' },
 };
 
 // Known routes for common flights (origin -> destination IATA codes)
@@ -214,11 +222,13 @@ export async function fetchFlightPosition(flightNumber) {
       destination: route?.dest || null,
     };
 
-    // Always try to get real route from flights/aircraft endpoint
-    // This is the most accurate source -- actual ADS-B departure/arrival data
+    // Try real route from flights/aircraft endpoint -- but only use it if it's
+    // BETTER than what we already have (must have both origin AND destination,
+    // and both must be airports we recognize)
     if (!cachedRealRoute && flight[0]) {
       fetchRealRoute(flight[0]).then(realRoute => {
-        if (realRoute) {
+        if (realRoute && realRoute.origin && realRoute.dest
+            && AIRPORTS[realRoute.origin] && AIRPORTS[realRoute.dest]) {
           result.origin = realRoute.origin;
           result.destination = realRoute.dest;
           KNOWN_ROUTES['_real_' + callsign] = realRoute;
@@ -337,7 +347,8 @@ export function guessRouteFromPosition(lat, lng, heading) {
     const dLat = airport.lat - lat;
     const dLng = airport.lng - lng;
     const dist = Math.sqrt(dLat * dLat + dLng * dLng);
-    if (dist < 0.3) continue;
+    if (dist < 0.3) continue; // too close
+    if (dist > 50) continue;  // too far (~3500 miles) -- skip Honolulu/Anchorage for CONUS flights
 
     // Use TRUE bearing (great circle) instead of simple atan2
     const bearing = trueBearing(lat, lng, airport.lat, airport.lng);
@@ -361,16 +372,14 @@ export function guessRouteFromPosition(lat, lng, heading) {
     }
   }
 
-  // For destination: pick the FARTHEST well-aligned airport (that's where the flight is going)
-  // For origin: pick the NEAREST well-aligned airport behind (that's where it came from)
-  ahead.sort((a, b) => {
-    // First by angle (tighter = better), then by distance (farther = more likely destination)
-    if (Math.abs(a.angleDiff - b.angleDiff) > 10) return a.angleDiff - b.angleDiff;
-    return b.dist - a.dist; // Prefer farther for destination
-  });
+  // Sort by angle alignment (tightest angle wins for both)
+  // For ties, destination prefers farther, origin prefers closer
+  ahead.sort((a, b) => a.angleDiff - b.angleDiff || b.dist - a.dist);
   behind.sort((a, b) => {
-    if (Math.abs(a.angleDiff - b.angleDiff) > 10) return a.angleDiff - b.angleDiff;
-    return a.dist - b.dist; // Prefer closer for origin
+    // For behind: reverse the angle diff (180 is perfect behind)
+    const aScore = (180 - a.angleDiff);
+    const bScore = (180 - b.angleDiff);
+    return bScore - aScore || a.dist - b.dist;
   });
 
   const origin = behind.length > 0 ? behind[0].code : null;

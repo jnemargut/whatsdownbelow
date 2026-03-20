@@ -453,7 +453,7 @@ function updateFlightBar() {
   document.getElementById('flight-origin').textContent = originAp
     ? `${originAp.name}, ${originAp.state} (${currentPosition.origin})` : (currentPosition.origin || '???');
   document.getElementById('flight-dest').textContent = destAp
-    ? `${destAp.name}, ${destAp.state} (${currentPosition.destination})` : (currentPosition.destination || '???');
+    ? `${destAp.name}, ${destAp.state} (${currentPosition.destination})` : (currentPosition.destination || 'Unknown');
   document.getElementById('flight-alt').textContent = currentPosition.altitude
     ? `${currentPosition.altitude.toLocaleString()} ft`
     : '-- ft';
