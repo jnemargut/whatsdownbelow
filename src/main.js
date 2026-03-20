@@ -1,5 +1,5 @@
 import mapboxgl from 'mapbox-gl';
-import { fetchFlightPosition, getSimulatedPosition, resetSimulation, AIRPORTS, iataToIcaoCallsign } from './flight-tracker.js';
+import { fetchFlightPosition, getSimulatedPosition, resetSimulation, AIRPORTS, iataToIcaoCallsign, openskyFetch } from './flight-tracker.js';
 import { findNearbyFacts, greatCircleArc, distanceMiles } from './geo-utils.js';
 import factsDB from './facts-db.js';
 import routesDB from './routes-db.js';
@@ -893,40 +893,14 @@ function hideExpandedPostcard() {
 // --- LIVE FLIGHT SUGGESTIONS ---
 const ICAO_TO_IATA = { 'DAL': 'DL', 'AAL': 'AA', 'UAL': 'UA', 'SWA': 'WN', 'JBU': 'B6', 'ASA': 'AS', 'NKS': 'NK', 'FFT': 'F9' };
 
-async function fetchWithRetry(url, retries = 3, delay = 2000) {
-  for (let i = 0; i < retries; i++) {
-    try {
-      const res = await fetch(url);
-      if (res.status === 429) {
-        // Rate limited -- wait and retry
-        await new Promise(r => setTimeout(r, delay * (i + 1)));
-        continue;
-      }
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
-    } catch(e) {
-      if (i === retries - 1) throw e;
-      await new Promise(r => setTimeout(r, delay));
-    }
-  }
-  throw new Error('Max retries');
-}
-
 async function fetchLiveFlightSuggestions() {
   const hint = document.getElementById('loading-flights-hint');
   const container = document.getElementById('suggested-flights');
 
   try {
-    // Query smaller regions to avoid rate limiting on the massive all-states request
-    // Pick 3 random geographic slices across the US
-    const regions = [
-      { lamin: 30, lamax: 42, lomin: -105, lomax: -85 },  // Central US
-      { lamin: 30, lamax: 45, lomin: -85, lomax: -70 },   // East
-      { lamin: 30, lamax: 48, lomin: -125, lomax: -105 },  // West
-    ];
-    const region = regions[Math.floor(Math.random() * regions.length)];
-    const data = await fetchWithRetry(
-      `https://opensky-network.org/api/states/all?lamin=${region.lamin}&lamax=${region.lamax}&lomin=${region.lomin}&lomax=${region.lomax}`
+    // With auth we can query the full US without hitting rate limits as fast
+    const data = await openskyFetch(
+      'https://opensky-network.org/api/states/all?lamin=25&lamax=50&lomin=-130&lomax=-65'
     );
     if (!data.states) throw new Error('No data');
 

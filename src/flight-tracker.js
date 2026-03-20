@@ -1,8 +1,59 @@
-// OpenSky Network flight tracker with callsign-based lookup
+// OpenSky Network flight tracker with OAuth2 authentication
 
 import routesDB from './routes-db.js';
 
 const OPENSKY_BASE = 'https://opensky-network.org/api';
+const OPENSKY_AUTH_URL = 'https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token';
+const OPENSKY_CLIENT_ID = import.meta.env.VITE_OPENSKY_CLIENT_ID || '';
+const OPENSKY_CLIENT_SECRET = import.meta.env.VITE_OPENSKY_CLIENT_SECRET || '';
+
+// OAuth2 token management
+let accessToken = null;
+let tokenExpiresAt = 0;
+
+async function getAuthToken() {
+  // Return cached token if still valid (with 60s buffer)
+  if (accessToken && Date.now() < tokenExpiresAt - 60000) {
+    return accessToken;
+  }
+
+  if (!OPENSKY_CLIENT_ID || !OPENSKY_CLIENT_SECRET) {
+    return null; // No credentials, fall back to anonymous
+  }
+
+  try {
+    const res = await fetch(OPENSKY_AUTH_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `grant_type=client_credentials&client_id=${OPENSKY_CLIENT_ID}&client_secret=${OPENSKY_CLIENT_SECRET}`,
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    accessToken = data.access_token;
+    tokenExpiresAt = Date.now() + (data.expires_in * 1000);
+    console.log('OpenSky auth: got token, expires in', data.expires_in, 'seconds');
+    return accessToken;
+  } catch (e) {
+    console.warn('OpenSky auth failed:', e.message);
+    return null;
+  }
+}
+
+export async function openskyFetch(url) {
+  const token = await getAuthToken();
+  const headers = token ? { 'Authorization': `Bearer ${token}` } : {};
+
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const response = await fetch(url, { headers });
+    if (response.status === 429) {
+      await new Promise(r => setTimeout(r, 3000 * (attempt + 1)));
+      continue;
+    }
+    if (!response.ok) throw new Error(`OpenSky API returned ${response.status}`);
+    return await response.json();
+  }
+  throw new Error('Max retries exceeded');
+}
 
 // Common airline ICAO prefixes mapped from IATA codes
 const AIRLINE_MAP = {
@@ -113,21 +164,7 @@ export async function fetchFlightPosition(flightNumber) {
   const paddedCallsign = callsign.padEnd(8, ' ');
 
   try {
-    // Fetch with retry for rate limiting
-    const url = `${OPENSKY_BASE}/states/all`;
-    let data = null;
-    for (let attempt = 0; attempt < 3; attempt++) {
-      const response = await fetch(url);
-      if (response.status === 429) {
-        await new Promise(r => setTimeout(r, 3000 * (attempt + 1)));
-        continue;
-      }
-      if (!response.ok) {
-        throw new Error(`OpenSky API returned ${response.status}`);
-      }
-      data = await response.json();
-      break;
-    }
+    const data = await openskyFetch(`${OPENSKY_BASE}/states/all`);
     if (!data || !data.states || data.states.length === 0) {
       return null;
     }
@@ -200,11 +237,7 @@ async function fetchRealRoute(icao24) {
     const now = Math.floor(Date.now() / 1000);
     const begin = now - 43200; // 12 hours ago
     const url = `${OPENSKY_BASE}/flights/aircraft?icao24=${icao24}&begin=${begin}&end=${now}`;
-    const response = await fetch(url);
-
-    if (!response.ok) return null;
-
-    const flights = await response.json();
+    const flights = await openskyFetch(url);
     if (!flights || flights.length === 0) return null;
 
     // Get the most recent flight for this aircraft
