@@ -113,16 +113,22 @@ export async function fetchFlightPosition(flightNumber) {
   const paddedCallsign = callsign.padEnd(8, ' ');
 
   try {
-    // OpenSky allows filtering by callsign via the states/all endpoint
+    // Fetch with retry for rate limiting
     const url = `${OPENSKY_BASE}/states/all`;
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      throw new Error(`OpenSky API returned ${response.status}`);
+    let data = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const response = await fetch(url);
+      if (response.status === 429) {
+        await new Promise(r => setTimeout(r, 3000 * (attempt + 1)));
+        continue;
+      }
+      if (!response.ok) {
+        throw new Error(`OpenSky API returned ${response.status}`);
+      }
+      data = await response.json();
+      break;
     }
-
-    const data = await response.json();
-    if (!data.states || data.states.length === 0) {
+    if (!data || !data.states || data.states.length === 0) {
       return null;
     }
 
