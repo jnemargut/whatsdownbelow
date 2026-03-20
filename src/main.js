@@ -6,7 +6,7 @@ import routesDB from './routes-db.js';
 
 // --- CONFIG ---
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN || '';
-const POLL_INTERVAL = 15000; // 15 seconds between position updates
+const POLL_INTERVAL = 30000; // 30 seconds -- conserve API credits (400/day anonymous)
 const FACT_MIN_INTERVAL = 8000; // Show facts more frequently
 const FACT_RADIUS_MILES = 80; // Wider radius to catch more facts
 const POSTCARD_DISPLAY_TIME = 10000; // Show postcard for 10 seconds

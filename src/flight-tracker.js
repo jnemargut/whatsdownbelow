@@ -1,44 +1,31 @@
 // OpenSky Network flight tracker
-// Uses /api/opensky proxy on Vercel (authenticated, 4000 credits/day)
-// Falls back to direct anonymous API for local dev
+// Direct browser access (OpenSky blocks cloud provider IPs so proxy won't work)
+// Anonymous: 400 credits/day. Cache aggressively, use small queries.
 
 import routesDB from './routes-db.js';
 
 const OPENSKY_BASE = 'https://opensky-network.org/api';
-const USE_PROXY = window.location.hostname !== 'localhost';
 
-// Cache to avoid repeat queries
+// Cache to avoid burning credits
 const statesCache = { data: null, timestamp: 0 };
-const CACHE_TTL = 8000; // 8 seconds
+const CACHE_TTL = 15000; // 15 seconds -- be conservative with credits
 
 export async function openskyFetch(url) {
-  // Check cache for states/all requests
-  if (url.includes('/states/all') || url.includes('endpoint=states')) {
+  // Check cache
+  if (url.includes('/states/all')) {
     if (statesCache.data && Date.now() - statesCache.timestamp < CACHE_TTL) {
       return statesCache.data;
     }
   }
 
-  let fetchUrl = url;
-
-  // On deployed site, route through our proxy for authenticated access
-  if (USE_PROXY && url.includes('opensky-network.org')) {
-    const parsed = new URL(url);
-    const endpoint = parsed.pathname.replace('/api/', '');
-    const params = parsed.searchParams;
-    params.set('endpoint', endpoint);
-    fetchUrl = `/api/opensky?${params.toString()}`;
-  }
-
-  const response = await fetch(fetchUrl);
+  const response = await fetch(url);
   if (response.status === 429) {
-    throw new Error('Rate limited');
+    throw new Error('Rate limited -- try again in a moment');
   }
   if (!response.ok) throw new Error(`OpenSky API returned ${response.status}`);
   const data = await response.json();
 
-  // Cache states responses
-  if (url.includes('/states/all') || url.includes('endpoint=states')) {
+  if (url.includes('/states/all')) {
     statesCache.data = data;
     statesCache.timestamp = Date.now();
   }
