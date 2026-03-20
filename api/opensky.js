@@ -1,10 +1,5 @@
 // Vercel serverless proxy for OpenSky API
-// Handles OAuth2 token exchange server-side (no CORS issues)
-
-export const config = {
-  runtime: 'edge',
-  maxDuration: 30, // Allow up to 30 seconds for OpenSky response
-};
+// Node.js runtime with native fetch (Node 18+)
 
 const TOKEN_URL = 'https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token';
 const OPENSKY_BASE = 'https://opensky-network.org/api';
@@ -19,88 +14,72 @@ async function getToken() {
 
   const clientId = process.env.OPENSKY_CLIENT_ID;
   const clientSecret = process.env.OPENSKY_CLIENT_SECRET;
-
-  if (!clientId || !clientSecret) {
-    console.log('No OpenSky credentials configured');
-    return null;
-  }
+  if (!clientId || !clientSecret) return null;
 
   try {
+    const controller = new AbortController();
+    setTimeout(() => controller.abort(), 10000);
+
     const res = await fetch(TOKEN_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `grant_type=client_credentials&client_id=${clientId}&client_secret=${clientSecret}`,
+      signal: controller.signal,
     });
-
-    if (!res.ok) {
-      console.error('Token fetch failed:', res.status);
-      return null;
-    }
+    if (!res.ok) return null;
 
     const data = await res.json();
     cachedToken = data.access_token;
     tokenExpiresAt = Date.now() + (data.expires_in * 1000);
     return cachedToken;
-  } catch (e) {
-    console.error('Token error:', e.message);
+  } catch {
     return null;
   }
 }
 
-export default async function handler(req) {
-  const url = new URL(req.url);
-  const endpoint = url.searchParams.get('endpoint');
+export default async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate=5');
 
-  if (!endpoint) {
-    return new Response(JSON.stringify({ error: 'Missing endpoint' }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' },
-    });
+  const { endpoint, ...params } = req.query;
+
+  if (!endpoint || !['states/all', 'flights/aircraft'].includes(endpoint)) {
+    return res.status(400).json({ error: 'Invalid or missing endpoint' });
   }
 
-  // Whitelist
-  const allowed = ['states/all', 'flights/aircraft'];
-  if (!allowed.includes(endpoint)) {
-    return new Response(JSON.stringify({ error: 'Invalid endpoint' }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
-
-  // Build OpenSky URL -- pass through all params except 'endpoint'
-  const params = new URLSearchParams(url.searchParams);
-  params.delete('endpoint');
-  const openskyUrl = `${OPENSKY_BASE}/${endpoint}${params.toString() ? '?' + params.toString() : ''}`;
+  const queryString = new URLSearchParams(params).toString();
+  const url = `${OPENSKY_BASE}/${endpoint}${queryString ? '?' + queryString : ''}`;
 
   try {
     const token = await getToken();
     const headers = token ? { 'Authorization': `Bearer ${token}` } : {};
 
-    const response = await fetch(openskyUrl, { headers });
+    const controller = new AbortController();
+    setTimeout(() => controller.abort(), 25000);
+
+    const response = await fetch(url, { headers, signal: controller.signal });
 
     if (!response.ok) {
-      return new Response(JSON.stringify({
+      return res.status(response.status).json({
         error: `OpenSky returned ${response.status}`,
         authenticated: !!token,
-      }), {
-        status: response.status,
-        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
       });
     }
 
-    const data = await response.text(); // Pass through as-is
-    return new Response(data, {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Cache-Control': 's-maxage=10, stale-while-revalidate=5',
-      },
-    });
+    const data = await response.json();
+    return res.status(200).json(data);
   } catch (err) {
-    return new Response(JSON.stringify({ error: err.message }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
-    });
+    // Fall back: try without auth
+    try {
+      const controller = new AbortController();
+      setTimeout(() => controller.abort(), 15000);
+      const fallback = await fetch(url, { signal: controller.signal });
+      if (fallback.ok) {
+        const data = await fallback.json();
+        return res.status(200).json(data);
+      }
+    } catch {}
+
+    return res.status(500).json({ error: err.message, authenticated: !!cachedToken });
   }
 }
