@@ -191,10 +191,14 @@ export async function fetchFlightPosition(flightNumber) {
       lastKnownLng = flight[5];
     }
 
-    // Try known routes first, then heading-based guess as fallback
-    const knownRoute = routesDB[callsign] || KNOWN_ROUTES[callsign];
+    // Route priority:
+    // 1. Real route from OpenSky flights/aircraft (cached after first fetch)
+    // 2. Heading-based guess from current position
+    // 3. Static routes DB (least reliable -- flight numbers change routes daily)
+    const cachedRealRoute = KNOWN_ROUTES['_real_' + callsign];
     const guessedRoute = guessRouteFromPosition(flight[6], flight[5], flight[10]);
-    const route = knownRoute || guessedRoute;
+    const staticRoute = routesDB[callsign] || KNOWN_ROUTES[callsign];
+    const route = cachedRealRoute || guessedRoute || staticRoute;
 
     const result = {
       icao24: flight[0],
@@ -210,18 +214,14 @@ export async function fetchFlightPosition(flightNumber) {
       destination: route?.dest || null,
     };
 
-    // Cache the route so we don't re-guess every poll
-    if (!knownRoute && route) {
-      KNOWN_ROUTES[callsign] = route;
-    }
-
-    // Try to get real route from flights/aircraft endpoint (via proxy)
-    if (!knownRoute && flight[0]) {
+    // Always try to get real route from flights/aircraft endpoint
+    // This is the most accurate source -- actual ADS-B departure/arrival data
+    if (!cachedRealRoute && flight[0]) {
       fetchRealRoute(flight[0]).then(realRoute => {
         if (realRoute) {
           result.origin = realRoute.origin;
           result.destination = realRoute.dest;
-          KNOWN_ROUTES[callsign] = realRoute;
+          KNOWN_ROUTES['_real_' + callsign] = realRoute;
         }
       }).catch(() => {});
     }
