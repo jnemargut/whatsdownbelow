@@ -257,24 +257,28 @@ function initMap() {
     }
 
     // Draw flight path (two layers: solid for traveled, dashed for remaining)
-    if (currentPosition.origin && currentPosition.destination &&
-        AIRPORTS[currentPosition.origin] && AIRPORTS[currentPosition.destination]) {
-      const fullPathCoords = greatCircleArc(
-        origin.lat, origin.lng,
-        dest.lat, dest.lng
+    // Use known airports if available, otherwise use plane position as fallback
+    const hasOrigin = currentPosition.origin && AIRPORTS[currentPosition.origin];
+    const hasDest = currentPosition.destination && AIRPORTS[currentPosition.destination];
+    {
+      // Fallback: if no origin, use the plane's current position as both start and current
+      const effectiveOrigin = hasOrigin ? origin : { lat: currentPosition.latitude, lng: currentPosition.longitude };
+      const effectiveDest = hasDest ? dest : null;
+      // Always draw the traveled path (origin to current position)
+      const traveledCoords = greatCircleArc(
+        effectiveOrigin.lat, effectiveOrigin.lng,
+        currentPosition.latitude, currentPosition.longitude,
+        50
       );
 
-      // Split path into traveled and remaining at current position
-      const traveledCoords = greatCircleArc(
-        origin.lat, origin.lng,
-        currentPosition.latitude, currentPosition.longitude,
-        50
-      );
-      const remainingCoords = greatCircleArc(
-        currentPosition.latitude, currentPosition.longitude,
-        dest.lat, dest.lng,
-        50
-      );
+      // Only draw remaining path if we know the destination
+      const remainingCoords = effectiveDest
+        ? greatCircleArc(
+            currentPosition.latitude, currentPosition.longitude,
+            effectiveDest.lat, effectiveDest.lng,
+            50
+          )
+        : [[currentPosition.longitude, currentPosition.latitude]];
 
       // Remaining path -- dashed, lighter
       map.addSource('flight-path-remaining', {

@@ -73,7 +73,7 @@ const factsDB = [
     "fullText": "Dothan, Alabama has fully committed to being the Peanut Capital of the World. The Wiregrass region surrounding the city produces a massive share of the nation's peanut crop, and Dothan celebrates this with a collection of large, elaborately decorated peanut statues placed throughout downtown. Each statue is painted with a different theme by local artists. The National Peanut Festival, running since 1938, draws over 160,000 visitors annually for rides, concerts, and more peanut-related activities than you thought possible. George Washington Carver, who developed over 300 products from peanuts at nearby Tuskegee Institute, is honored throughout the region. If you are allergic to peanuts, this may not be your town.",
     "category": "culture",
     "year": "1938 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Alabama.svg/960px-Flag_of_Alabama.svg.png",
     "videoUrl": "",
     "location": "Dothan, Alabama"
   },
@@ -99,7 +99,7 @@ const factsDB = [
     "fullText": "Just outside Flora, Mississippi sits the only petrified forest in the eastern half of the country. Around 36 million years ago during the late Eocene epoch, a massive river system carried giant trees downstream and buried them in mineral-rich sediment. Over millions of years, the organic wood was replaced molecule by molecule with silica, essentially turning the trees into colorful stone logs. Some of the petrified specimens are over six feet in diameter. The site was designated a National Natural Landmark in 1965. Walking among the stone trees feels genuinely surreal, like stumbling into a science fiction set where time just decided to stop and harden everything in place.",
     "category": "nature",
     "year": "36 million years ago",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Jasper_Forest_at_Petrified_Forest_NP_in_AZ_12.jpg/960px-Jasper_Forest_at_Petrified_Forest_NP_in_AZ_12.jpg",
     "videoUrl": "",
     "location": "Flora, Mississippi"
   },
@@ -190,7 +190,7 @@ const factsDB = [
     "fullText": "The Marfa Lights are unexplained luminous phenomena that appear sporadically in the Mitchell Flat area east of Marfa, Texas. First reported by rancher Robert Reed Ellison in 1883, the lights appear as glowing orbs that hover, split apart, merge together, and dart around the desert landscape. They range in color from white to yellow to orange to red. Skeptics have attributed them to car headlights on nearby Highway 67, atmospheric refraction, or swamp gas, but eyewitnesses insist the lights behave in ways that defy these explanations. A 2004 study by physicists from the University of Texas at Dallas tracked some lights that appeared to correspond to vehicle headlights, but acknowledged that other sightings remained unexplained. The town of Marfa has fully embraced its mysterious reputation, building an official viewing platform on Highway 90 and hosting an annual Marfa Lights Festival.",
     "category": "sighting",
     "year": "1883 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Will-o-the-wisp_and_snake_by_Hermann_Hendrich_1823.jpg/960px-Will-o-the-wisp_and_snake_by_Hermann_Hendrich_1823.jpg",
     "videoUrl": "",
     "location": "Marfa, Texas"
   },
@@ -242,7 +242,7 @@ const factsDB = [
     "fullText": "Every March since 1958, the tiny town of Sweetwater, Texas (population 10,000) swells with visitors for the Sweetwater Jaycees World's Largest Rattlesnake Roundup. Hunters fan out across West Texas and return with thousands of pounds of live western diamondback rattlesnakes, which are displayed in open pits downtown. Professional snake handlers milk the snakes for venom, which is sold to biomedical companies for antivenin production. The rattlesnake meat is breaded and deep-fried, and visitors line up to try it -- the consensus is that it tastes like chewy, slightly gamey chicken. At its peak, the event has processed over 24,000 pounds of snake in a single weekend. Animal rights organizations have protested the roundup for decades, and the event has become a flashpoint in debates about wildlife management, but Sweetwater shows no signs of stopping.",
     "category": "weird",
     "year": "1958 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_Montana.svg/960px-Flag_of_Montana.svg.png",
     "videoUrl": "",
     "location": "Sweetwater, Texas"
   },
@@ -255,7 +255,7 @@ const factsDB = [
     "fullText": "On the south side of San Antonio, near the intersection of Shane Road and Villamain Road, sits a railroad crossing with one of the most persistent ghost stories in Texas. Legend holds that a school bus stalled on the tracks decades ago and was struck by a train, killing all the children aboard. Now, if you stop your car on the tracks and put it in neutral, invisible hands will push you uphill to safety. Believers sprinkle baby powder on their rear bumper and claim to find small handprints after being pushed. The nearby streets are even named after children: Cindy Sue, Laura Lee, Bobbie Allen. The truth is more mundane -- the road creates an optical illusion where what appears to be an uphill slope is actually a slight downhill grade, and the street names predate the legend. But that has not stopped thousands of thrill-seekers from making the pilgrimage every year.",
     "category": "sighting",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Laff_Trakk_Sunset.jpg/960px-Laff_Trakk_Sunset.jpg",
     "videoUrl": "",
     "location": "San Antonio, Texas"
   },
@@ -281,7 +281,7 @@ const factsDB = [
     "fullText": "On April 10, 1979, a massive F4 tornado tore through Wichita Falls, Texas, killing 42 people and injuring over 1,700. The twister carved a path 1.5 miles wide through the heart of the city, destroying over 3,000 homes and causing $400 million in damage. Among the astonishing feats of wind power documented afterward: a motel sign was found 30 miles from its original location, and pieces of straw were found embedded in telephone poles like nails. Approximately 20,000 people were left homeless, making it one of the costliest natural disasters in Texas history at the time. The tornado also spawned one of the earliest large-scale studies of tornado damage patterns, which significantly advanced warning systems. Wichita Falls has since become one of the most tornado-prepared cities in the country, with an extensive network of storm shelters and early warning sirens.",
     "category": "nature",
     "year": "1979",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Wisconsin_Tornado_Paths.PNG",
     "videoUrl": "",
     "location": "Wichita Falls, Texas"
   },
@@ -320,7 +320,7 @@ const factsDB = [
     "fullText": "Bugs Bunny's running gag about taking a wrong turn at Albuquerque appeared in at least nine different Looney Tunes cartoons between 1945 and 1962, beginning with 'Herr Meets Hare.' The joke worked because Albuquerque sat at the crossroads of Route 66 and numerous north-south highways, making it a natural spot where a tunnel-digging rabbit might take a wrong turn. The line became one of the most quoted phrases in animation history and essentially gave Albuquerque free advertising for decades. The city has embraced the reference, and the Albuquerque Convention and Visitors Bureau has used variations of the line in tourism campaigns. Beyond the cartoon connection, Albuquerque is home to the world's largest hot air balloon festival, the Albuquerque International Balloon Fiesta, where over 500 balloons fill the sky each October. It is a genuinely strange and wonderful experience to stand in a field at dawn and watch the sky fill with color.",
     "category": "culture",
     "year": "1945 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Loonatics_Unleashed.svg/960px-Loonatics_Unleashed.svg.png",
     "videoUrl": "",
     "location": "Albuquerque, New Mexico"
   },
@@ -424,7 +424,7 @@ const factsDB = [
     "fullText": "The Torrey Pines Gliderport sits on 350-foot sandstone cliffs overlooking the Pacific Ocean in La Jolla, and it is one of the premier soaring sites in the world. Consistent ocean breezes create reliable ridge lift along the cliff face, allowing paragliders and hang gliders to stay aloft for hours without an engine. The site has been used for glider flights since the 1920s and served as a training ground for military glider pilots during World War II. Directly adjacent to the launch area sits a small cemetery, which some pilots find either ironic or motivating depending on their outlook. Below the cliffs lies Blacks Beach, one of the most famous clothing-optional beaches in the United States. The combination of soaring above the ocean, a nude beach below, and a graveyard behind you makes this possibly the most existentially complex half-mile of coastline in America.",
     "category": "landmark",
     "year": "1920s - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/La_Jolla_Shores_view.jpg/960px-La_Jolla_Shores_view.jpg",
     "videoUrl": "",
     "location": "La Jolla, California"
   },
@@ -489,7 +489,7 @@ const factsDB = [
     "fullText": "From 1897 to 1917, a 20-block neighborhood in New Orleans known as Storyville served as the city's legal red-light district, and it inadvertently became the incubator for America's most original art form: jazz. The district's dance halls, saloons, and sporting houses employed musicians around the clock, giving early jazz pioneers like Jelly Roll Morton, King Oliver, and the young Louis Armstrong steady work and an audience eager for new, exciting sounds. The musicians blended African rhythms, blues, ragtime, and brass band traditions into something nobody had heard before. The US Navy shut Storyville down in 1917, worried that the district was corrupting sailors stationed at a nearby base. The closure scattered New Orleans musicians to Chicago, New York, and Kansas City, inadvertently spreading jazz across the nation. Today, virtually nothing of the original Storyville survives -- the neighborhood was demolished in the 1930s to build a public housing project -- but its musical legacy reshaped the entire world.",
     "category": "culture",
     "year": "1897 - 1917",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/Johnny_Costa_photo.jpg",
     "videoUrl": "",
     "location": "New Orleans, Louisiana"
   },
@@ -515,7 +515,7 @@ const factsDB = [
     "fullText": "Central Louisiana sits atop the massive Winnfield Salt Dome, one of over 500 salt domes that dot the Gulf Coast region. These geological formations were created when ancient salt deposits, buried under miles of sediment, were slowly pushed upward by their own buoyancy over millions of years. The Winnfield dome is estimated to contain billions of tons of nearly pure rock salt. Salt mining has been a major industry in the region since the Civil War, when the Confederacy desperately needed salt for food preservation. The strategic mineral reserves in Louisiana's salt domes have been proposed for everything from nuclear waste storage to compressed air energy facilities. Winnfield is also notable as the birthplace of three Louisiana governors, including the aforementioned Huey Long. The town's dual identity as both a political powerhouse and a giant salt deposit is, honestly, a pretty good metaphor for Louisiana politics.",
     "category": "science",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Salt_Lake_Union_Pacific_Railroad_Station%2C_South_Temple_at_400_West%2C_Central_City_West%2C_Salt_Lake_City%2C_UT%2C_USA.jpg/960px-Salt_Lake_Union_Pacific_Railroad_Station%2C_South_Temple_at_400_West%2C_Central_City_West%2C_Salt_Lake_City%2C_UT%2C_USA.jpg",
     "videoUrl": "",
     "location": "Winnfield, Louisiana"
   },
@@ -528,7 +528,7 @@ const factsDB = [
     "fullText": "One of the greatest engineering dramas in America plays out near Simmesport, Louisiana, where the Old River Control Structure prevents the Mississippi River from doing what it desperately wants to do: abandon its current path and join the Atchafalaya River on a shorter route to the Gulf of Mexico. If the Mississippi switched courses, it would leave New Orleans and Baton Rouge without a river, devastating two of the nation's busiest ports and the drinking water supply for millions. The Army Corps of Engineers built the control structure in 1963, but it nearly failed during the catastrophic 1973 flood, when raging waters came within hours of scouring out the structure's foundations. The Corps has since reinforced the complex multiple times, but the river's relentless force means the battle is never truly won. Geologists point out that the Mississippi has changed course every thousand years or so throughout geological history, and that the Corps is essentially trying to hold back an inevitable geological process with concrete.",
     "category": "science",
     "year": "1963 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Waves_of_paratroops_land_in_Holland.jpg/960px-Waves_of_paratroops_land_in_Holland.jpg",
     "videoUrl": "",
     "location": "Simmesport, Louisiana"
   },
@@ -554,7 +554,7 @@ const factsDB = [
     "fullText": "For 90 years, Texas A&M students built a massive bonfire before the annual football game against the University of Texas, a tradition that grew from a modest trash fire into an engineered log stack reaching nearly 60 feet tall. On November 18, 1999, at 2:42 AM, the 59-foot stack of approximately 5,000 logs collapsed while students were working on it, killing 12 people and injuring 27. The victims were crushed beneath an estimated two million pounds of timber. Investigations revealed that the structure had become dangerously large over the decades, growing from a simple pile into a complex, wedding-cake-shaped tower that exceeded the engineering expertise of the student builders. Texas A&M permanently ended the on-campus bonfire tradition, though an unofficial off-campus bonfire continues to this day. A memorial of 12 portals representing the victims now stands on the exact spot where the stack fell, oriented to face the UT campus in Austin.",
     "category": "event",
     "year": "1999",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/AC_DC_Black_Ice_Tour_2009_Buenos_Aires_4_de_Diciembre_%284238680962%29.jpg/960px-AC_DC_Black_Ice_Tour_2009_Buenos_Aires_4_de_Diciembre_%284238680962%29.jpg",
     "videoUrl": "",
     "location": "College Station, Texas"
   },
@@ -567,7 +567,7 @@ const factsDB = [
     "fullText": "While Austin's Congress Avenue Bridge gets all the press, the Bracken Cave and several bridge colonies in south-central Texas dwarf it in sheer bat numbers. The area around Del Rio and the Texas Hill Country hosts some of the largest bat concentrations on Earth, with colonies that can number in the tens of millions. Bracken Cave near San Antonio is home to the largest bat colony in the world, with an estimated 20 million Mexican free-tailed bats. When the colony emerges at dusk, the stream of bats is so dense it shows up on weather radar, and the exodus can take four to five hours. The bats are crucial to Texas agriculture, consuming thousands of tons of crop-damaging insects every night, providing an estimated pest-control service worth billions of dollars annually. These colonies are also critical nurseries; the females give birth in the caves and nurse their pups in clusters of up to 500 babies per square foot.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Hugo_1989-09-15_2000Z.png/960px-Hugo_1989-09-15_2000Z.png",
     "videoUrl": "",
     "location": "Near San Antonio, Texas"
   },
@@ -619,7 +619,7 @@ const factsDB = [
     "fullText": "In 1885, three teenage Hawaiian princes attending a nearby military academy took redwood planks from a local mill and surfed the waves at the mouth of the San Lorenzo River, marking the first documented instance of surfing on the US mainland. Over the following century, Santa Cruz evolved into one of the most important surfing communities in the world. Steamer Lane, the point break next to the lighthouse on West Cliff Drive, is considered one of the best cold-water surf spots on the planet. Nearby Mavericks, in Half Moon Bay, produces some of the largest rideable waves in the world, with faces exceeding 60 feet during major swells. The Santa Cruz surfing community is famously territorial, with a 'locals only' culture that has spawned books, documentaries, and more than a few parking lot confrontations. The city's official surfing museum is housed in a former lighthouse overlooking Steamer Lane.",
     "category": "culture",
     "year": "1885 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Fuerteventura_from_space.jpg/960px-Fuerteventura_from_space.jpg",
     "videoUrl": "",
     "location": "Santa Cruz, California"
   },
@@ -684,7 +684,7 @@ const factsDB = [
     "fullText": "Area 51, officially known as Groom Lake or Homey Airport, is a restricted US Air Force facility in the Nevada Test and Training Range. The US government did not even acknowledge the base existed until a 2013 CIA document release, despite decades of satellite imagery clearly showing runways, hangars, and support buildings. The facility was established in 1955 to develop the U-2 spy plane and later used for testing the SR-71 Blackbird, the F-117 Nighthawk stealth fighter, and other classified aircraft programs. The high-altitude test flights of unusual-looking aircraft are widely believed to be the source of many UFO sightings in the region. The base is surrounded by restricted airspace and extensive ground security, with warning signs that state the use of deadly force is authorized. In 2019, a Facebook joke event called 'Storm Area 51' went viral, attracting about 3,000 curious visitors to the area, though nobody actually stormed anything.",
     "category": "sighting",
     "year": "1955 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/ADurerWoodwoses1499.jpg",
     "videoUrl": "",
     "location": "Lincoln County, Nevada"
   },
@@ -723,7 +723,7 @@ const factsDB = [
     "fullText": "The city of Moore, Oklahoma, a suburb of Oklahoma City, has the dubious distinction of being one of the most tornado-struck communities in the world. Major tornadoes struck the city in 1999, 2003, 2010, 2013, and 2015. The May 3, 1999 tornado was an F5 with wind speeds measured at 302 mph, the highest ever recorded on Earth, obliterating entire neighborhoods and killing 36 people. The May 20, 2013 tornado, also an EF5, was 1.3 miles wide and killed 24 people, including seven children at Plaza Towers Elementary School. After the 2013 tornado, the state passed legislation requiring storm shelters in new public schools. The repeated devastation has made Moore a center for tornado research and storm preparedness. Residents display a remarkable resilience, rebuilding each time, though many now build their homes with reinforced safe rooms or underground shelters, acknowledging what the weather keeps trying to tell them.",
     "category": "nature",
     "year": "1999 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/F5_tornado_Elie_Manitoba_2007.jpg/960px-F5_tornado_Elie_Manitoba_2007.jpg",
     "videoUrl": "",
     "location": "Moore, Oklahoma"
   },
@@ -801,7 +801,7 @@ const factsDB = [
     "fullText": "On May 17, 2015, members of the Bandidos and Cossacks motorcycle clubs got into a brawl in the restroom of a Twin Peaks restaurant in Waco, Texas, that quickly escalated into a full-blown battle with knives, clubs, chains, and guns. The violence spilled into the parking lot, where police officers who had been stationed nearby in anticipation of trouble opened fire. When it was over, nine bikers were dead and 18 were wounded. Police arrested 177 people and set bail at $1 million each. The crime scene was extraordinary: the restaurant parking lot was littered with weapons, shell casings, and over 300 confiscated firearms. In the legal aftermath, the cases proved extremely difficult to prosecute. The first trial in 2017 ended in a mistrial, and ultimately all charges against the 177 defendants were dismissed or dropped. The incident remains one of the deadliest criminal events in modern Texas history, and questions about the police response continue to be debated.",
     "category": "crime",
     "year": "2015",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mcclennan_courthouse.jpg/960px-Mcclennan_courthouse.jpg",
     "videoUrl": "",
     "location": "Waco, Texas"
   },
@@ -853,7 +853,7 @@ const factsDB = [
     "fullText": "In the middle of the dry New Mexico plains sits the Blue Hole of Santa Rosa, a natural artesian spring that produces a bell-shaped pool about 80 feet in diameter and 80 feet deep. The water is a stunning cerulean blue due to its extreme clarity and mineral content, maintaining a constant temperature of 62 degrees Fahrenheit year-round. The spring pumps out about 3,000 gallons of water per minute, completely replacing the pool's volume every six hours. The combination of depth, clarity, and year-round accessibility has made the Blue Hole one of the most popular scuba diving training sites in the country, despite being hundreds of miles from the nearest ocean. The site sits along the old Route 66 corridor and draws an estimated 40,000 divers per year. Standing on the edge of this perfect circle of vivid blue water in the middle of the high desert is one of those experiences that makes your brain briefly question whether reality is rendering correctly.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Fairy_ring_on_a_suburban_lawn_100_1851.jpg/960px-Fairy_ring_on_a_suburban_lawn_100_1851.jpg",
     "videoUrl": "",
     "location": "Santa Rosa, New Mexico"
   },
@@ -879,7 +879,7 @@ const factsDB = [
     "fullText": "In December 1814, the British approached New Orleans with a formidable invasion force, and American General Andrew Jackson was desperately short on men and supplies. Enter Jean Lafitte, a notorious pirate and smuggler who operated out of the bayous south of New Orleans. The British had already approached Lafitte offering him a commission and land in exchange for his help, but Lafitte instead warned the Americans and offered his fleet, his men, and his substantial stockpile of flintlocks and ammunition to Jackson. Lafitte's Baratarian pirates proved decisive in the Battle of New Orleans on January 8, 1815, manning artillery positions and providing critical supplies. The Americans won a stunning victory, killing over 2,000 British soldiers while suffering only about 70 casualties. President James Madison granted Lafitte and his men a full pardon for their piracy. Lafitte returned to pirating shortly after, because apparently one good deed was enough for a lifetime.",
     "category": "people",
     "year": "1815",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/War_of_1812_Montage.jpg/960px-War_of_1812_Montage.jpg",
     "videoUrl": "",
     "location": "New Orleans, Louisiana"
   },
@@ -892,7 +892,7 @@ const factsDB = [
     "fullText": "North-central Florida, including the Tallahassee region, sits atop a vast layer of porous limestone that dissolves over time as slightly acidic rainwater percolates through it, creating underground voids. When the roof of one of these voids collapses, a sinkhole is born, sometimes with spectacular and terrifying results. Florida averages hundreds of sinkhole reports per year, and the state is considered the sinkhole capital of the United States. In 2013, a sinkhole opened directly beneath a house in Seffner, Florida, swallowing a man named Jeff Bush while he slept in his bedroom; his body was never recovered. In 2016, a sinkhole near Disney World swallowed two homes. The geological process is completely natural and has been happening for millions of years -- many of Florida's famous lakes are actually ancient sinkholes that filled with water. The combination of limestone bedrock, abundant rainfall, and Florida's booming construction (which can disrupt underground drainage patterns) means this problem is not going away anytime soon.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/VillageSquareFountainMN.jpg/960px-VillageSquareFountainMN.jpg",
     "videoUrl": "",
     "location": "Tallahassee, Florida"
   },
@@ -905,7 +905,7 @@ const factsDB = [
     "fullText": "Flying over El Paso and Ciudad Juarez, you get one of the starkest visual contrasts visible from any commercial flight path: two cities, two countries, separated by the thin ribbon of the Rio Grande and a line of fencing. The international boundary was established by the Treaty of Guadalupe Hidalgo in 1848 after the Mexican-American War, which transferred roughly half of Mexico's territory to the United States. The Rio Grande forms the border in this region, though the river has shifted course multiple times over the centuries, creating diplomatic headaches. The Chamizal dispute, caused by the river changing course and leaving Mexican land on the American side, took over 100 years to resolve. From the air at typical cruising altitude, the border is clearly visible as a line of infrastructure cutting through the urban landscape, with the architectural and developmental differences between the two sides visible to the naked eye. It is a sobering and fascinating sight.",
     "category": "landmark",
     "year": "1848 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Mollweide_Paleographic_Map_of_Earth%2C_105_Ma_%28Albian_Age%29.png/960px-Mollweide_Paleographic_Map_of_Earth%2C_105_Ma_%28Albian_Age%29.png",
     "videoUrl": "",
     "location": "El Paso, Texas"
   },
@@ -931,7 +931,7 @@ const factsDB = [
     "fullText": "Camelback Mountain rises 2,704 feet in the heart of Phoenix, and its two hiking trails -- Echo Canyon and Cholla -- look deceptively manageable from the parking lot. They are not. The trails involve steep scrambles over loose rock, exposed ridgelines, and sections that require using hands and feet to climb. Despite posted warnings and trailhead signs practically begging people to bring water, the Phoenix Fire Department responds to roughly 200 rescue calls on Camelback Mountain every year. Many rescues involve dehydrated hikers who underestimated the desert heat, which can push trail surface temperatures well above 150 degrees Fahrenheit in summer. Others involve people who attempted the hike in sandals or without water. The city has implemented periodic trail closures during extreme heat events, but determined hikers keep trying. From the summit on a clear day, you can see the entire Phoenix metropolitan area spread out below, which is genuinely spectacular -- assuming you make it up there without requiring a helicopter ride back down.",
     "category": "weird",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%22The_Thing%22_Store_Front_2016.jpg/960px-%22The_Thing%22_Store_Front_2016.jpg",
     "videoUrl": "",
     "location": "Phoenix, Arizona"
   },
@@ -944,7 +944,7 @@ const factsDB = [
     "fullText": "Opened in 2007, the Grand Canyon Skywalk is a horseshoe-shaped cantilever bridge with a glass floor and glass sides that extends 70 feet beyond the rim of the Grand Canyon, suspending visitors roughly 4,000 feet above the Colorado River. The structure was designed to withstand 71 million pounds of force and can support 120 people at a time. It was built on the Hualapai tribal reservation on the canyon's West Rim and cost $30 million to construct. Visitors must wear special fabric booties over their shoes to avoid scratching the glass floor, and cameras and phones are not allowed on the walkway (professional photos are available for purchase, naturally). The psychological challenge of stepping onto glass with a 4,000-foot drop beneath you triggers an intense fear response in many visitors, regardless of how many times they are told the glass can support their weight. Several visitors have reported being physically unable to step onto the bridge despite traveling thousands of miles specifically to do so.",
     "category": "landmark",
     "year": "2007 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg/960px-Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg",
     "videoUrl": "",
     "location": "Grand Canyon, Arizona"
   },
@@ -957,7 +957,7 @@ const factsDB = [
     "fullText": "When the Texas and Pacific Railway established a stop in west-central Texas in 1881, the town's founders named it Abilene after the famous cattle town in Kansas, hoping the tough-sounding name would attract settlers. The original Abilene, Kansas, had been the endpoint of the Chisholm Trail and one of the wildest cattle-drive towns in the 1860s and 70s, with Wild Bill Hickok serving as its marshal. Texas's Abilene ended up becoming a perfectly respectable small city best known for its three universities and nearby Dyess Air Force Base, home of the B-1B Lancer bomber fleet. The irony of naming your town after a wild frontier outpost and then becoming a quiet college town is not lost on anyone. Abilene, Texas does have one legitimate claim to frontier fame: it sits in the heart of the region where Cynthia Ann Parker was kidnapped by Comanches in 1836, an event that inspired the novel and John Wayne film 'The Searchers.'",
     "category": "history",
     "year": "1881 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Camps_bay_%2853460319478%29_%28cropped%29.jpg/960px-Camps_bay_%2853460319478%29_%28cropped%29.jpg",
     "videoUrl": "",
     "location": "Abilene, Texas"
   },
@@ -983,7 +983,7 @@ const factsDB = [
     "fullText": "When Breaking Bad became one of the most acclaimed television series in history, it turned dozens of ordinary Albuquerque locations into tourist destinations. The most famous is the former Mister Car Wash (used as the A1A Car Wash in the show), where Walter White laundered his meth profits. The Octopus Car Wash used in exterior shots is a real operating business that has had to deal with a steady stream of tourists since the show premiered. The house used as Walter White's residence on 3828 Piermont Drive has been so besieged by fans throwing pizzas on the roof (recreating a famous scene) that the owners built a fence and put up a security camera. Albuquerque has embraced its Breaking Bad fame with official filming location tours, though some residents are ambivalent about their city being most famous for a show about methamphetamine manufacturing. The show and its prequel Better Call Saul injected an estimated $385 million into the New Mexico economy over their combined production runs.",
     "category": "culture",
     "year": "2008 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Abqdowntown.jpg/960px-Abqdowntown.jpg",
     "videoUrl": "",
     "location": "Albuquerque, New Mexico"
   },
@@ -1009,7 +1009,7 @@ const factsDB = [
     "fullText": "The Okefenokee Swamp in southern Georgia is one of the largest intact freshwater ecosystems in North America. Covering over 700 square miles, the swamp sits on peat deposits up to 15 feet thick. These deposits are so unstable that walking on them causes the ground -- and any trees growing on it -- to shake and tremble, which is how the Seminole people named it. The swamp is home to over 10,000 alligators, 234 bird species, and 60 species of reptiles. In 2007 and 2011, massive wildfires burned through the swamp for months, creating so much smoke that it was visible from space and could be smelled hundreds of miles away.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Okefenokeelocatormap.png",
     "videoUrl": "",
     "location": "Waycross, Georgia"
   },
@@ -1022,7 +1022,7 @@ const factsDB = [
     "fullText": "By Georgia state law, only onions grown in a 20-county region around Vidalia can carry the Vidalia name. The secret is the soil: the area has unusually low sulfur content, which is what normally makes onions pungent and tear-inducing. Without that sulfur, these onions are so mild and sweet that people genuinely eat them raw like apples. A farmer named Mose Coleman discovered this in 1931 during the Great Depression and started selling them at the local farmers market. Today the Vidalia onion is a $150 million per year industry and Georgia's official state vegetable.",
     "category": "weird",
     "year": "1931 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mixed_onions.jpg/960px-Mixed_onions.jpg",
     "videoUrl": "",
     "location": "Vidalia, Georgia"
   },
@@ -1035,7 +1035,7 @@ const factsDB = [
     "fullText": "Camp Sumter, better known as Andersonville, was a Confederate prisoner-of-war camp in southwest Georgia that operated for only 14 months during the Civil War. Designed for 10,000 prisoners, it held over 45,000. The stockade covered just 26 acres with no shelter, contaminated water, and almost no food. Nearly 13,000 Union prisoners died there -- roughly 100 per day at the peak. The camp commander, Captain Henry Wirz, was the only Confederate official executed for war crimes. Today Andersonville is a National Historic Site and the only park in the National Park Service dedicated to all American prisoners of war throughout history.",
     "category": "history",
     "year": "1864-1865",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Battle_of_Gettysburg%2C_by_Currier_and_Ives.png/960px-Battle_of_Gettysburg%2C_by_Currier_and_Ives.png",
     "videoUrl": "",
     "location": "Andersonville, Georgia"
   },
@@ -1048,7 +1048,7 @@ const factsDB = [
     "fullText": "Providence Canyon in southwest Georgia looks like a miniature Grand Canyon, with gullies up to 150 feet deep exposing layers of colorful orange, pink, and purple soil. But unlike the Grand Canyon, this landscape is entirely man-made. In the early 1800s, poor farming practices stripped away the vegetation that held the soil in place. Rainwater did the rest, carving these massive canyons in barely 150 years. The exposed soil layers reveal geological formations dating back millions of years. It is simultaneously one of Georgia's most beautiful natural areas and one of its greatest environmental disasters, now preserved as a state park.",
     "category": "nature",
     "year": "1800s - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Canyon_River_Tree_%28165872763%29.jpeg/960px-Canyon_River_Tree_%28165872763%29.jpeg",
     "videoUrl": "",
     "location": "Lumpkin, Georgia"
   },
@@ -1061,7 +1061,7 @@ const factsDB = [
     "fullText": "Dismals Canyon in northwest Alabama is one of only a handful of places on the planet where you can see dismalites -- the larvae of a rare species of fungus gnat that produce bioluminescent light. On summer nights, guided visitors hike into the canyon after dark and the rock walls come alive with thousands of tiny blue-green points of light, like a galaxy compressed into a ravine. The canyon itself is a National Natural Landmark, filled with ancient trees, mossy boulders, and a year-round stream. The dismalites use their glow to attract prey into sticky silk threads. It looks like something from a science fiction movie.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/RobbieKnievelTexasMotorSpeedway.jpg/960px-RobbieKnievelTexasMotorSpeedway.jpg",
     "videoUrl": "",
     "location": "Phil Campbell, Alabama"
   },
@@ -1074,7 +1074,7 @@ const factsDB = [
     "fullText": "On the grounds of St. Bernard Abbey in Cullman, Alabama sits one of the strangest art installations in America. Brother Joseph Zoettl, a hunchbacked Benedictine monk from Bavaria, spent nearly 50 years constructing 125 miniature reproductions of famous landmarks from around the world. Using concrete, marble, cold cream jars, toilet floats, fishing lures, and costume jewelry, he recreated the Roman Colosseum, St. Peter's Basilica, the Leaning Tower of Pisa, the Temple of Jerusalem, and dozens more. The miniatures cover a four-acre hillside garden that Brother Joseph called his 'hobby' until his death in 1961.",
     "category": "weird",
     "year": "1912-1958",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Westminster_Abbey_St_Peter.jpg/960px-Westminster_Abbey_St_Peter.jpg",
     "videoUrl": "",
     "location": "Cullman, Alabama"
   },
@@ -1087,7 +1087,7 @@ const factsDB = [
     "fullText": "On March 7, 1965, approximately 600 civil rights marchers set out from Selma, Alabama toward the state capital of Montgomery. As they crossed the Edmund Pettus Bridge, they were met by Alabama state troopers who attacked them with billy clubs, tear gas, and bullwhips. The brutality was broadcast on national television, interrupting the ABC Sunday Night Movie. The footage was so shocking that it galvanized public support for voting rights. Two weeks later, Dr. Martin Luther King Jr. led a successful march across the same bridge with federal protection. Five months after Bloody Sunday, President Johnson signed the Voting Rights Act of 1965.",
     "category": "history",
     "year": "1965",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg/960px-Great_Seal_of_the_United_States_%28obverse%29.svg.png",
     "videoUrl": "",
     "location": "Selma, Alabama"
   },
@@ -1100,7 +1100,7 @@ const factsDB = [
     "fullText": "U.S. Highway 61 runs 1,400 miles from Wyoming to New Orleans, but the stretch through the Mississippi Delta is sacred ground for music. Muddy Waters grew up just off it in Clarksdale. B.B. King played his first gigs in juke joints along it. Robert Johnson supposedly sold his soul at the crossroads where it meets Highway 49. The cotton fields lining the highway are where the work songs that became the blues were first sung. Bob Dylan named his groundbreaking 1965 album 'Highway 61 Revisited.' Without this road and the people who lived along it, there would be no blues, no rock and roll, no R&B, and no hip-hop. Every popular music genre traces back here.",
     "category": "culture",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Elvis_Presley_promoting_Jailhouse_Rock.jpg/960px-Elvis_Presley_promoting_Jailhouse_Rock.jpg",
     "videoUrl": "",
     "location": "Mississippi Delta"
   },
@@ -1113,7 +1113,7 @@ const factsDB = [
     "fullText": "Windsor Plantation was the largest and most opulent antebellum mansion ever built in Mississippi. Completed in 1861 at a cost of $175,000 (roughly $6 million today), the four-story Greek Revival mansion featured 25 rooms, 23 massive Corinthian columns, and an observatory on the roof. During the Civil War, both Union and Confederate forces used its rooftop as an observation post. The house survived the war unscathed. Then in 1890, a guest at a house party dropped a lit cigarette, and the entire mansion burned to the ground. All that remains are the 23 hauntingly beautiful columns, standing like sentinels in the forest.",
     "category": "history",
     "year": "1861-1890",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/State_Fair_Time%21_%2814860351256%29_%28cropped3%29.jpg",
     "videoUrl": "",
     "location": "Port Gibson, Mississippi"
   },
@@ -1126,7 +1126,7 @@ const factsDB = [
     "fullText": "The Siege of Vicksburg was one of the most pivotal -- and brutal -- campaigns of the Civil War. For 47 days, Union forces under General Grant bombarded the city from land and river while its residents hid in caves dug into the hillsides. Food ran so scarce that people ate mules, rats, and wallpaper paste. When the Confederate garrison finally surrendered on July 4, 1863, it gave the Union complete control of the Mississippi River and effectively cut the Confederacy in two. The timing of the surrender -- on Independence Day -- was so traumatic for Vicksburg's residents that the city refused to officially celebrate July 4th for the next 81 years, finally relenting in 1945 after World War II.",
     "category": "history",
     "year": "1863",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Parliament-Ottawa.jpg/960px-Parliament-Ottawa.jpg",
     "videoUrl": "",
     "location": "Vicksburg, Mississippi"
   },
@@ -1139,7 +1139,7 @@ const factsDB = [
     "fullText": "Poverty Point in northeast Louisiana is one of the most mind-bending archaeological sites in North America. Built between 1700 and 1100 BCE -- while Stonehenge was still being modified and the Egyptian New Kingdom was at its height -- it features massive earthen mounds and six concentric half-circle ridges spanning three-quarters of a mile. The largest mound is 72 feet tall. The builders had no metal tools, no draft animals, no wheels, and no pottery at the time of early construction. Archaeologists estimate it would have taken 5 million hours of labor to build. Who these people were and why they built it remains largely a mystery. It is now a UNESCO World Heritage Site.",
     "category": "history",
     "year": "1700 BCE",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Flag_of_Louisiana.svg/960px-Flag_of_Louisiana.svg.png",
     "videoUrl": "",
     "location": "Pioneer, Louisiana"
   },
@@ -1165,7 +1165,7 @@ const factsDB = [
     "fullText": "The end of Bonnie and Clyde came on a quiet stretch of Highway 154 near Gibsland, Louisiana. Texas Ranger Frank Hamer had spent 102 days tracking the outlaw couple and assembled a six-man posse that hid in the bushes along the road. When Bonnie and Clyde stopped to help a staged disabled truck, the lawmen opened fire without warning. They fired approximately 167 rounds in under 16 seconds. The car was hit so many times it was nearly unrecognizable. Both were killed instantly. The ambush site is still marked, and bullet-riddled remnants of their exploits are displayed in various museums. The coroner counted 25 bullet wounds on Clyde and 23 on Bonnie.",
     "category": "crime",
     "year": "1934",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bonnie_Parker_and_Clyde_Barrow.jpg/960px-Bonnie_Parker_and_Clyde_Barrow.jpg",
     "videoUrl": "",
     "location": "Gibsland, Louisiana"
   },
@@ -1178,7 +1178,7 @@ const factsDB = [
     "fullText": "Palo Duro Canyon stretches 120 miles long and 20 miles wide across the Texas Panhandle, making it the second-largest canyon system in the US after the Grand Canyon. Its red, orange, and yellow layers of rock tell 250 million years of geological history. In 1874, Colonel Ranald Mackenzie led U.S. troops into the canyon and captured the Comanche's entire horse herd of about 1,400 animals. Rather than risk the Comanche recapturing them, Mackenzie ordered all 1,400 horses shot. The act effectively ended the Red River War and the Comanche's resistance, as they could not survive on the plains without horses.",
     "category": "history",
     "year": "1874",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Canyon_River_Tree_%28165872763%29.jpeg/960px-Canyon_River_Tree_%28165872763%29.jpeg",
     "videoUrl": "",
     "location": "Canyon, Texas"
   },
@@ -1191,7 +1191,7 @@ const factsDB = [
     "fullText": "On the evening of August 25, 1951, three science professors sitting in a backyard in Lubbock, Texas watched a semicircle of blue-green lights pass silently overhead at tremendous speed. Over the next two weeks, hundreds of Lubbock residents reported seeing the same V-shaped formations. A freshman at Texas Tech named Carl Hart Jr. managed to photograph the lights from his bedroom window. Project Blue Book -- the Air Force's official UFO investigation -- looked into the Lubbock Lights extensively. Their final report classified the case as 'identified' but then, remarkably, stated that the actual identification was classified and could not be released. It remains one of the most credible mass UFO sightings in American history.",
     "category": "sighting",
     "year": "1951",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Lubbock_Skyline.jpg/960px-Lubbock_Skyline.jpg",
     "videoUrl": "",
     "location": "Lubbock, Texas"
   },
@@ -1204,7 +1204,7 @@ const factsDB = [
     "fullText": "In Edwards County, Texas, the earth simply opens up. The Devil's Sinkhole is a vertical shaft that drops 350 feet straight down into a bell-shaped cavern roughly 300 feet wide. It was first described by early settlers who reportedly lowered lanterns on ropes and watched them disappear into blackness. The sinkhole is the summer home to approximately 3 million Mexican free-tailed bats, one of the largest bat colonies in the world. Every evening from May to October, the bats emerge in a spiraling column that takes 30 to 45 minutes to fully exit. The spectacle is visible on weather radar and attracts visitors from around the world.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/1755_james_ayscough.jpg/960px-1755_james_ayscough.jpg",
     "videoUrl": "",
     "location": "Rocksprings, Texas"
   },
@@ -1217,7 +1217,7 @@ const factsDB = [
     "fullText": "In the 1880s, the vast stretch of west Texas between the Pecos River and the Rio Grande had no law enforcement whatsoever. Into this void stepped Roy Bean, a saloon owner who appointed himself Justice of the Peace. Bean held court on his saloon porch, kept a pet bear chained to a post, and dispensed a unique brand of frontier justice. He once fined a corpse $40 for carrying a concealed weapon -- and pocketed the cash. When a railroad worker killed a Chinese laborer, Bean acquitted the killer, declaring he had searched his law book and found no statute against killing a Chinese man. He named the town Langtry after actress Lillie Langtry, whom he adored but never met.",
     "category": "people",
     "year": "1882-1903",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Pecos_texas_stores.jpg/960px-Pecos_texas_stores.jpg",
     "videoUrl": "",
     "location": "Langtry, Texas"
   },
@@ -1230,7 +1230,7 @@ const factsDB = [
     "fullText": "The Permian Basin, centered around Midland and Odessa, Texas, is the spiritual home of American high school football. The 2004 book and subsequent TV series 'Friday Night Lights' documented the intensity of Permian High School football, but it barely scratched the surface. Ratliff Stadium in Odessa seats 19,032 people for high school games. Some teams have annual budgets exceeding $1 million. During football season, the towns effectively shut down on Friday nights. Businesses close early, churches reschedule services, and the entire community packs the stadium. The region has produced dozens of NFL players and multiple state championships. It is simultaneously inspiring and slightly terrifying.",
     "category": "culture",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Edward_Burne-Jones_-_The_Adoration_of_the_Magi_-_Google_Art_Project.jpg/960px-Edward_Burne-Jones_-_The_Adoration_of_the_Magi_-_Google_Art_Project.jpg",
     "videoUrl": "",
     "location": "Odessa, Texas"
   },
@@ -1243,7 +1243,7 @@ const factsDB = [
     "fullText": "The highest point in Texas is not in the Hill Country or the panhandle -- it is Guadalupe Peak, rising 8,751 feet in the far western corner of the state near the New Mexico border. What makes this mountain extraordinary is what it is made of: an ancient limestone reef. 265 million years ago, this part of Texas was a shallow sea, and a massive reef system grew along its edge -- much like the Great Barrier Reef of today. When the sea dried up, the reef was buried and then uplifted by tectonic forces. The Guadalupe Mountains are the most well-preserved Permian-era fossil reef in the world, and scientists come from around the globe to study them.",
     "category": "science",
     "year": "265 million years ago",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Kingman_Reef_NWR._Photo_credit-_Susan_White-USFWS_%2812198955306%29.jpg/960px-Kingman_Reef_NWR._Photo_credit-_Susan_White-USFWS_%2812198955306%29.jpg",
     "videoUrl": "",
     "location": "Guadalupe Mountains, Texas"
   },
@@ -1256,7 +1256,7 @@ const factsDB = [
     "fullText": "On the Plains of San Agustin in central New Mexico sit 27 radio telescope dishes, each 82 feet in diameter and weighing 230 tons, arranged in a Y-shaped pattern that can spread up to 22 miles across. The Very Large Array (VLA) is one of the world's most productive astronomical observatories. By combining signals from all 27 dishes, the VLA achieves the resolution of a single antenna 22 miles wide. It has made discoveries ranging from ice on Mercury to the first Einstein ring (a gravitational lens). The VLA appeared in the movie Contact with Jodie Foster and in the TV series Breaking Bad. The dishes are moved along railroad tracks to change the array's configuration four times per year.",
     "category": "science",
     "year": "1980 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Muzak_truck.jpg/960px-Muzak_truck.jpg",
     "videoUrl": "",
     "location": "Socorro, New Mexico"
   },
@@ -1269,7 +1269,7 @@ const factsDB = [
     "fullText": "Ghost Ranch in northern New Mexico is where Georgia O'Keeffe found the landscape that would define her art. She first visited in 1934, bought a house there in 1940, and painted the red hills, bleached bones, and dramatic mesas obsessively for the next four decades. 'It's my private mountain,' she said of Cerro Pedernal, the flat-topped peak visible from her studio. 'God told me if I painted it enough, I could have it.' The ranch is also a paleontological goldmine -- in 1947, thousands of Coelophysis dinosaur fossils were discovered here, making it one of the most significant fossil sites in the world. O'Keeffe's ashes were scattered on Pedernal after her death in 1986.",
     "category": "people",
     "year": "1934-1986",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Georgia_O%27Keeffe_MET_DP230868.jpg/960px-Georgia_O%27Keeffe_MET_DP230868.jpg",
     "videoUrl": "",
     "location": "Abiquiu, New Mexico"
   },
@@ -1282,7 +1282,7 @@ const factsDB = [
     "fullText": "In the middle of the Jornada del Muerto desert in southern New Mexico -- the same desert where the first atomic bomb was detonated -- sits the world's first purpose-built commercial spaceport. Spaceport America, designed by Foster + Partners, is a striking building that looks like it was designed by aliens. Virgin Galactic uses it as its operational headquarters, launching wealthy tourists to the edge of space on suborbital flights. The facility cost $220 million to build and features a 12,000-foot runway, a hangar large enough for multiple spacecraft, and a mission control center. It sits on 18,000 acres of desert that is restricted airspace.",
     "category": "science",
     "year": "2011 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Baikonur_Cosmodrome_Soyuz_launch_pad.jpg/960px-Baikonur_Cosmodrome_Soyuz_launch_pad.jpg",
     "videoUrl": "",
     "location": "Truth or Consequences, New Mexico"
   },
@@ -1295,7 +1295,7 @@ const factsDB = [
     "fullText": "The Painted Desert stretches 150 miles across northern Arizona in an otherworldly display of color. The bands of red, orange, pink, blue, grey, and lavender are caused by different mineral deposits in the exposed rock layers -- iron oxides create reds and yellows, manganese creates blues and purples. The colors visibly shift throughout the day as the sun angle changes, making sunrise and sunset almost psychedelic. The Painted Desert overlaps with the Petrified Forest, where 225-million-year-old trees have turned to solid stone with crystallized interiors that sparkle like gemstones. Early travelers on Route 66 were so taken with the petrified wood that they stole massive quantities, leading to the establishment of the national park.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Flower_flounder_in_Kona_may_2010.jpg/960px-Flower_flounder_in_Kona_may_2010.jpg",
     "videoUrl": "",
     "location": "Painted Desert, Arizona"
   },
@@ -1308,7 +1308,7 @@ const factsDB = [
     "fullText": "If you have ever driven I-10 through southern Arizona, you have seen the billboards. For over 200 miles, bright yellow signs appear every few miles: 'THE THING?' 'MYSTERY OF THE DESERT!' 'WHAT IS IT?' The campaign is so relentless that even the most disciplined travelers eventually give in and pull off at the exit. What they find is a gas station, a Dairy Queen, and a shed where you pay a dollar to walk through a series of rooms containing increasingly bizarre displays culminating in... THE THING. We won't spoil it. The attraction has been running since 1965 and the billboard campaign is widely considered one of the most successful roadside advertising gambits in American history.",
     "category": "weird",
     "year": "1965 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Glaston2024_2806_300624_%28129_of_173%29_%28cropped%29.jpg/960px-Glaston2024_2806_300624_%28129_of_173%29_%28cropped%29.jpg",
     "videoUrl": "",
     "location": "Dragoon, Arizona"
   },
@@ -1321,7 +1321,7 @@ const factsDB = [
     "fullText": "Joshua trees are found only in the Mojave Desert, primarily in the national park that bears their name. These bizarre plants -- technically not trees but giant yuccas -- grow in twisted, arm-raising shapes that struck Mormon settlers in the 1850s as resembling the biblical figure Joshua raising his arms in prayer. Individual Joshua trees can live for over 1,000 years and grow up to 40 feet tall. They depend entirely on one species of moth for pollination -- the yucca moth, which in turn depends entirely on Joshua trees to lay its eggs. If either species disappears, both go extinct. Climate change is currently threatening this relationship, and some models predict Joshua trees could disappear from 90% of their current range by 2100.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Mormon-book.jpg",
     "videoUrl": "",
     "location": "Joshua Tree, California"
   },
@@ -1334,7 +1334,7 @@ const factsDB = [
     "fullText": "Bombay Beach sits on the eastern shore of the Salton Sea in one of the lowest, hottest, and most desolate places in California -- 223 feet below sea level. In the 1950s and 60s it was a thriving resort community. As the Salton Sea became increasingly toxic and salty, the town emptied out. What remained was a post-apocalyptic landscape of abandoned trailers, dead fish, and crumbling infrastructure. Then artists discovered it. Over the past decade, Bombay Beach has become an accidental art colony. Sculptures, installations, and murals rise from the ruins. An annual event called the Bombay Beach Biennale draws thousands for music, art, and parties in the ruins. It is equal parts beautiful and deeply unsettling.",
     "category": "culture",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mumbai_03-2016_30_Gateway_of_India.jpg/960px-Mumbai_03-2016_30_Gateway_of_India.jpg",
     "videoUrl": "",
     "location": "Bombay Beach, California"
   },
@@ -1347,7 +1347,7 @@ const factsDB = [
     "fullText": "The Hotel del Coronado is one of the last surviving Victorian beach resorts in America. Opened in 1888, it has hosted presidents, royalty, and movie stars -- the Marilyn Monroe film 'Some Like It Hot' was filmed here. But the hotel's most persistent guest is Kate Morgan, who checked into Room 302 on November 24, 1892. Five days later, she was found dead on the steps leading to the beach with a gunshot wound. The death was ruled a suicide, but inconsistencies in the evidence have fueled debate ever since. Guests in Room 3327 (formerly 302) report flickering lights, sudden cold spots, doors opening on their own, and the ghostly figure of a young woman in a black lace dress.",
     "category": "weird",
     "year": "1892 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Trauma_Towers.jpg/960px-Trauma_Towers.jpg",
     "videoUrl": "",
     "location": "Coronado, California"
   },
@@ -1360,7 +1360,7 @@ const factsDB = [
     "fullText": "The Pecos River High Bridge carries Highway 90 across the Pecos River canyon at a height of 273 feet. The original bridge, built in 1892, was considered an engineering marvel of the Southern Pacific Railroad. The current highway bridge was the highest in Texas until 2003 and attracted bungee jumpers from around the world despite the questionable legality of the activity. The canyon below is stunning -- the green Pecos River cuts through layers of white limestone in the otherwise brown desert landscape. The area is also home to some of the oldest known rock art in North America, with pictographs in nearby caves dating back over 4,000 years.",
     "category": "landmark",
     "year": "1892 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Base_jump.webm/600px--Base_jump.webm.jpg",
     "videoUrl": "",
     "location": "Comstock, Texas"
   },
@@ -1373,7 +1373,7 @@ const factsDB = [
     "fullText": "In August 1955, 14-year-old Emmett Till traveled from Chicago to visit relatives in Money, Mississippi. After allegedly whistling at Carolyn Bryant, a white woman at a grocery store, Till was kidnapped from his great-uncle's home in the middle of the night by Bryant's husband Roy and his half-brother. They beat Till brutally, shot him, and threw his body in the Tallahatchie River weighted with a cotton gin fan. His mother, Mamie Till-Mobley, insisted on an open-casket funeral so the world could see what had been done. The photographs published in Jet magazine shocked the nation. An all-white jury acquitted the killers in 67 minutes. The murder and its aftermath are widely credited as the spark that ignited the modern civil rights movement.",
     "category": "history",
     "year": "1955",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/960px-Flag_of_the_Taliban.svg.png",
     "videoUrl": "",
     "location": "Money, Mississippi"
   },
@@ -1386,7 +1386,7 @@ const factsDB = [
     "fullText": "In 1950, Ralph Edwards, host of the popular NBC radio show 'Truth or Consequences,' announced that he would broadcast the show's 10th anniversary from the first town in America to rename itself after the program. Hot Springs, New Mexico -- a small spa town -- took the bait. Residents voted to change their name, and Edwards broadcast the show from there. He returned every May for the next 50 years for a fiesta. Multiple attempts to change the name back have failed at the ballot box. The town, still called Truth or Consequences (T or C for short), embraces its strange identity. It is now also home to Spaceport America, making it perhaps the only town named after a game show that also launches people into space.",
     "category": "weird",
     "year": "1950",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Enterprise-National-League-Colour-Badged.png/960px-Enterprise-National-League-Colour-Badged.png",
     "videoUrl": "",
     "location": "Truth or Consequences, New Mexico"
   },
@@ -1399,7 +1399,7 @@ const factsDB = [
     "fullText": "Breaux Bridge, a small Cajun town straddling Bayou Teche, declared itself the Crawfish Capital of the World in 1959 and nobody has successfully challenged the claim since. Louisiana produces over 100 million pounds of crawfish annually, and the area around Breaux Bridge is the epicenter. The annual Breaux Bridge Crawfish Festival, held every May since 1960, features crawfish eating contests, crawfish racing (yes, the crawfish race each other), Cajun music, and a Crawfish Festival Queen pageant. A typical Louisiana crawfish boil involves massive pots of crawfish with corn, potatoes, and enough cayenne pepper to make your lips go numb. It is a deeply serious cultural institution disguised as a party.",
     "category": "culture",
     "year": "1959 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Breaux_Bridge_Louisiana_Main_Street_2018.jpg/960px-Breaux_Bridge_Louisiana_Main_Street_2018.jpg",
     "videoUrl": "",
     "location": "Breaux Bridge, Louisiana"
   },
@@ -1412,7 +1412,7 @@ const factsDB = [
     "fullText": "If your suitcase vanished at the airport and never came back, it probably ended up in Scottsboro, Alabama. The Unclaimed Baggage Center has an exclusive contract with major U.S. airlines to purchase all permanently lost luggage. About 7,000 new items arrive daily, and workers sort through everything from designer clothing and electronics to bizarre one-offs like ancient Egyptian artifacts, a full suit of armor, a live rattlesnake, and a guidance system from an F-16 fighter jet. The store covers a full city block and draws over a million visitors per year. Only about 0.03% of checked bags are permanently lost, but that still adds up to a staggering volume of stuff.",
     "category": "weird",
     "year": "1970 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/George_Orwell_press_photo.jpg/960px-George_Orwell_press_photo.jpg",
     "videoUrl": "",
     "location": "Scottsboro, Alabama"
   },
@@ -1425,7 +1425,7 @@ const factsDB = [
     "fullText": "On the night of December 16, 1773, a group of American colonists disguised as Mohawk Indians boarded three ships in Boston Harbor and dumped 342 chests of British East India Company tea into the water. The act was a protest against the Tea Act, which granted the company a monopoly on tea sales in the colonies. The destroyed tea was worth about 10,000 British pounds at the time, roughly $1.7 million today. The British Parliament responded with the Coercive Acts, which the colonists called the Intolerable Acts, ultimately pushing the colonies toward revolution. The harbor supposedly smelled like tea for days afterward. It remains the most consequential act of vandalism in American history.",
     "category": "history",
     "year": "1773",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/John_Trumbull_-_Alexander_Hamilton_-_Google_Art_Project.jpg/960px-John_Trumbull_-_Alexander_Hamilton_-_Google_Art_Project.jpg",
     "videoUrl": "",
     "location": "Boston, Massachusetts"
   },
@@ -1438,7 +1438,7 @@ const factsDB = [
     "fullText": "Fenway Park, opened in 1912, is the oldest active Major League Baseball stadium in America. Its most famous feature, the Green Monster in left field, stands 37 feet, 2 inches tall -- roughly the height of a four-story building. The wall exists because the park was built on a tight city block and the architects needed to contain the field. Before 1947 the wall was covered in advertisements; then it was painted green, and the name stuck. The manual scoreboard embedded in the wall is still operated by hand from inside. The park seats only about 37,000, making it one of the smallest in the majors, but tickets are among the hardest to get in all of professional sports. A seat atop the Monster is considered one of the great experiences in American sports.",
     "category": "landmark",
     "year": "1912",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/131023-F-PR861-033_Hanscom_participates_in_World_Series_pregame_events.jpg/960px-131023-F-PR861-033_Hanscom_participates_in_World_Series_pregame_events.jpg",
     "videoUrl": "",
     "location": "Boston, Massachusetts"
   },
@@ -1451,7 +1451,7 @@ const factsDB = [
     "fullText": "Harvard University was established in 1636 by the Massachusetts Bay Colony, making it the oldest institution of higher education in the United States. It predates the Declaration of Independence by 140 years and the U.S. Constitution by 151 years. The school was named after John Harvard, a clergyman who left the school his library and half his estate upon his death. Harvard's endowment exceeds $50 billion, larger than the GDP of over 100 countries. The famous John Harvard statue in Harvard Yard is known as the Statue of Three Lies because the inscription gets his name, the founding date, and his role wrong. Eight U.S. presidents graduated from Harvard, more than any other university.",
     "category": "landmark",
     "year": "1636",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Ivy_League_map.svg/960px-Ivy_League_map.svg.png",
     "videoUrl": "",
     "location": "Cambridge, Massachusetts"
   },
@@ -1464,7 +1464,7 @@ const factsDB = [
     "fullText": "The Empire State Building was constructed between March 1930 and April 1931 -- just 410 days from groundbreaking to opening. At peak pace, workers completed 14 floors in 10 days. The building was part of a fierce race with the Chrysler Building to claim the title of world's tallest. The Chrysler team secretly assembled a 185-foot spire inside the building and popped it out of the top at the last moment. The Empire State team responded by adding a mooring mast for dirigibles, pushing the building to 1,454 feet. During the Depression, the building had so few tenants it was nicknamed the Empty State Building. It held the tallest-building title for 40 years until the World Trade Center surpassed it in 1970.",
     "category": "landmark",
     "year": "1931",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Silver_Pitcher_presented_to_White_House_%28Portrait%29.jpg/960px-Silver_Pitcher_presented_to_White_House_%28Portrait%29.jpg",
     "videoUrl": "",
     "location": "New York City, New York"
   },
@@ -1477,7 +1477,7 @@ const factsDB = [
     "fullText": "The Statue of Liberty was a gift from France, designed by sculptor Frederic Auguste Bartholdi with an iron framework engineered by Gustave Eiffel of Eiffel Tower fame. The statue was built in Paris, then disassembled into 350 pieces and shipped across the Atlantic in 214 crates aboard the French frigate Isere. Reassembly on what was then Bedloe's Island took four months. Lady Liberty stands 305 feet from the ground to the tip of her torch. Her copper skin is only 3/32 of an inch thick -- about the thickness of two pennies -- and the green patina that covers her is the result of over a century of oxidation. The seven rays on her crown represent the seven continents and seven seas.",
     "category": "landmark",
     "year": "1886",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Manatvs_gelegen_op_de_Noot_Riuier.jpg/960px-Manatvs_gelegen_op_de_Noot_Riuier.jpg",
     "videoUrl": "",
     "location": "New York City, New York"
   },
@@ -1490,7 +1490,7 @@ const factsDB = [
     "fullText": "Grand Central Terminal opened in 1913 and processes about 750,000 visitors per day, making it one of the most visited tourist attractions in the world. The main concourse ceiling features an astronomical mural depicting 2,500 stars illuminated with fiber optics. The constellations are painted in reverse -- as if viewed from outside the celestial sphere looking in. Some say this was a deliberate artistic choice to show God's perspective; others say the artist, Paul Cesar Helleu, simply made a mistake. A small dark patch near the corner of the ceiling was left uncleaned during a 1998 restoration to show the decades of tar and nicotine that had accumulated from cigarette smoke. There is also a secret train platform, Track 61, that was used by President Franklin Roosevelt to enter the Waldorf Astoria hotel privately.",
     "category": "landmark",
     "year": "1913",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/HelsinkiStationEntranceAndClockTower.jpg/960px-HelsinkiStationEntranceAndClockTower.jpg",
     "videoUrl": "",
     "location": "New York City, New York"
   },
@@ -1503,7 +1503,7 @@ const factsDB = [
     "fullText": "Times Square was renamed from Longacre Square in 1904 when the New York Times moved its headquarters there. Before that, it was the hub of New York's horse-and-carriage trade. Today it draws roughly 50 million visitors per year and its electronic billboards consume enough electricity to power about 161 average homes. The famous New Year's Eve ball drop has been happening since 1907, when the first ball -- made of iron and wood and covered in 100 light bulbs -- was lowered from the Times Tower. The current ball weighs nearly 12,000 pounds and is covered in 2,688 Waterford Crystal triangles. Advertising space on a Times Square billboard can cost upward of $3 million per month. It is one of the most photographed locations on Earth.",
     "category": "landmark",
     "year": "1904",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/CrossroadsAble2.gif",
     "videoUrl": "",
     "location": "New York City, New York"
   },
@@ -1516,7 +1516,7 @@ const factsDB = [
     "fullText": "The Brooklyn Bridge took 14 years to build and was the longest suspension bridge in the world when it opened in 1883. Its designer, John Augustus Roebling, died from a tetanus infection caused by an injury at the construction site before work even began. His son Washington Roebling took over but was struck by decompression sickness from working in the underwater caissons and supervised the rest of the project from his apartment window using a telescope. The public was terrified the bridge would collapse, so P.T. Barnum famously walked 21 elephants across it to demonstrate its strength. Tragically, just a week after opening, a woman tripped on the stairs and someone screamed that the bridge was collapsing, causing a stampede that killed 12 people. The bridge remains one of the most iconic structures in America.",
     "category": "landmark",
     "year": "1883",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Boston_Highway_System_Pre_Post_Big_Dig.gif/960px-Boston_Highway_System_Pre_Post_Big_Dig.gif",
     "videoUrl": "",
     "location": "New York City, New York"
   },
@@ -1529,7 +1529,7 @@ const factsDB = [
     "fullText": "Philadelphia served as the de facto capital of the United States from 1790 to 1800 while Washington, D.C. was being built. Independence Hall hosted both the signing of the Declaration of Independence in 1776 and the drafting of the Constitution in 1787. The Liberty Bell, which cracked the first time it was rung and was recast twice, sits just steps away. Philadelphia was also home to America's first hospital, first zoo, first stock exchange, and first daily newspaper. Benjamin Franklin, perhaps the city's most famous resident, established the country's first lending library and first volunteer fire department here. The city's nickname, the City of Brotherly Love, comes from the Greek roots of its name: philos (love) and adelphos (brother).",
     "category": "history",
     "year": "1776",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ancientlibraryalex.jpg/960px-Ancientlibraryalex.jpg",
     "videoUrl": "",
     "location": "Philadelphia, Pennsylvania"
   },
@@ -1542,7 +1542,7 @@ const factsDB = [
     "fullText": "The 72 steps leading up to the Philadelphia Museum of Art became one of the most recognizable movie landmarks in the world after Sylvester Stallone sprinted up them in the 1976 film Rocky. The scene, set to Bill Conti's 'Gonna Fly Now,' has been imitated by millions of visitors. The city installed a bronze Rocky statue at the base in 1982, which was originally a prop from Rocky III. The museum itself is world-class, housing over 240,000 works of art including significant collections of Impressionist and Post-Impressionist paintings. But surveys suggest that more visitors come to run the steps and pose with the statue than to see the art. The steps have become such a cultural institution that the city officially renamed them the Rocky Steps.",
     "category": "culture",
     "year": "1976",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Kellogg_World_Headquarters_%28battlecreekcvb%29_001.jpg/960px-Kellogg_World_Headquarters_%28battlecreekcvb%29_001.jpg",
     "videoUrl": "",
     "location": "Philadelphia, Pennsylvania"
   },
@@ -1555,7 +1555,7 @@ const factsDB = [
     "fullText": "The White House was designed by James Hoban, an Irish-born architect living in Charleston, South Carolina, who won a public design competition in 1792. His prize was $500 -- equivalent to about $16,000 today. President George Washington oversaw the construction but never lived in the building; John Adams was the first resident in 1800. The British burned the White House in 1814 during the War of 1812, and it had to be largely rebuilt. The building has 132 rooms, 35 bathrooms, 28 fireplaces, 8 staircases, 3 elevators, and a bowling alley that Richard Nixon installed. The famous white paint was first applied in 1818 to cover smoke damage from the British burning. There are about 6,000 visitors per day.",
     "category": "landmark",
     "year": "1800",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Tricolour_Cockade.svg/960px-Tricolour_Cockade.svg.png",
     "videoUrl": "",
     "location": "Washington, District of Columbia"
   },
@@ -1568,7 +1568,7 @@ const factsDB = [
     "fullText": "The Vietnam Veterans Memorial was designed by Maya Lin, a 21-year-old Yale architecture student who submitted the design as part of a class project and won a national competition that drew 1,421 entries. The memorial consists of two walls of black granite sinking into the earth, inscribed with the names of 58,320 service members who died or went missing during the Vietnam War. The polished surface reflects the viewer's own face among the names, a deliberate design choice. The memorial was controversial when it was unveiled in 1982 -- critics called it a 'black gash of shame' -- but it quickly became one of the most visited and emotionally powerful memorials in Washington. Visitors leave personal items at the wall: letters, photographs, medals, dog tags. The National Park Service collects and catalogs every item.",
     "category": "landmark",
     "year": "1982",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/960px-Wikipedia-logo-v2.svg.png",
     "videoUrl": "",
     "location": "Washington, District of Columbia"
   },
@@ -1581,7 +1581,7 @@ const factsDB = [
     "fullText": "The Smithsonian Institution is the world's largest museum, education, and research complex, holding roughly 155 million artifacts, specimens, and works of art across 21 museums and the National Zoo. Every single one is free to enter. The collection includes the Hope Diamond, Dorothy's ruby slippers from The Wizard of Oz, the original Star-Spangled Banner, the Wright Brothers' 1903 Flyer, and Abraham Lincoln's top hat. The institution was founded in 1846 with funds bequeathed by British scientist James Smithson, who had never visited the United States. Only about 1% of the collection is on display at any given time. The rest is stored in facilities around the country, making it one of the great hidden treasure troves of human civilization.",
     "category": "landmark",
     "year": "1846",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Smithsonian_Building_Sunlight.jpg/960px-Smithsonian_Building_Sunlight.jpg",
     "videoUrl": "",
     "location": "Washington, District of Columbia"
   },
@@ -1594,7 +1594,7 @@ const factsDB = [
     "fullText": "Louis' Lunch, a tiny lunch counter in New Haven, Connecticut, claims to have invented the hamburger sandwich in 1900 when owner Louis Lassen ground up beef trimmings and served them between two slices of toast to a customer in a hurry. The Library of Congress has recognized the claim, though several other cities dispute it. Louis' Lunch is still open and still makes burgers on the original cast-iron vertical broilers from 1898. They serve the burgers on white toast with onion, tomato, and cheese only. Ketchup is absolutely forbidden -- ask for it and you may be asked to leave. The tiny brick building was nearly demolished in 1974 but was saved and physically moved to its current location. It is one of the oldest continuously operating restaurants in the United States.",
     "category": "culture",
     "year": "1900",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Bundesarchiv_Bild_183-H04436%2C_Klagenfurt%2C_Adolf_Hitler%2C_Ehrenkompanie.jpg",
     "videoUrl": "",
     "location": "New Haven, Connecticut"
   },
@@ -1607,7 +1607,7 @@ const factsDB = [
     "fullText": "Thomas Edison established his famous laboratory in Menlo Park, New Jersey in 1876 and proceeded to invent the future. Over the next decade, he and his team developed the phonograph, the first practical incandescent light bulb, and the electrical distribution system that would power the modern world. Edison called the lab his 'invention factory' and staffed it with a team of skilled machinists, clockmakers, and scientists. The approach -- industrial-scale invention with a team of specialists -- was itself an invention, essentially creating the model for modern corporate R&D labs. Edison held 1,093 U.S. patents, a record that stood for decades. He famously slept only three to four hours per night and expected his employees to match his relentless schedule. The lab site is now a National Historical Park.",
     "category": "science",
     "year": "1876",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Tesla_circa_1890.jpeg",
     "videoUrl": "",
     "location": "Menlo Park, New Jersey"
   },
@@ -1620,7 +1620,7 @@ const factsDB = [
     "fullText": "Albert Einstein fled Nazi Germany in 1933 and accepted a position at the Institute for Advanced Study in Princeton, New Jersey. He would spend the remaining 22 years of his life there, becoming perhaps the most famous small-town resident in history. Einstein became legendary in Princeton for his daily walks, his refusal to wear socks, his habit of wandering around in a leather jacket and slippers, and his approachability to local children. He became a U.S. citizen in 1940. When he died in 1955, the pathologist who performed his autopsy removed Einstein's brain without permission and kept it in a jar for decades, eventually parceling out slices to researchers around the world. The house where Einstein lived at 112 Mercer Street is still a private residence.",
     "category": "people",
     "year": "1933",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Albert_Einstein_Head_cleaned.jpg/960px-Albert_Einstein_Head_cleaned.jpg",
     "videoUrl": "",
     "location": "Princeton, New Jersey"
   },
@@ -1633,7 +1633,7 @@ const factsDB = [
     "fullText": "The Space Needle was built for the 1962 World's Fair in Seattle, themed 'Century 21.' The 605-foot tower was the tallest structure west of the Mississippi River at the time and became an instant icon. It was designed to withstand winds of up to 200 mph and earthquakes up to magnitude 9.0. The restaurant at the top rotates 360 degrees in 47 minutes. The Space Needle has been struck by lightning numerous times, which the operators describe as routine. Construction took only 13 months. The design was inspired by a sketch drawn on a placemat by architect Edward E. Carlson, who envisioned a flying saucer perched on a spire. It remains the most recognizable building in the Pacific Northwest.",
     "category": "landmark",
     "year": "1962",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Oma_strickt_Str%C3%BCmpfe.jpg/960px-Oma_strickt_Str%C3%BCmpfe.jpg",
     "videoUrl": "",
     "location": "Seattle, Washington"
   },
@@ -1646,7 +1646,7 @@ const factsDB = [
     "fullText": "The first Starbucks opened at 2000 Western Avenue in Seattle in 1971, but it moved to its current Pike Place Market location at 1912 Pike Place in 1976. The store has been remodeled multiple times, and the 'original' brown logo sign is actually a recreation. The original founders -- Jerry Baldwin, Zev Siegl, and Gordon Bowker -- sold only whole coffee beans and equipment, not brewed drinks. Howard Schultz did not join the company until 1982 and did not buy it until 1987. Despite almost nothing about the current store being truly original, tourists line up around the block to visit. The store does about $10 million in annual revenue, making it one of the highest-grossing Starbucks locations in the world. The Pike Place store is the only Starbucks that uses the original brown siren logo.",
     "category": "culture",
     "year": "1971",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Starbuckscenter.jpg/960px-Starbuckscenter.jpg",
     "videoUrl": "",
     "location": "Seattle, Washington"
   },
@@ -1659,7 +1659,7 @@ const factsDB = [
     "fullText": "Pike Place Fish Market in Seattle is famous for its fishmongers throwing whole fish through the air, catching customer orders in spectacular fashion. The tradition reportedly started in 1986 when the workers decided that carrying fish from the display case to the wrapping counter was boring. They started throwing them instead, and the crowds loved it. The fish-throwing became so famous that Pike Place Fish Market has been featured in numerous documentaries and business books. Management consultants turned it into a corporate philosophy called the FISH! Philosophy, based on principles of play, choosing your attitude, making someone's day, and being present. The workers throw about 40 pounds of fish per toss. The market itself dates to 1907 and is one of the oldest continuously operated farmers' markets in the United States.",
     "category": "culture",
     "year": "1986",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Starbuckscenter.jpg/960px-Starbuckscenter.jpg",
     "videoUrl": "",
     "location": "Seattle, Washington"
   },
@@ -1672,7 +1672,7 @@ const factsDB = [
     "fullText": "Mount Rainier stands 14,411 feet tall and is an active stratovolcano classified by the USGS as the most dangerous volcano in the United States. The danger comes not primarily from lava but from lahars -- massive mudflows created when volcanic heat rapidly melts the mountain's glaciers. Rainier has more glacial ice than any other peak in the contiguous United States, about 35 square miles of it. A major lahar could reach the Puget Sound lowlands in as little as 30 minutes, and over 80,000 people currently live in designated lahar hazard zones. The mountain last erupted about 1,000 years ago, and geologists consider another eruption not a matter of if but when. Despite this, Rainier is also staggeringly beautiful, and on clear days it dominates the Seattle skyline from 60 miles away. Locals call it simply 'The Mountain.'",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Whitesnake_San_Antonio_2015_6_%28Cropped%29.jpg/960px-Whitesnake_San_Antonio_2015_6_%28Cropped%29.jpg",
     "videoUrl": "",
     "location": "Mount Rainier, Washington"
   },
@@ -1685,7 +1685,7 @@ const factsDB = [
     "fullText": "Powell's City of Books in Portland, Oregon is the largest independent bookstore in the world, occupying an entire city block -- 68,000 square feet across multiple floors. The store holds over one million new, used, and out-of-print books organized into nine color-coded rooms. Maps are available at the entrance because people genuinely get lost. Walter Powell opened the original store in 1971, and his son Michael expanded it to its current enormity. Powell's buys about 3,000 used books per day from walk-in sellers. The store has become a defining institution of Portland's identity and is frequently cited as a reason people move to the city. It burns through an absurd amount of coffee -- the in-store cafe is one of the busiest in Portland.",
     "category": "culture",
     "year": "1971",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Street_sign%2C_Hampstead_Gardens_NW11_-_geograph.org.uk_-_1678301.jpg",
     "videoUrl": "",
     "location": "Portland, Oregon"
   },
@@ -1698,7 +1698,7 @@ const factsDB = [
     "fullText": "In 1845, the city of Portland, Oregon was a newly established settlement on the Willamette River in need of a name. Its two founders, Asa Lovejoy from Massachusetts and Francis Pettygrove from Maine, each wanted to name it after their respective hometowns. Lovejoy wanted Boston. Pettygrove wanted Portland. They settled the matter with a best-of-three coin toss using a copper penny, and Pettygrove won. The penny, now known as the Portland Penny, is preserved in the collections of the Oregon Historical Society. Had the coin landed differently, Portland would be called Boston, Oregon, and the Pacific Northwest's cultural landscape might have turned out very differently. The city went on to develop its own aggressively distinct identity, far removed from either East Coast city.",
     "category": "history",
     "year": "1845",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Coin_Toss_%283635981474%29.jpg/960px-Coin_Toss_%283635981474%29.jpg",
     "videoUrl": "",
     "location": "Portland, Oregon"
   },
@@ -1711,7 +1711,7 @@ const factsDB = [
     "fullText": "In 1967, Governor Tom McCall signed the Oregon Beach Bill into law, declaring that the entire 363-mile Oregon coastline belongs to the public. The legislation was prompted by a motel owner in Cannon Beach who tried to fence off a section of beach as private property. The public outrage was immediate and bipartisan. The resulting law established public ownership of the beach from the water to the vegetation line along the entire coast. Oregon remains one of the only states where every inch of coastline is publicly accessible. The law was challenged in 2006 and upheld by the Oregon Supreme Court. The Oregon coast features dramatic sea stacks, tide pools, temperate rainforest, and some of the most spectacular coastal scenery in the world -- and every bit of it is free to walk on.",
     "category": "nature",
     "year": "1967",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Seal_of_the_United_States_Supreme_Court.svg/960px-Seal_of_the_United_States_Supreme_Court.svg.png",
     "videoUrl": "",
     "location": "Oregon Coast, Oregon"
   },
@@ -1724,7 +1724,7 @@ const factsDB = [
     "fullText": "The eruption of Mount St. Helens on May 18, 1980 was the deadliest and most economically destructive volcanic event in U.S. history. A magnitude 5.1 earthquake triggered the collapse of the mountain's north face, producing the largest landslide ever recorded. The lateral blast that followed moved at over 300 mph and flattened 230 square miles of forest. The eruption column rose 80,000 feet into the atmosphere. Fifty-seven people were killed, including volcanologist David Johnston, whose last radio transmission was 'Vancouver! Vancouver! This is it!' The mountain lost 1,300 feet of elevation in seconds, dropping from 9,677 feet to 8,363 feet. Today the blast zone is a National Volcanic Monument where visitors can see the slowly recovering landscape and the massive crater.",
     "category": "science",
     "year": "1980",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%D0%B4%D1%8F%D1%82%D0%BB%D0%BE%D0%B2%D1%86%D0%B0%D0%BC_%D0%BD%D0%B0_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BA%D0%BB%D0%B0%D0%B4%D0%B1%D0%B8%D1%89%D0%B5.jpg/960px-%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%D0%B4%D1%8F%D1%82%D0%BB%D0%BE%D0%B2%D1%86%D0%B0%D0%BC_%D0%BD%D0%B0_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BA%D0%BB%D0%B0%D0%B4%D0%B1%D0%B8%D1%89%D0%B5.jpg",
     "videoUrl": "",
     "location": "Mount St. Helens, Washington"
   },
@@ -1737,7 +1737,7 @@ const factsDB = [
     "fullText": "Mall of America in Bloomington, Minnesota covers 5.6 million square feet, making it the largest mall in the United States. It contains over 500 stores, an indoor amusement park called Nickelodeon Universe with 27 rides, a 1.2-million-gallon aquarium, a comedy club, and a chapel where over 8,000 couples have gotten married. The mall has its own zip code (55425) and its own police substation. Despite being in Minnesota, the mall has no central heating system -- body heat from the 40 million annual visitors and heat from the lighting keep it warm. The site was previously home to Metropolitan Stadium, where the Minnesota Twins and Vikings played. A plaque marks the exact spot where a Harmon Killebrew home run seat used to be.",
     "category": "landmark",
     "year": "1992",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/JuniperSouth2.JPG/960px-JuniperSouth2.JPG",
     "videoUrl": "",
     "location": "Bloomington, Minnesota"
   },
@@ -1750,7 +1750,7 @@ const factsDB = [
     "fullText": "The Duluth Aerial Lift Bridge connects the mainland to Park Point, the world's longest freshwater sandbar, spanning the Duluth Ship Canal. Originally built in 1905 as a transfer bridge that carried a gondola car, it was converted to a lift bridge in 1930. The entire roadbed rises 138 feet straight up in about 55 seconds to allow massive Great Lakes freighters to pass into the Duluth-Superior harbor. The bridge operates roughly 5,000 times per season during the shipping months. Watching a 1,000-foot ore boat glide through the canal while the bridge rises overhead is a Duluth rite of passage. The bridge is so central to Duluth's identity that it appears on the city's official logo. In winter, the canal sometimes freezes around the bridge, creating dramatic ice formations.",
     "category": "landmark",
     "year": "1905",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/960px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg",
     "videoUrl": "",
     "location": "Duluth, Minnesota"
   },
@@ -1776,7 +1776,7 @@ const factsDB = [
     "fullText": "Madison, Wisconsin is built on an isthmus -- a narrow strip of land between Lake Mendota and Lake Monona. The Wisconsin State Capitol sits at the highest point of this isthmus, and since 1990 a city ordinance has prohibited any building from being taller than the columns surrounding the dome. The capitol building itself is the tallest in Madison at 284 feet and features the only granite dome in the United States. The dome is topped by a gold-leafed bronze statue called 'Wisconsin' (often mistakenly called 'Lady Forward'). The building took 11 years to construct, from 1906 to 1917. Madison is also home to the University of Wisconsin, whose iconic Terrace chairs on the Memorial Union Terrace overlooking Lake Mendota are considered one of the finest spots to watch a sunset in the Midwest.",
     "category": "landmark",
     "year": "1917",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Aerial_View_of_Campus%2C_with_Helen_C._White_Hall_in_foreground_%2814070186173%29.jpg/960px-Aerial_View_of_Campus%2C_with_Helen_C._White_Hall_in_foreground_%2814070186173%29.jpg",
     "videoUrl": "",
     "location": "Madison, Wisconsin"
   },
@@ -1789,7 +1789,7 @@ const factsDB = [
     "fullText": "At its peak in 1950, Detroit was the fourth-largest city in the United States with a population of 1.85 million. It was the wealthiest city per capita in America, the birthplace of the automobile industry, and home to the Big Three automakers: General Motors, Ford, and Chrysler. Then came decades of deindustrialization, white flight, racial tensions, and political mismanagement. Detroit's population plummeted to under 640,000. In 2013, the city filed for bankruptcy -- the largest municipal bankruptcy in American history at $18.5 billion. Entire neighborhoods were abandoned. But Detroit has been fighting its way back. The downtown core is revitalizing, the arts scene is thriving, and the city has become a magnet for entrepreneurs drawn by cheap real estate and an underdog spirit. Detroit's story is the most dramatic rise-and-fall-and-rise narrative in American urbanism.",
     "category": "history",
     "year": "1950 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Elon_Musk_-_54820081119_%28cropped%29.jpg/960px-Elon_Musk_-_54820081119_%28cropped%29.jpg",
     "videoUrl": "",
     "location": "Detroit, Michigan"
   },
@@ -1802,7 +1802,7 @@ const factsDB = [
     "fullText": "Michigan Stadium, known universally as the Big House, was opened in 1927 with a capacity of 72,000. It has been expanded repeatedly and now officially seats 107,601, making it the largest stadium in the Western Hemisphere. On game days, it becomes the de facto fourth-largest city in Michigan. The stadium was designed by architect Bernard Ward Green and built into the ground rather than up from it -- from the outside, it looks deceptively small. Inside, the scale is staggering. The Big House has hosted NCAA records for largest crowd at a football game, a hockey game (the 2014 Winter Classic drew 105,491), and a soccer match. The Ann Arbor economy is almost entirely driven by University of Michigan events, and a home football game generates an estimated $12 million in local spending.",
     "category": "landmark",
     "year": "1927",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Michigan_Stadium_Aerial.jpg/960px-Michigan_Stadium_Aerial.jpg",
     "videoUrl": "",
     "location": "Ann Arbor, Michigan"
   },
@@ -1815,7 +1815,7 @@ const factsDB = [
     "fullText": "Pictured Rocks National Lakeshore stretches 42 miles along the Lake Superior shoreline of Michigan's Upper Peninsula. The main attraction is a series of sandstone cliffs that rise up to 200 feet above the lake, stained in vivid streaks of color by mineral-laden groundwater seeping through the rock. Iron produces reds and oranges, copper creates greens and blues, manganese makes browns and blacks, and limonite adds whites and yellows. The result looks like an enormous abstract mural painted on the cliff face. The cliffs are best viewed from the water, and the boat tours are consistently rated among the top natural attractions in the Midwest. In winter, the seeping water freezes into massive ice curtains that coat the cliffs in blue and white formations. It is one of the most underrated natural wonders in America.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/960px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
     "videoUrl": "",
     "location": "Munising, Michigan"
   },
@@ -1828,7 +1828,7 @@ const factsDB = [
     "fullText": "The Iowa State Fair has been held nearly every year since 1854 and draws over a million visitors in just 11 days, making it one of the largest state fairs in the country. The fair's most famous tradition is the Butter Cow -- a life-sized cow sculpted from approximately 600 pounds of Iowa butter in a refrigerated display case. The tradition has been running since 1911. The fair is equally famous for its food-on-a-stick culture: fried butter on a stick, pork chop on a stick, deep-fried Snickers on a stick, and dozens of other questionable nutritional decisions. The fair has been a mandatory campaign stop for presidential candidates since the 1970s. The 1932 Phil Stong novel 'State Fair' was set here and was adapted into three Hollywood films. For 11 days, the Iowa State Fairgrounds essentially becomes the state's second-largest city.",
     "category": "culture",
     "year": "1854",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Looking_West_From_Peristyle%2C_Court_of_Honor_and_Grand_Basin%2C_1893.jpg/960px-Looking_West_From_Peristyle%2C_Court_of_Honor_and_Grand_Basin%2C_1893.jpg",
     "videoUrl": "",
     "location": "Des Moines, Iowa"
   },
@@ -1841,7 +1841,7 @@ const factsDB = [
     "fullText": "The Henry Doorly Zoo in Omaha, Nebraska has been ranked the world's best zoo by TripAdvisor, Fodor's, and multiple other organizations. The zoo is home to the world's largest indoor desert under the Desert Dome, a 137-foot geodesic structure, and the largest indoor rainforest in North America, spanning 1.5 acres under the Lied Jungle. The Kingdoms of the Night exhibit is the world's largest nocturnal exhibit. The aquarium holds 900,000 gallons and includes a 70-foot shark tunnel. Omaha seems like an unlikely place for a world-class zoo, but the institution has invested aggressively in immersive habitats rather than traditional cages. The zoo draws about 1.8 million visitors annually to a metro area of about 950,000, meaning it essentially doubles the local population in foot traffic. It is quietly one of the greatest cultural institutions in the middle of the country.",
     "category": "nature",
     "year": "1894",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Oregon_Zoo_entrance_January_2024.jpeg/960px-Oregon_Zoo_entrance_January_2024.jpeg",
     "videoUrl": "",
     "location": "Omaha, Nebraska"
   },
@@ -1854,7 +1854,7 @@ const factsDB = [
     "fullText": "Mount Rushmore was the brainchild of historian Doane Robinson, who wanted to attract tourism to the Black Hills of South Dakota. Sculptor Gutzon Borglum spent 14 years, from 1927 to 1941, carving the 60-foot faces of Washington, Jefferson, Roosevelt, and Lincoln into the granite mountainside using dynamite and jackhammers. The original design called for the presidents to be depicted from the waist up, but funding ran out and Borglum died in March 1941, seven months before the project was declared complete in its unfinished state. About 450,000 tons of rock were removed during construction. The memorial draws about 3 million visitors per year. The mountain is sacred to the Lakota Sioux, who consider the carving a desecration of the Six Grandfathers, the original name for the peak. The nearby Crazy Horse Memorial, still under construction since 1948, is intended as a Native American response.",
     "category": "landmark",
     "year": "1941",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Mount_Rushmore_detail_view_%28100MP%29.jpg/960px-Mount_Rushmore_detail_view_%28100MP%29.jpg",
     "videoUrl": "",
     "location": "Keystone, South Dakota"
   },
@@ -1867,7 +1867,7 @@ const factsDB = [
     "fullText": "The Big Sioux River cascades over a series of waterfalls made of Sioux quartzite, a distinctive pink stone that is approximately 1.6 billion years old, making it some of the oldest exposed rock in North America. The falls drop about 100 feet over the course of the park and gave the city its name when settlers arrived in 1856. Falls Park, the centerpiece of the city, sits on the site where the falls are most dramatic. The quartzite is so hard that it was used to build many of the city's early structures, giving downtown Sioux Falls a distinctive pink-stone character. The falls generate a surprising amount of power -- they were harnessed for hydroelectricity as early as 1908. Sioux Falls has grown into the largest city in South Dakota, with about 200,000 residents, and the falls remain the symbolic and geographic heart of the community.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Condo_building_in_downtown_Falls_Church.jpg/960px-Condo_building_in_downtown_Falls_Church.jpg",
     "videoUrl": "",
     "location": "Sioux Falls, South Dakota"
   },
@@ -1893,7 +1893,7 @@ const factsDB = [
     "fullText": "Glacier National Park in Montana was established in 1910 and originally contained approximately 150 glaciers. As of the most recent surveys, only about 25 remain, and they have lost roughly 85% of their area. The park's signature feature -- the glaciers that carved its dramatic valleys, cirques, and aretes over millions of years -- is disappearing within a single human lifetime. The Going-to-the-Sun Road, which crosses the Continental Divide at Logan Pass, is considered one of the most scenic drives in North America. The park is also one of the few places in the lower 48 where grizzly bears, mountain goats, wolverines, and gray wolves all coexist. Scientists estimate that the remaining glaciers could vanish entirely within the next 10 to 20 years if current warming trends continue. The park will still be spectacular, but it will need a new defining feature.",
     "category": "nature",
     "year": "1910",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mountain_Goat_at_Hidden_Lake.jpg/960px-Mountain_Goat_at_Hidden_Lake.jpg",
     "videoUrl": "",
     "location": "Glacier National Park, Montana"
   },
@@ -1906,7 +1906,7 @@ const factsDB = [
     "fullText": "Bozeman, Montana has transformed from a quiet college town into one of the fastest-growing communities in the United States. The Gallatin Valley setting is absurdly scenic -- surrounded by mountain ranges on all sides with three major ski areas within an hour and some of the best fly-fishing rivers in the world, including the Gallatin, Madison, and Yellowstone. Montana State University anchors the town's economy alongside a growing tech sector. Yellowstone National Park is about 90 minutes south. The downside of all this beauty is that housing prices have skyrocketed, pricing out many longtime residents. The town's population has roughly doubled in the last two decades. The novelist Thomas McGuane and the actors Jeff Bridges and Dennis Quaid are among the celebrities who have made the area home.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Alaska.svg/960px-Flag_of_Alaska.svg.png",
     "videoUrl": "",
     "location": "Bozeman, Montana"
   },
@@ -1919,7 +1919,7 @@ const factsDB = [
     "fullText": "Yellowstone National Park is, in geological terms, the surface expression of an enormous magma chamber sitting about 5 miles below ground. The Yellowstone supervolcano has experienced three caldera-forming eruptions: 2.1 million years ago, 1.3 million years ago, and 640,000 years ago. The most recent eruption produced 240 cubic miles of debris -- enough to bury the entire state of Texas five feet deep. The current caldera measures 34 by 45 miles. The park's famous geothermal features -- Old Faithful, Grand Prismatic Spring, Mammoth Hot Springs -- are all powered by this underground heat. Scientists at the Yellowstone Volcano Observatory monitor the system constantly. A full eruption would be catastrophic for North America, potentially blanketing the Midwest in feet of ash and triggering a volcanic winter. The probability of eruption in any given year is about 1 in 730,000.",
     "category": "science",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Grand_Canyon_of_yellowstone.jpg",
     "videoUrl": "",
     "location": "Yellowstone National Park, Wyoming"
   },
@@ -1932,7 +1932,7 @@ const factsDB = [
     "fullText": "Old Faithful was named during the Washburn-Langford-Doane Expedition of 1870 because of its perceived regularity. It erupts approximately every 90 minutes, shooting 3,700 to 8,400 gallons of boiling water up to 185 feet in the air. However, the interval between eruptions has actually been increasing over the decades and varies between 60 and 110 minutes. Several other geysers in Yellowstone, including Riverside Geyser and Daisy Geyser, are considerably more predictable, but Old Faithful got the name and the fame first. The geyser has been erupting for at least 300 years based on analysis of geysir deposits. It is powered by a complex underground plumbing system where water heated by the shallow magma chamber flashes to steam. Old Faithful is the centerpiece of the Upper Geyser Basin, which contains the largest concentration of active geysers in the world.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Steamboat_Geyser_at_Norris_Geyser_Basin_in_Yellowstone-750px.JPG",
     "videoUrl": "",
     "location": "Yellowstone National Park, Wyoming"
   },
@@ -1945,7 +1945,7 @@ const factsDB = [
     "fullText": "The Teton Range in western Wyoming rose along a fault line that lifted the mountains while simultaneously dropping the valley floor, creating a stunning visual effect: the peaks rise nearly 7,000 feet straight up from the flat Jackson Hole valley with essentially no foothills. The Grand Teton, at 13,775 feet, is the centerpiece. The range is geologically young at only about 9 million years old, making the Tetons the youngest mountains in the Rocky Mountain chain. The lack of foothills means the full scale of the peaks is visible from the valley -- a view that consistently ranks among the most photographed in North America. French trappers named the peaks 'Les Trois Tetons,' which translates to 'The Three Breasts,' making Grand Teton National Park perhaps the most awkwardly named national park in the system.",
     "category": "nature",
     "year": "ongoing",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_Montana.svg/960px-Flag_of_Montana.svg.png",
     "videoUrl": "",
     "location": "Grand Teton National Park, Wyoming"
   },
@@ -1958,7 +1958,7 @@ const factsDB = [
     "fullText": "Boise, Idaho sits on a substantial geothermal aquifer, and the city has been tapping it for heat since 1890 when the Natatorium, a grand public swimming pool, was built around a natural hot spring. In 1983, the city established the Boise Warm Springs Water District, creating the largest geothermal direct-use system in the United States. Hot water at about 177 degrees Fahrenheit is pumped from wells up to 3,000 feet deep and piped through a four-mile loop that heats the state capitol building, city hall, and dozens of other downtown structures. After the heat is extracted, the cooled water is injected back underground. The system offsets the equivalent of about 95,000 barrels of oil per year. The original hot springs that fed the Natatorium are still there, and the Boise neighborhood called Warm Springs has homes that heat with individual geothermal wells.",
     "category": "science",
     "year": "1983",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/NesjavellirPowerPlant_edit2.jpg/960px-NesjavellirPowerPlant_edit2.jpg",
     "videoUrl": "",
     "location": "Boise, Idaho"
   },
@@ -1984,7 +1984,7 @@ const factsDB = [
     "fullText": "Aspen, Colorado boomed in the 1880s as a silver mining town, growing to a population of about 12,000. When the silver market crashed in 1893, the town nearly died -- the population dropped to about 700 people. It languished as a ghost town for decades until the 1930s and 40s, when a group of visionaries led by Walter Paepcke, a Chicago industrialist, began developing it as a ski resort and cultural center. Aspen Mountain Ski Area opened in 1947, and the town reinvented itself as a playground for the wealthy. Today, the median home price in Aspen exceeds $5 million. The town of about 7,000 permanent residents hosts over 3 million visitors annually. It also became an unlikely intellectual hub: the Aspen Institute, founded in 1949, hosts global leaders for policy discussions amid some of the best skiing in North America.",
     "category": "history",
     "year": "1947",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Milan_Cortina_2026_Cauldron_and_Arco_della_Pace_01.jpg/960px-Milan_Cortina_2026_Cauldron_and_Arco_della_Pace_01.jpg",
     "videoUrl": "",
     "location": "Aspen, Colorado"
   },
@@ -2036,7 +2036,7 @@ const factsDB = [
     "fullText": "In the winter of 1894-95, a devastating freeze destroyed citrus crops across most of Florida. Julia Tuttle, a wealthy Cleveland widow who had moved to the tiny settlement at the mouth of the Miami River, reportedly mailed fresh orange blossoms to railroad magnate Henry Flagler to prove that her corner of South Florida had been spared. The demonstration worked. Flagler extended his Florida East Coast Railway to Miami, and the city was incorporated in 1896 with just 300 registered voters. Tuttle donated land for the railroad, a hotel, and city streets. She is recognized as the founder of Miami and the only woman to have founded a major American city. She died just two years later in 1898 at age 49, never seeing the metropolis her initiative created. Miami is now the seventh-largest metro area in the United States with nearly 6.2 million residents.",
     "category": "people",
     "year": "1896",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/The_Eagles_in_performance%2C_2008.jpg/960px-The_Eagles_in_performance%2C_2008.jpg",
     "videoUrl": "",
     "location": "Miami, Florida"
   },
@@ -2296,7 +2296,7 @@ const factsDB = [
     "fullText": "Napa Valley produces some of the most celebrated wines in the world from a valley just 30 miles long and 5 miles wide. The region's rise to prominence began with the 1976 Judgment of Paris, a blind tasting in which California wines beat established French wines in both the red and white categories, shocking the wine world. Napa's climate -- warm days and cool nights created by Pacific fog funneling through gaps in the coastal mountains -- is ideal for Cabernet Sauvignon and Chardonnay. The valley is home to over 400 wineries and has the highest concentration of Michelin-starred restaurants per capita in North America. A single acre of prime Napa vineyard land can sell for over $400,000. The wine industry generates about $9.5 billion annually for the county. Despite its small size, Napa produces only about 4% of California's total wine output, but it accounts for a vastly disproportionate share of its reputation and revenue.",
     "category": "culture",
     "year": "1976",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Motherhood_and_apple_pie.jpg/960px-Motherhood_and_apple_pie.jpg",
     "videoUrl": "",
     "location": "Napa Valley, California"
   },
@@ -2335,7 +2335,7 @@ const factsDB = [
     "fullText": "Silicon Valley refers to the southern portion of the San Francisco Bay Area, centered around San Jose, Palo Alto, and Mountain View. The name was coined by journalist Don Hoefler in 1971, referring to the silicon-based semiconductor companies concentrated in the area. The valley's origin story typically starts with the founding of Hewlett-Packard in a Palo Alto garage in 1939. Stanford University's policy of encouraging faculty entrepreneurship and leasing university land to tech companies created a feedback loop that attracted more talent and more companies. Today, Silicon Valley is home to Apple, Google, Meta, Netflix, and thousands of other technology companies. The region generates an economic output that exceeds the GDP of most countries. A modest three-bedroom house in Palo Alto can cost over $3 million. The name is somewhat misleading: the area is not a geological valley, and silicon chip manufacturing has largely moved overseas.",
     "category": "science",
     "year": "1971",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/MTMap-doton-Hamilton.PNG",
     "videoUrl": "",
     "location": "San Jose, California"
   },
@@ -2504,7 +2504,7 @@ const factsDB = [
     "fullText": "Green Bay is the smallest metropolitan area to host a major professional sports franchise, and the Green Bay Packers are the most improbable team in the NFL. The city has about 107,000 people, yet the Packers are one of the most valuable franchises in professional sports. The team is unique as the only community-owned, nonprofit franchise in major American professional sports -- over 360,000 shareholders own more than 5 million shares, though no individual can own more than 200,000. The shares pay no dividends and cannot appreciate in value. Lambeau Field, known as the Frozen Tundra, seats 81,441 and has been sold out for every game since 1960. The season ticket waiting list is over 130,000 names long, with an estimated wait time of over 30 years. In a city this size, the Packers are not just a team; they are the entire civic identity.",
     "category": "culture",
     "year": "1919",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Green_Bay_Packers_logo.svg/960px-Green_Bay_Packers_logo.svg.png",
     "videoUrl": "",
     "location": "Green Bay, Wisconsin"
   },
@@ -2530,7 +2530,7 @@ const factsDB = [
     "fullText": "Red Rocks Amphitheatre sits at 6,450 feet elevation in the foothills of the Rocky Mountains, about 10 miles west of Denver. The venue is flanked by two massive red sandstone monoliths -- Ship Rock and Creation Rock -- that form a natural amphitheater with extraordinary acoustics. The Civilian Conservation Corps improved the site in the 1930s, adding seating for 9,525 people. The Beatles played here in 1964 to a crowd that was only about half full. U2's 1983 concert under a red Colorado rainstorm, filmed for the 'Live at Red Rocks: Under a Blood Red Sky' video, is considered one of the greatest live concert recordings ever made. The venue is owned by the City of Denver, and during the day it functions as a public park where visitors hike and exercise on the amphitheater stairs. It is consistently ranked the number one outdoor concert venue in the world by musicians, critics, and fans alike.",
     "category": "landmark",
     "year": "1941",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/THPress_CREDIT_Emory_Hall_.jpg/960px-THPress_CREDIT_Emory_Hall_.jpg",
     "videoUrl": "",
     "location": "Morrison, Colorado"
   },
@@ -2790,7 +2790,7 @@ const factsDB = [
     "fullText": "Waycross, Georgia serves as the northern gateway to the Okefenokee Swamp, one of the most ecologically significant wetlands in North America. The Okefenokee Swamp Park offers guided boat tours through blackwater channels lined with towering bald cypress trees draped in Spanish moss. The swamp is home to an estimated 10,000 to 13,000 American alligators, and seeing dozens during a single boat trip is common. The park also features a pioneer island with reconstructed homesteads showing how people once lived inside the swamp. The water appears tea-colored due to tannins leaching from decaying vegetation. Walt Kelly's beloved comic strip Pogo was set in the Okefenokee.",
     "category": "nature",
     "year": "1946",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Perth_CBD_skyline_from_State_War_Memorial_Lookout%2C_2023%2C_04_b.jpg/960px-Perth_CBD_skyline_from_State_War_Memorial_Lookout%2C_2023%2C_04_b.jpg",
     "videoUrl": "",
     "location": "Waycross, Georgia"
   },
@@ -2816,7 +2816,7 @@ const factsDB = [
     "fullText": "In downtown Enterprise, Alabama stands what is believed to be the only monument in the world dedicated to an agricultural pest. The Boll Weevil Monument was erected in 1919 to honor the insect that devastated the region's cotton crops beginning around 1915. The logic behind the tribute is that the boll weevil forced local farmers to diversify their crops, particularly into peanuts, which turned out to be far more profitable. Coffee County's economy actually improved after the cotton collapse. The original statue was a woman holding a fountain, but a large boll weevil sculpture was added to her upraised hands in 1949. The boll weevil itself has been stolen multiple times, most recently in 1998, but a replacement always goes back up. Enterprise also hosts an annual Boll Weevil festival.",
     "category": "weird",
     "year": "1919",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/George_Washington_Carver_c1910_-_Restoration.jpg/960px-George_Washington_Carver_c1910_-_Restoration.jpg",
     "videoUrl": "",
     "location": "Enterprise, Alabama"
   },
@@ -3024,7 +3024,7 @@ const factsDB = [
     "fullText": "In 1927, John Ringling moved the winter quarters of the Ringling Bros. and Barnum & Bailey Circus to Sarasota, Florida, transforming the small Gulf Coast town forever. Circus performers, trainers, and animals became part of daily life, and Sarasota earned the nickname 'Circus City.' Ringling also built Ca' d'Zan, a lavish Venetian Gothic mansion on Sarasota Bay, and the John and Mable Ringling Museum of Art, which houses an impressive collection of Baroque paintings including works by Rubens. The circus winter quarters operated in Sarasota until 1960. The legacy persists -- the Circus Arts Conservatory operates in Sarasota, and the Ringling Museum complex is now the state art museum of Florida. The grounds include the mansion, art museum, circus museum, and 66 acres of bayfront gardens.",
     "category": "culture",
     "year": "1927",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Sarasota_Skyline.jpeg/960px-Sarasota_Skyline.jpeg",
     "videoUrl": "",
     "location": "Sarasota, Florida"
   },
@@ -3037,7 +3037,7 @@ const factsDB = [
     "fullText": "Everglades National Park covers 1.5 million acres of southern Florida and protects one of the most unique ecosystems on the planet. Despite being commonly called a swamp, the Everglades is actually a slow-moving sheet of water about 60 miles wide and only a few inches deep, flowing southward from Lake Okeechobee to Florida Bay. Marjory Stoneman Douglas famously named it 'River of Grass' in her 1947 book. It is the only place on Earth where American alligators and American crocodiles naturally coexist. The park is home to 36 threatened or endangered species, including the Florida panther and the West Indian manatee. Decades of drainage for agriculture and development have reduced the original Everglades to about half its historic size. A massive federal and state restoration project, authorized in 2000, aims to restore more natural water flow patterns.",
     "category": "nature",
     "year": "1947",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Everglades_Pa-Hay-Oke_Swamp.jpg/960px-Everglades_Pa-Hay-Oke_Swamp.jpg",
     "videoUrl": "",
     "location": "Homestead, Florida"
   },
@@ -3323,7 +3323,7 @@ const factsDB = [
     "fullText": "Hot Springs, Arkansas sits atop a geothermal aquifer that produces nearly a million gallons of 143-degree water daily. Bathhouse Row, a collection of eight historic bathhouses built between 1892 and 1923, lines Central Avenue in what was once America's premier spa destination. The thermal water falls as rain on the surrounding mountains and takes approximately 4,000 years to percolate through the rock, heating naturally before rising to the surface. Hot Springs National Park, the oldest federal reserve in the National Park System (predating Yellowstone), protects the springs. The Fordyce Bathhouse serves as the park's visitor center. In the 1920s and 1930s, Hot Springs was also a notorious haven for gangsters -- Al Capone was a regular visitor. Two public fountains on Bathhouse Row dispense the thermal water free of charge, and locals fill jugs daily.",
     "category": "landmark",
     "year": "1832",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Blick_auf_das_Rathaus_und_den_Dom_Aachens_aufgenommen_von_St_Jakob.jpg/960px-Blick_auf_das_Rathaus_und_den_Dom_Aachens_aufgenommen_von_St_Jakob.jpg",
     "videoUrl": "",
     "location": "Hot Springs, Arkansas"
   },
@@ -3583,7 +3583,7 @@ const factsDB = [
     "fullText": "By federal law, bourbon can be made anywhere in the United States, not just Kentucky. However, approximately 95 percent of all bourbon is produced in the Bluegrass State, and Kentucky has more barrels of bourbon aging in warehouses (over 11 million) than it has residents (roughly 4.5 million). The Kentucky Bourbon Trail, established in 1999, takes visitors through distilleries including Maker's Mark, Woodford Reserve, Jim Beam, and Wild Turkey. Bourbon must meet specific legal requirements: it must be made from at least 51 percent corn, aged in new charred oak barrels, distilled to no more than 160 proof, and entered into the barrel at no more than 125 proof. Kentucky's natural limestone water, which filters out iron and provides calcium, is credited with giving the state's bourbon its distinctive character. The bourbon industry generates over $8.6 billion in annual economic impact for Kentucky.",
     "category": "culture",
     "year": "1999",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/DecaturBourbons.jpg",
     "videoUrl": "",
     "location": "Frankfort, Kentucky"
   },
@@ -3596,7 +3596,7 @@ const factsDB = [
     "fullText": "Berea, Kentucky is a small town in the foothills of the Appalachian Mountains with an outsized cultural identity. Berea College, founded in 1855, was the first interracial and coeducational college in the South and charges no tuition whatsoever -- every admitted student receives a full-tuition scholarship and works at least 10 hours per week in one of over 100 campus labor positions. The town itself is known as the Folk Arts and Crafts Capital of Kentucky, with numerous studios and galleries featuring traditional Appalachian crafts including woodworking, weaving, pottery, and broom-making. The artisan tradition dates back generations and has been deliberately cultivated. Berea's Old Town Artisan Village features working studios where visitors can watch craftspeople at work. The combination of radical educational philosophy and artisan tradition makes Berea one of the most distinctive small towns in the South.",
     "category": "culture",
     "year": "1855",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Doyly_Carte_Opera_Company_poster%2C_John_Hassall.jpg/960px-Doyly_Carte_Opera_Company_poster%2C_John_Hassall.jpg",
     "videoUrl": "",
     "location": "Berea, Kentucky"
   },
@@ -3856,7 +3856,7 @@ const factsDB = [
     "fullText": "Charlotte, North Carolina is the epicenter of American stock car racing. The vast majority of NASCAR Cup Series teams are headquartered in the Charlotte metro area, particularly in the suburb of Mooresville, known as 'Race City USA.' The NASCAR Hall of Fame, which opened in downtown Charlotte in 2010, celebrates a sport that literally began with bootleggers souping up their cars to outrun federal revenue agents on mountain roads during Prohibition. The Charlotte Motor Speedway in nearby Concord hosts two Cup Series races and the All-Star Race annually. The region's connection to racing dates to the earliest days of the sport in the late 1940s. Legendary drivers including Dale Earnhardt, Richard Petty, and Jeff Gordon have all been based in the Charlotte area. The hall features interactive exhibits, a 278-seat theater, and a banked track simulator.",
     "category": "culture",
     "year": "2010",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Uptown_Charlotte_2018_taking_by_DJI_Phantom_4_pro.jpg/960px-Uptown_Charlotte_2018_taking_by_DJI_Phantom_4_pro.jpg",
     "videoUrl": "",
     "location": "Charlotte, North Carolina"
   },
@@ -4064,7 +4064,7 @@ const factsDB = [
     "fullText": "On November 10, 1898, a mob of approximately 2,000 white men in Wilmington, North Carolina carried out the only successful coup d'etat in American history. The mob, led by former Confederate officer Alfred Moore Waddell, attacked the Black newspaper The Daily Record, burned it to the ground, and then rampaged through Black neighborhoods, killing an estimated 60 to 300 people (the exact death toll has never been determined). The legally elected biracial city government -- which included Black aldermen and a Republican mayor -- was forced to resign at gunpoint. Waddell installed himself as mayor. The event was covered up for decades, often mischaracterized in textbooks as a 'race riot' rather than the organized political overthrow it was. It was not until 2006 that the state of North Carolina issued an official report documenting what actually happened. A memorial now stands in Wilmington.",
     "category": "history",
     "year": "1898",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Wilmington%2C_North_Carolina_along_the_Cape_Fear_River_-_panoramio.jpg/960px-Wilmington%2C_North_Carolina_along_the_Cape_Fear_River_-_panoramio.jpg",
     "videoUrl": "",
     "location": "Wilmington, North Carolina"
   },
@@ -4103,7 +4103,7 @@ const factsDB = [
     "fullText": "Red River Gorge Geological Area in the Daniel Boone National Forest of eastern Kentucky contains over 100 natural sandstone arches, one of the highest concentrations of natural arches anywhere east of the Rocky Mountains. The gorge was carved over millions of years by the Red River cutting through Pennsylvanian-age sandstone. The largest arch, Sky Bridge, spans 75 feet and draws hikers from across the region. The area also features massive rock shelters, cliff lines, and dense forest. In the 1960s and 1970s, the Army Corps of Engineers proposed building a dam that would have flooded much of the gorge, but a fierce grassroots campaign led by the Sierra Club and local residents saved it. Red River Gorge is also one of the premier rock climbing destinations in the eastern United States, with thousands of established routes on its sandstone cliffs. The nearby Natural Bridge State Resort Park features a massive arch visible from a skylift.",
     "category": "nature",
     "year": "1974",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Natural_Bridge%2C_Rockbridge_County%2C_VA.jpg/960px-Natural_Bridge%2C_Rockbridge_County%2C_VA.jpg",
     "videoUrl": "",
     "location": "Slade, Kentucky"
   },
@@ -4363,7 +4363,7 @@ const factsDB = [
     "fullText": "Crater Lake in southern Oregon fills the caldera of Mount Mazama, a volcano that erupted catastrophically about 7,700 years ago. The explosion was 42 times more powerful than the 1980 eruption of Mount St. Helens. The resulting caldera slowly filled with rain and snowmelt over centuries, creating the deepest lake in the United States at 1,943 feet. No rivers feed the lake and none drain it; the water level is maintained by a balance of precipitation and evaporation. The water is famously clear and intensely blue because of its purity and depth. Wizard Island, a cinder cone that formed after the caldera collapse, rises 760 feet above the lake surface. The Klamath people witnessed the original eruption and passed down the story as a battle between the sky god Skell and the underworld god Llao.",
     "category": "nature",
     "year": "Present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Great_Lakes%2C_No_Clouds_%284968915002%29_Brighter.jpg/960px-Great_Lakes%2C_No_Clouds_%284968915002%29_Brighter.jpg",
     "videoUrl": "",
     "location": "Crater Lake, Oregon"
   },
@@ -4623,7 +4623,7 @@ const factsDB = [
     "fullText": "Delicate Arch is a 52-foot-tall freestanding natural sandstone arch in Arches National Park near Moab, Utah. It is probably the most widely recognized natural arch in the world, appearing on Utah license plates, US postage stamps, and countless calendars and advertisements. The arch was formed over millions of years as water seeped into cracks in Entrada Sandstone, freezing and expanding, gradually widening the opening. Despite its fame, geologists warn that Delicate Arch could collapse at any time, as all arches are temporary geological features in the process of being destroyed by the same forces that created them. The 3-mile roundtrip hike to the arch is one of the most popular in the national park system, drawing over a million visitors annually. In 2000, a proposal to install safety railings near the arch was rejected as contrary to the spirit of wilderness. From the air, it is surprisingly hard to spot against the red rock terrain.",
     "category": "nature",
     "year": "Present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/St_Louis_night_expblend_cropped.jpg/960px-St_Louis_night_expblend_cropped.jpg",
     "videoUrl": "",
     "location": "Moab, Utah"
   },
@@ -4636,7 +4636,7 @@ const factsDB = [
     "fullText": "Canyonlands National Park in southeastern Utah is carved into a bewildering maze of canyons, mesas, and buttes by the Colorado and Green Rivers. The Island in the Sky district is a massive mesa connected to the surrounding terrain by a single narrow land bridge, rising over 1,000 feet above the rivers below. Early ranchers who grazed cattle on top called it an island because the cliffs made it feel like one. The park's Maze district is considered the most remote and inaccessible terrain in the contiguous United States; some backcountry routes require days of four-wheel driving on tracks that haven't improved since the uranium prospectors blazed them in the 1950s. Dead Horse Point, a dramatic overlook on the edge of the park, allegedly got its name from cowboys who fenced wild horses on the narrow promontory and forgot about them. From the air, the layered red rock canyons look like they belong on Mars.",
     "category": "nature",
     "year": "Present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Tombstone_%28probably_in_1881%29_%28cropped%29.jpg/960px-Tombstone_%28probably_in_1881%29_%28cropped%29.jpg",
     "videoUrl": "",
     "location": "Moab, Utah"
   },
@@ -4675,7 +4675,7 @@ const factsDB = [
     "fullText": "Skinwalker Ranch, a 512-acre property in the Uintah Basin of northeastern Utah, has been the subject of intense paranormal and scientific investigation since the 1990s. The Sherman family, who owned the property from 1994 to 1996, reported a terrifying array of phenomena including UFO sightings, cattle mutilations, poltergeist activity, and encounters with creatures that defied explanation. Aerospace billionaire Robert Bigelow purchased the ranch in 1996 and funded years of covert scientific research through the National Institute for Discovery Science. In 2007, the Defense Intelligence Agency funded a secret program called AAWSAP to study the ranch and related phenomena, spending $22 million of taxpayer money. The ranch was purchased by real estate magnate Brandon Fugal in 2016 and is now the subject of a History Channel television series. The Ute tribe has long considered the area cursed, associated with the skinwalker legend from Navajo tradition.",
     "category": "sighting",
     "year": "1994 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Robert_Bigelow.jpg",
     "videoUrl": "",
     "location": "Ballard, Utah"
   },
@@ -4896,7 +4896,7 @@ const factsDB = [
     "fullText": "Since at least 1991, a small percentage of residents of Taos, New Mexico have reported hearing a persistent low-frequency humming or droning sound that they cannot identify or escape. The Taos Hum, as it came to be known, is heard by roughly 2% of the local population and has been the subject of multiple scientific investigations, including a study commissioned by Congress in 1993. Researchers from the University of New Mexico and Sandia National Laboratories found no identifiable acoustic source. Theories range from industrial equipment to underground geological activity to tinnitus to mass psychogenic illness. The hum is typically described as similar to a distant diesel engine idling and is reportedly worse indoors than outdoors, which is the opposite of what you'd expect from an external sound source. Similar hums have been reported in Bristol, England and Windsor, Ontario. The phenomenon remains genuinely unexplained.",
     "category": "weird",
     "year": "1991 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bhagwan_beweging_gekwetst_door_reclame-affiche_van_het_NRC_met_de_tekst_profeet%2C_Bestanddeelnr_933-0734-cropped.jpg/960px-Bhagwan_beweging_gekwetst_door_reclame-affiche_van_het_NRC_met_de_tekst_profeet%2C_Bestanddeelnr_933-0734-cropped.jpg",
     "videoUrl": "",
     "location": "Taos, New Mexico"
   },
@@ -4935,7 +4935,7 @@ const factsDB = [
     "fullText": "Craters of the Moon National Monument in central Idaho preserves a vast landscape of volcanic features including lava flows, cinder cones, lava tubes, and spatter cones that erupted as recently as 2,000 years ago. The 618-square-mile lava field is one of the best-preserved basaltic landscapes in the continental United States. NASA sent Apollo 14 astronauts Alan Shepard, Edgar Mitchell, Joe Engle, and Eugene Cernan to train here in 1969 because the terrain closely resembled what they expected to find on the moon. The volcanic features formed along the Great Rift, a series of deep cracks in the Earth's crust that runs 52 miles through the monument. Geologists consider the area dormant rather than extinct; the USGS estimates eruptions occur here roughly every 2,000 years, meaning the next one is statistically overdue. From the air, the black lava flows stand in stark contrast to the surrounding green ranchland and look genuinely alien.",
     "category": "science",
     "year": "1969",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Adams_The_Tetons_and_the_Snake_River.jpg/960px-Adams_The_Tetons_and_the_Snake_River.jpg",
     "videoUrl": "",
     "location": "Arco, Idaho"
   },
@@ -5143,7 +5143,7 @@ const factsDB = [
     "fullText": "Mauna Kea, a dormant shield volcano on the Big Island of Hawaii, rises 13,796 feet above sea level. But that figure is misleading: measured from its base on the ocean floor, Mauna Kea is approximately 33,500 feet tall, making it the tallest mountain on Earth from base to summit, over 4,000 feet taller than Mount Everest. The summit is one of the best astronomical observation sites in the world due to its high altitude, dry atmosphere, stable airflow, and minimal light pollution. A complex of 13 telescopes operated by institutions from 11 countries sits atop the mountain, including the twin Keck Telescopes with their 33-foot mirrors. The summit is sacred to Native Hawaiians, who consider Mauna Kea the home of Poliahu, goddess of snow. The construction of the Thirty Meter Telescope sparked intense protests starting in 2014, as Native Hawaiian activists blocked construction access roads for years. The conflict between scientific advancement and indigenous rights remains unresolved.",
     "category": "science",
     "year": "Present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/960px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg",
     "videoUrl": "",
     "location": "Mauna Kea, Hawaii"
   },
@@ -5156,7 +5156,7 @@ const factsDB = [
     "fullText": "On December 7, 1941, the Japanese attack on Pearl Harbor killed 2,403 Americans and drew the United States into World War II. The USS Arizona suffered a catastrophic explosion when a bomb penetrated its forward magazine, killing 1,177 crew members in minutes. The ship sank and was never raised; it remains on the harbor bottom as a memorial and the final resting place of most of its crew. More than 80 years later, the Arizona continues to leak approximately 2 quarts of fuel oil per day from its ruptured bunkers, creating an iridescent sheen on the water above. Navy divers have estimated that the ship still contains approximately 500,000 gallons of fuel oil. As the ship's hull continues to corrode, there is an ongoing debate about whether to attempt to remove the oil before a catastrophic release or to leave the ship undisturbed as a grave. The USS Arizona Memorial, a white structure spanning the sunken hull, receives over 1.8 million visitors per year.",
     "category": "history",
     "year": "1941",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Attack_on_Pearl_Harbor_Japanese_planes_view.jpg/960px-Attack_on_Pearl_Harbor_Japanese_planes_view.jpg",
     "videoUrl": "",
     "location": "Pearl Harbor, Hawaii"
   },
@@ -5416,7 +5416,7 @@ const factsDB = [
     "fullText": "The Great Falls of the Missouri River are a series of five waterfalls and rapids spanning a 10-mile stretch of the river near the city of Great Falls, Montana. When Lewis and Clark reached the falls in June 1805, they expected from Native American descriptions that the portage would take a day. Instead, it took 31 grueling days to haul their canoes and equipment 18 miles over rough terrain around the cascades. Clark wrote that the falls were the grandest sight I ever beheld. The series includes Black Eagle Falls, Rainbow Falls, Crooked Falls, and the Great Falls themselves. Four of the five falls have been harnessed by hydroelectric dams built in the early 1900s, significantly altering their natural appearance. Only the highest, the Great Falls at 87 feet, remains partially visible in something approaching its original form. The Lewis and Clark National Historic Trail Interpretive Center in Great Falls tells the story of the expedition's painful portage. From the air, the string of dams along the river marks the location of the original cascades.",
     "category": "history",
     "year": "1805",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Onapookkalam.jpg/960px-Onapookkalam.jpg",
     "videoUrl": "",
     "location": "Great Falls, Montana"
   },
@@ -5455,7 +5455,7 @@ const factsDB = [
     "fullText": "Hot Springs State Park in Thermopolis, Wyoming is built around the largest mineral hot spring in the world, Big Spring, which flows at an estimated 3.6 million gallons per day at a constant temperature of 135 degrees Fahrenheit. The springs were part of the Wind River Reservation until 1896, when Arapaho and Shoshone leaders ceded 10 square miles around the springs to the federal government with the stipulation that the springs should forever remain free for public use. Today, the state of Wyoming honors that agreement: the state bathhouse at Hot Springs State Park offers free soaking in mineral hot spring water. The spring deposits dramatic travertine terraces that grow continuously as dissolved minerals precipitate out of the cooling water. A herd of bison is maintained in the park as well. Thermopolis, with a population of about 3,000, is one of the few towns in America where you can soak in a hot spring for free in the middle of town.",
     "category": "nature",
     "year": "1896",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Adams_The_Tetons_and_the_Snake_River.jpg/960px-Adams_The_Tetons_and_the_Snake_River.jpg",
     "videoUrl": "",
     "location": "Thermopolis, Wyoming"
   },
@@ -5676,7 +5676,7 @@ const factsDB = [
     "fullText": "Naval Air Station Fallon in the high desert of western Nevada is home to the real Top Gun, officially the Navy Strike Fighter Tactics Instructor program (SFTI). While the Tom Cruise movie depicted Top Gun at NAS Miramar in San Diego, the actual program relocated to Fallon in 1996. NAS Fallon was chosen because of its vast surrounding airspace, excellent flying weather (over 300 clear days per year), and extensive weapons ranges. The base is the Navy's premier air combat training facility, where carrier air wings complete their final pre-deployment training. The bombing ranges around Fallon cover roughly 240,000 acres of desert. Fallon is also the center of a major agricultural region irrigated by the Newlands Reclamation Project, one of the first federal irrigation projects in America. The juxtaposition of fighter jets screaming over alfalfa fields and cattle ranches is pure Nevada. From the air, the base's runway complex and the bomb-cratered ranges sprawling across the desert are unmistakable.",
     "category": "landmark",
     "year": "1996 - present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Teyana_Taylor_%28cropped%29.jpg",
     "videoUrl": "",
     "location": "Fallon, Nevada"
   },
@@ -5715,7 +5715,7 @@ const factsDB = [
     "fullText": "When drillers hit the Spindletop salt dome on January 10, 1901, oil shot 150 feet into the air and flowed uncontrolled for nine days at an estimated 100,000 barrels per day. It was the largest oil gusher the world had ever seen. The strike proved that massive oil reserves existed along the Gulf Coast and triggered a boom that drew tens of thousands of speculators to Beaumont. The population of Beaumont went from 10,000 to 50,000 in a matter of months. Companies like Texaco, Gulf Oil, and Humble Oil (later ExxonMobil) all trace their origins to Spindletop. The gusher fundamentally transformed Texas from a cattle and cotton economy into the oil powerhouse it remains today.",
     "category": "history",
     "year": "1901",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Texas.svg/960px-Flag_of_Texas.svg.png",
     "videoUrl": "",
     "location": "Beaumont, Texas"
   },
@@ -5936,7 +5936,7 @@ const factsDB = [
     "fullText": "The Nebraska Sandhills are a 19,300-square-mile region of grass-stabilized sand dunes covering about a quarter of the state. They are the largest sand dune formation in the Western Hemisphere and one of the largest grass-stabilized dune systems in the world. The dunes formed about 8,000 years ago when the climate was drier and are held in place today by a thick carpet of prairie grass. Beneath the Sandhills lies the Ogallala Aquifer, one of the largest underground freshwater reserves on Earth. The region is incredibly sparsely populated, with some counties having fewer than one person per square mile. Ranching is essentially the only viable economy. At night, the Sandhills offer some of the darkest skies in the United States.",
     "category": "nature",
     "year": "",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Rub_al_Khali_002.JPG/960px-Rub_al_Khali_002.JPG",
     "videoUrl": "",
     "location": "Valentine, Nebraska"
   },
@@ -5975,7 +5975,7 @@ const factsDB = [
     "fullText": "J. Sterling Morton, a newspaper editor and politician in Nebraska City, proposed a tree-planting holiday in 1872 because the Nebraska prairie was almost entirely treeless. On the first Arbor Day, April 10, 1872, an estimated one million trees were planted across Nebraska. The holiday spread to other states and eventually became a national observance. Morton's estate, Arbor Lodge, is now a state historical park. The National Arbor Day Foundation, headquartered in Nebraska City, is the world's largest nonprofit dedicated to tree planting. The organization has planted over 500 million trees worldwide. Nebraska's state nickname, the Tree Planters' State, was later changed to the Cornhusker State, which tells you something about shifting priorities.",
     "category": "history",
     "year": "1872",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/ArborDay2009treeplanters.JPG/960px-ArborDay2009treeplanters.JPG",
     "videoUrl": "",
     "location": "Nebraska City, Nebraska"
   },
@@ -6196,7 +6196,7 @@ const factsDB = [
     "fullText": "On December 2, 1942, physicist Enrico Fermi and his team achieved the first controlled, self-sustaining nuclear chain reaction in a makeshift laboratory under the west stands of Stagg Field, the University of Chicago's abandoned football stadium. The experiment was part of the Manhattan Project and proved that nuclear energy could be harnessed. The reactor, called Chicago Pile-1, was built from uranium and graphite blocks stacked in a pile. The entire experiment was kept secret; Chicago's mayor and most city officials had no idea a nuclear reactor was running in the middle of a residential neighborhood. Arthur Compton famously called James Conant to report success using the coded message: 'The Italian navigator has just landed in the new world.' A Henry Moore sculpture called Nuclear Energy now marks the spot.",
     "category": "science",
     "year": "1942",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/960px-Flag_of_Israel.svg.png",
     "videoUrl": "",
     "location": "Chicago, Illinois"
   },
@@ -6235,7 +6235,7 @@ const factsDB = [
     "fullText": "Peoria, Illinois has been the home of Caterpillar Inc. since 1925, making it the manufacturing hub for one of the largest equipment companies in the world. Those massive yellow bulldozers, excavators, and haul trucks seen on construction sites and mines on every continent are designed and often built in central Illinois. The company employs tens of thousands in the region. Peoria is also the origin of the famous phrase 'Will it play in Peoria?' which vaudeville performers used to test whether an act would succeed with mainstream America. Richard Nixon's campaign later adopted the phrase for political messaging. The city sits on the Illinois River and was historically a major whiskey distilling center during Prohibition. Peoria's name has become shorthand for Middle America itself.",
     "category": "culture",
     "year": "1925",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Caterpillarhq.JPG/960px-Caterpillarhq.JPG",
     "videoUrl": "",
     "location": "Peoria, Illinois"
   },
@@ -6456,7 +6456,7 @@ const factsDB = [
     "fullText": "Grand Rapids, Michigan earned the nickname Furniture Capital of the World in the late 1800s and early 1900s, when dozens of furniture manufacturers operated in the city. Companies like Steelcase, Herman Miller, and Haworth still have roots in the area. But as the furniture industry consolidated and moved offshore, Grand Rapids reinvented itself. The city now boasts over 80 craft breweries in the metropolitan area and has been voted Beer City USA multiple times by readers of USA Today. Founders Brewing Company, based in Grand Rapids, has become one of the largest craft breweries in America. The transformation from furniture factories to taprooms is one of the more successful economic pivots of any Midwestern city. Grand Rapids also hosts ArtPrize, one of the world's largest open art competitions, which draws hundreds of thousands of visitors every fall.",
     "category": "culture",
     "year": "",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Denver_Downtown_Aerial%2C_December_2025.jpg/960px-Denver_Downtown_Aerial%2C_December_2025.jpg",
     "videoUrl": "",
     "location": "Grand Rapids, Michigan"
   },
@@ -6495,7 +6495,7 @@ const factsDB = [
     "fullText": "In La Crosse, Wisconsin, six enormous beer storage tanks at the City Brewing Company (formerly the G. Heileman Brewing Company) are painted to resemble a colossal six-pack of Old Style beer. Each tank is over 67 feet tall and holds approximately 22,000 barrels of beer. Together, the six-pack could hold enough beer to fill 7,340,796 regular cans. The tanks were painted to look like Old Style in the 1960s and have become one of Wisconsin's most iconic roadside attractions, visible from Interstate 90 as you drive through La Crosse. The branding on the tanks has changed over the years as the brewery has changed hands, but the six-pack format has remained constant. La Crosse is a charming Mississippi River town, and the giant six-pack perfectly captures Wisconsin's enthusiastic relationship with beer.",
     "category": "weird",
     "year": "1969",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/G._Heileman_Brewing_Company.jpg",
     "videoUrl": "",
     "location": "La Crosse, Wisconsin"
   },
@@ -6716,7 +6716,7 @@ const factsDB = [
     "fullText": "The Sturgis Motorcycle Rally, held every August since 1938, draws approximately 500,000 motorcycle riders to the small Black Hills town of Sturgis, South Dakota. The town's permanent population of about 7,000 is overwhelmed by an influx that swells the population by 7,000 percent. The rally began when Clarence 'Pappy' Hoel organized a race with nine participants. It has since grown into a 10-day event featuring concerts, races, stunt shows, and an ocean of Harley-Davidsons parked along Main Street. The economic impact on South Dakota exceeds $800 million annually. The rally has a reputation for rowdiness, but most attendees are middle-aged professionals who ride motorcycles as a hobby. The surrounding Black Hills offer spectacular riding roads, which is a major draw. Sturgis spends much of the year preparing for those 10 days in August that define its entire identity.",
     "category": "event",
     "year": "1938",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_South_Dakota.svg/960px-Flag_of_South_Dakota.svg.png",
     "videoUrl": "",
     "location": "Sturgis, South Dakota"
   },
@@ -6755,7 +6755,7 @@ const factsDB = [
     "fullText": "Every February, Laredo, Texas hosts the Washington's Birthday Celebration, a month-long festival that is the largest commemoration of George Washington's birthday anywhere in the United States. Started in 1898, the celebration includes parades, a jalapeno eating contest, a fireworks show over the Rio Grande, the Society of Martha Washington Colonial Pageant, and the Abrazo (hug) ceremony on the International Bridge connecting Laredo and Nuevo Laredo, Mexico. The festival draws hundreds of thousands of visitors and is a major cultural event in the predominantly Mexican-American city. The Society of Martha Washington pageant, established in 1939, features elaborate colonial-era gowns that cost tens of thousands of dollars. The celebration represents a unique blend of American patriotism and Mexican-American culture in one of the oldest continuously occupied settlements in Texas.",
     "category": "culture",
     "year": "1898",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Lyndon_B._Johnson%2C_photo_portrait%2C_color_%283x4_cropped%29%283%29.jpg/960px-Lyndon_B._Johnson%2C_photo_portrait%2C_color_%283x4_cropped%29%283%29.jpg",
     "videoUrl": "",
     "location": "Laredo, Texas"
   },
@@ -6976,7 +6976,7 @@ const factsDB = [
     "fullText": "Bailey Yard in North Platte, Nebraska, operated by Union Pacific Railroad, is the largest railroad classification yard in the world. The facility covers 2,850 acres and stretches about eight miles from end to end. It processes approximately 10,000 railcars every 24 hours, sorting them by destination and assembling them into new trains. The yard operates around the clock and employs about 2,600 people. The Golden Spike Tower, an eight-story observation platform, gives visitors a panoramic view of the entire operation, which looks like a massive mechanical organism from above. North Platte's railroad heritage dates back to the transcontinental railroad, and the town has been a major rail hub ever since. During World War II, the North Platte Canteen, operated by local volunteers, served meals to over six million troops passing through on trains. The canteen operated for every day of the war without missing a single troop train.",
     "category": "landmark",
     "year": "1948",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Golden_Spike_Tower%2C_North_Platte.JPG/960px-Golden_Spike_Tower%2C_North_Platte.JPG",
     "videoUrl": "",
     "location": "North Platte, Nebraska"
   },
@@ -7015,7 +7015,7 @@ const factsDB = [
     "fullText": "The Ohio State Reformatory in Mansfield, Ohio served as the primary filming location for the 1994 film The Shawshank Redemption, widely considered one of the greatest movies ever made. The imposing Gothic-style prison was built between 1886 and 1910 and operated until 1990, when a federal court ordered it closed due to overcrowding and inhumane conditions. The building features the world's largest free-standing steel cell block, rising six tiers high. After the prison closed, the Mansfield Reformatory Preservation Society took over and opened it for tours. The warden's office, the yard, and many other locations from the film are recognizable. The reformatory is also a popular destination for ghost hunters, as numerous paranormal investigations have been conducted there. The building's combination of architectural grandeur and institutional grimness makes it one of the most atmospheric places in Ohio.",
     "category": "culture",
     "year": "1994",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Mansfield_skyline.jpg/960px-Mansfield_skyline.jpg",
     "videoUrl": "",
     "location": "Mansfield, Ohio"
   },
@@ -7236,7 +7236,7 @@ const factsDB = [
     "fullText": "Lily Dale is a gated community in western New York where every permanent resident is a registered spirit medium. Founded in 1879 as a center for the Spiritualist movement, the hamlet sits on the shores of Cassadaga Lake and draws around 22,000 visitors each summer seeking to communicate with the dead. The community has its own post office, hotel, and healing temple. Daily activities include message services where mediums deliver communications from spirits to audience members, and visitors can book private readings. The Inspiration Stump, a tree stump in the old-growth Leolyn Woods, is considered one of the most powerful vortexes for spirit communication. Fox Cottage, associated with the Fox Sisters who helped launch American Spiritualism, was relocated to Lily Dale before it burned down in 1955.",
     "category": "weird",
     "year": "1879",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/John_Beattie_Eugene_Rochas_seance.jpg",
     "videoUrl": "",
     "location": "Lily Dale, New York"
   },
@@ -7275,7 +7275,7 @@ const factsDB = [
     "fullText": "The New Jersey Pine Barrens cover 1.1 million acres in the southern part of the state, making up roughly 22 percent of New Jersey's total land area. This vast expanse of pine forest, cedar swamps, and sandy soil is larger than Yosemite National Park and sits within a 90-minute drive of both New York City and Philadelphia. The Pinelands National Reserve, established in 1978, was America's first National Reserve. Beneath the forest lies the Kirkwood-Cohansey aquifer, containing 17 trillion gallons of pure water. The area is incredibly sparsely populated, with some census tracts showing fewer than 15 people per square mile in a state that averages over 1,200. The acidic, iron-rich water of the Pine Barrens streams creates a distinctive tea-colored flow that looks undrinkable but is actually pristine.",
     "category": "nature",
     "year": "",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Bass_Harbor_Lighthouse_b.jpg/960px-Bass_Harbor_Lighthouse_b.jpg",
     "videoUrl": "",
     "location": "Pine Barrens, New Jersey"
   },
@@ -7483,7 +7483,7 @@ const factsDB = [
     "fullText": "Mark Twain lived in Hartford, Connecticut from 1874 to 1891 and built a 25-room Victorian Gothic mansion that was as eccentric as its owner. The house featured a grand staircase designed to look like a riverboat pilothouse, a billiard room where Twain wrote late into the night, and one of the first residential telephones in the world. Twain hated the phone and allegedly said the human voice carries entirely too far as it is. He wrote The Adventures of Tom Sawyer, Adventures of Huckleberry Finn, The Prince and the Pauper, and A Connecticut Yankee in King Arthur's Court in this house. The family spent roughly $70,000 to build it, equivalent to over $2 million today. Financial ruin from bad investments forced Twain to leave Hartford, and he never returned to live there. The house is now a museum and National Historic Landmark.",
     "category": "people",
     "year": "1874",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Cody-Buffalo-Bill-LOC.jpg/960px-Cody-Buffalo-Bill-LOC.jpg",
     "videoUrl": "",
     "location": "Hartford, Connecticut"
   },
@@ -7496,7 +7496,7 @@ const factsDB = [
     "fullText": "In 1775, Yale graduate David Bushnell built the Turtle, a one-man, hand-powered submarine, in the Connecticut River near Old Saybrook. It was the first submarine used in combat. The plan was simple: pilot the Turtle beneath a British warship in New York Harbor, drill a hole in the hull, attach a time bomb, and escape. On September 7, 1776, Sergeant Ezra Lee attempted the mission against HMS Eagle. He successfully navigated underwater in darkness but couldn't drill through the ship's copper-clad hull. Exhausted and running out of air, Lee released the bomb and fled. The explosive detonated harmlessly in the river. Despite the failure, the Turtle terrified the British navy and proved that submarine warfare was possible. Bushnell later served as an Army engineer and disappeared into obscurity.",
     "category": "history",
     "year": "1775",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Flag_of_Connecticut.svg/960px-Flag_of_Connecticut.svg.png",
     "videoUrl": "",
     "location": "Old Saybrook, Connecticut"
   },
@@ -7743,7 +7743,7 @@ const factsDB = [
     "fullText": "Vermont existed as an independent republic called the Vermont Republic from 1777 to 1791, with its own constitution, currency, and postal service. It declared independence not just from Britain but also from New York, which claimed the territory. Vermont's 1777 constitution was the first in North America to ban adult slavery and the first to grant suffrage to all men regardless of property ownership. During its years as an independent nation, Vermont even negotiated secretly with the British in Canada about potentially becoming a British province, using the talks as leverage to pressure Congress into admitting it to the Union. Vermont finally became the 14th state in 1791, the first admitted after the original thirteen. Its independent streak has never fully faded.",
     "category": "history",
     "year": "1777",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Vermont.svg/960px-Flag_of_Vermont.svg.png",
     "videoUrl": "",
     "location": "Bennington, Vermont"
   },
@@ -7756,7 +7756,7 @@ const factsDB = [
     "fullText": "Barre, Vermont sits atop one of the largest and deepest granite deposits in the world, and its quarries have been producing stone since 1812. The Rock of Ages quarry is the largest deep-hole dimension granite quarry on Earth, extending 600 feet into the ground. In the late 1800s, waves of Italian and Scottish stonemasons immigrated to Barre for work, bringing extraordinary carving skills that transformed the local Hope Cemetery into an open-air sculpture gallery. Headstones there include full-sized race cars, a biplane, a soccer ball, and an armchair, all carved from solid granite. The dust from granite cutting caused an epidemic of silicosis, and many stoneworkers died young. Barre's labor movement, driven by Italian anarchists and socialists, was one of the most radical in America. The quarries still operate today, shipping Vermont granite across the world.",
     "category": "landmark",
     "year": "1812",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Elberton_ga_heard_house.jpg/960px-Elberton_ga_heard_house.jpg",
     "videoUrl": "",
     "location": "Barre, Vermont"
   },
@@ -8263,7 +8263,7 @@ const factsDB = [
     "fullText": "Green-Wood Cemetery in Brooklyn, established in 1838, was the most popular attraction in New York City before Central Park opened in 1858, drawing over 500,000 visitors a year. The 478-acre cemetery became so fashionable that wealthy New Yorkers lobbied to be buried there the way people today lobby for apartments in prime zip codes. Among its 570,000 interments are Boss Tweed, Leonard Bernstein, Jean-Michel Basquiat, and the inventor of the sewing machine, Elias Howe. The cemetery's rolling hills, scenic ponds, and elaborate monuments make it feel more like a sculpture garden than a burial ground. Its Gothic Revival entrance gate is one of the finest examples of the style in America. Green-Wood was designated a National Historic Landmark in 2006 and remains an active burial site. The cemetery's population exceeds that of most American cities.",
     "category": "landmark",
     "year": "1838",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Green-Wood_Cemetery_gate_%2853784p%29_cropped.jpg/960px-Green-Wood_Cemetery_gate_%2853784p%29_cropped.jpg",
     "videoUrl": "",
     "location": "Brooklyn, New York"
   },
@@ -8536,7 +8536,7 @@ const factsDB = [
     "fullText": "Baldassare Forestiere was a Sicilian immigrant who arrived in Fresno in 1906 hoping to become a citrus farmer. When he discovered the hardpan clay beneath his land made surface farming nearly impossible, he started digging. Over the next 40 years, he excavated an elaborate network of underground rooms, passageways, patios, and grottos covering about 10 acres. He grew citrus trees, grapes, and other fruit in sunken courtyards open to the sky. Forestiere never used blueprints and did nearly all the work by hand with simple tools. He modeled some rooms after the ancient catacombs he remembered from Sicily. The underground temperature stays comfortable year-round despite Fresno's brutal summers. Today the Forestiere Underground Gardens are a California Historical Landmark and one of the strangest attractions in the Central Valley.",
     "category": "people",
     "year": "1906",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Fresno_Bee_Building_Dec_2012_%28cropped%29.jpg",
     "videoUrl": "",
     "location": "Fresno, California"
   },
@@ -8744,7 +8744,7 @@ const factsDB = [
     "fullText": "Lava River Cave is the longest continuous lava tube in Oregon, running 5,211 feet beneath the surface of the Deschutes National Forest. It formed about 80,000 years ago when the surface of a basalt lava flow hardened into a crust while molten rock continued to flow beneath, eventually draining out and leaving a hollow tube. The cave maintains a temperature of about 42 degrees year-round, so visitors need warm clothing even in summer. Some sections have ceilings over 50 feet high, while others require stooping. Sand formations on the floor were left by water percolating through the rock. The cave entrance is a collapsed section of the tube ceiling that forms a natural stairway down. From the air, there is almost no surface indication that a mile-long tunnel lies below the forest floor.",
     "category": "nature",
     "year": "Present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/CratersDrone1.jpg/960px-CratersDrone1.jpg",
     "videoUrl": "",
     "location": "Bend, Oregon"
   },
@@ -8796,7 +8796,7 @@ const factsDB = [
     "fullText": "Hole in the Ground is a maar crater about 25 miles southeast of Bend, Oregon that measures nearly a mile across and 300 feet deep. When first studied, geologists assumed it was a meteor impact crater because of its near-perfect circular shape. Later investigation revealed it was a volcanic explosion crater, or maar, formed when rising magma encountered groundwater and the resulting steam explosion blew out a perfectly round hole. The crater is estimated to be about 18,000 years old. The rim rises about 100 feet above the surrounding terrain, and the crater floor is flat, covered in grass and scattered pines. It is accessible by a rough Forest Service road but gets few visitors. From the air, the crater looks astonishingly like something punched a hole in the landscape. Similar maars are found throughout the volcanic terrain of central Oregon.",
     "category": "science",
     "year": "Present",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Firestorm_cloud_over_Hiroshima_%28from_Matsuyama%29.jpg/960px-Firestorm_cloud_over_Hiroshima_%28from_Matsuyama%29.jpg",
     "videoUrl": "",
     "location": "La Pine, Oregon"
   },
@@ -9004,7 +9004,7 @@ const factsDB = [
     "fullText": "Rachel, Nevada is an unincorporated community of about 50 people on State Route 375, which was officially designated the Extraterrestrial Highway by the state in 1996. It is the closest civilian settlement to the Nellis Test and Training Range, which includes the notorious Area 51 military installation. The town's main business is the Little A'Le'Inn, a bar and restaurant that serves as the social center for UFO enthusiasts, conspiracy theorists, and curious tourists. In September 2019, a viral Facebook event called Storm Area 51 drew international attention and several thousand people actually showed up in Rachel, overwhelming the tiny town. The surrounding landscape is classic Great Basin desert, flat valleys and barren mountain ranges stretching to every horizon. From the air, the Nellis range is a vast restricted airspace zone, and commercial flights are regularly rerouted around it.",
     "category": "weird",
     "year": "1996",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Harry_Reid_official_portrait_2009_%28cropped%29.jpg/960px-Harry_Reid_official_portrait_2009_%28cropped%29.jpg",
     "videoUrl": "",
     "location": "Rachel, Nevada"
   },
@@ -9017,7 +9017,7 @@ const factsDB = [
     "fullText": "The Black Rock Desert in Pershing County, Nevada is a playa that stretches over 100 miles long, making it one of the largest flat surfaces on Earth. In 1997, the ThrustSSC jet car driven by Andy Green set the land speed record at 763.035 mph, becoming the first car to break the sound barrier. The playa surface is so flat that deviations of more than a few inches are rare across miles of terrain. The Black Rock Desert is also the home of Burning Man, the annual arts festival that draws 70,000 people to an otherwise uninhabited lakebed. The playa surface is a mix of alkali mud and clay that is rock-hard when dry and impassably muddy when wet. Surrounding the desert are hot springs, colorful mineral deposits, and the ruins of a 19th-century way station on the Emigrant Trail. From the air, the playa is a vast white expanse ringed by dark mountains.",
     "category": "science",
     "year": "1997",
-    "imageUrl": "",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Thrust_SSC_at_Coventry_Transport_Museum.jpg/960px-Thrust_SSC_at_Coventry_Transport_Museum.jpg",
     "videoUrl": "",
     "location": "Gerlach, Nevada"
   },
