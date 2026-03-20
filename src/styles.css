@@ -528,8 +528,12 @@ html, body {
 .postcard-distance {
   font-family: var(--font-display);
   font-size: 0.65rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.8);
+  font-weight: 700;
+  color: #fefae0;
+  background: rgba(40, 54, 24, 0.7);
+  padding: 3px 8px;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
 }
 
 .postcard-body {
