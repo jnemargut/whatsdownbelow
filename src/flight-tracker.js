@@ -253,14 +253,22 @@ async function fetchRealRoute(icao24) {
     const flights = await openskyFetch(url);
     if (!flights || flights.length === 0) return null;
 
-    // Get the most recent flight for this aircraft
-    const latest = flights[flights.length - 1];
-    const depIcao = latest.estDepartureAirport; // ICAO format like "KATL"
-    const arrIcao = latest.estArrivalAirport;   // ICAO format like "KSAN"
+    // Find the CURRENT flight -- the one most recently seen and still in progress.
+    // Sort by lastSeen descending, prefer flights without an arrival (still flying).
+    // OpenSky returns flights where lastSeen is recent for in-progress flights.
+    const sorted = [...flights].sort((a, b) => (b.lastSeen || 0) - (a.lastSeen || 0));
 
-    if (!depIcao) return null;
+    // The current flight is the one with the most recent lastSeen
+    // that was seen within the last 10 minutes
+    const currentFlight = sorted.find(f => {
+      return f.estDepartureAirport && (now - (f.lastSeen || 0)) < 600;
+    }) || sorted[0];
 
-    // Convert ICAO airport codes (KATL) to IATA (ATL)
+    if (!currentFlight || !currentFlight.estDepartureAirport) return null;
+
+    const depIcao = currentFlight.estDepartureAirport;
+    const arrIcao = currentFlight.estArrivalAirport;
+
     const origin = icaoAirportToIata(depIcao);
     const dest = arrIcao ? icaoAirportToIata(arrIcao) : null;
 
@@ -301,9 +309,22 @@ function icaoAirportToIata(icaoCode) {
 }
 
 /**
+ * Calculate true bearing between two points using haversine-based formula.
+ * Returns degrees 0-360 from north.
+ */
+function trueBearing(lat1, lng1, lat2, lng2) {
+  const toRad = d => d * Math.PI / 180;
+  const dLng = toRad(lng2 - lng1);
+  const lat1R = toRad(lat1);
+  const lat2R = toRad(lat2);
+  const y = Math.sin(dLng) * Math.cos(lat2R);
+  const x = Math.cos(lat1R) * Math.sin(lat2R) - Math.sin(lat1R) * Math.cos(lat2R) * Math.cos(dLng);
+  return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+}
+
+/**
  * Guess origin and destination airports from position and heading.
- * Scores airports by how well they align with the flight path
- * (combination of angle alignment and distance).
+ * Uses true bearing (accounts for Earth's curvature) and tight cones.
  */
 export function guessRouteFromPosition(lat, lng, heading) {
   if (lat == null || lng == null || heading == null) return null;
@@ -316,33 +337,41 @@ export function guessRouteFromPosition(lat, lng, heading) {
     const dLat = airport.lat - lat;
     const dLng = airport.lng - lng;
     const dist = Math.sqrt(dLat * dLat + dLng * dLng);
-    if (dist < 0.3) continue; // skip airports right underneath
+    if (dist < 0.3) continue;
 
-    // Bearing from plane to airport
-    const bearingToAirport = (Math.atan2(dLng, dLat) * 180 / Math.PI + 360) % 360;
+    // Use TRUE bearing (great circle) instead of simple atan2
+    const bearing = trueBearing(lat, lng, airport.lat, airport.lng);
 
     // Angle difference between heading and bearing to airport
-    let diff = bearingToAirport - heading;
+    let diff = bearing - heading;
     if (diff > 180) diff -= 360;
     if (diff < -180) diff += 360;
 
-    // Score: lower is better. Penalize being off-axis heavily.
-    // A perfectly aligned airport at moderate distance beats a close but off-axis one.
-    const angleWeight = Math.abs(diff) / 45; // 0 = perfect alignment, 1 = 45deg off
-    const score = dist * (1 + angleWeight * 2);
+    // Score: prefer airports that are well-aligned AND far away
+    // (the destination is usually the farthest well-aligned airport, not the nearest)
+    const anglePenalty = (Math.abs(diff) / 30); // 0 = perfect, 1 = 30deg off
+    const score = anglePenalty * 3 + (1 / (dist + 0.1)); // Low angle penalty + prefer farther
 
-    if (Math.abs(diff) < 45) {
-      // Airport is ahead (within 45 degrees of heading)
+    if (Math.abs(diff) < 30) {
+      // Airport is ahead (tight 30-degree cone)
       ahead.push({ code, dist, angleDiff: Math.abs(diff), score });
-    } else if (Math.abs(diff) > 135) {
-      // Airport is behind (within 45 degrees of opposite heading)
+    } else if (Math.abs(diff) > 150) {
+      // Airport is behind (tight 30-degree cone from reverse heading)
       behind.push({ code, dist, angleDiff: Math.abs(diff), score });
     }
   }
 
-  // Sort by score (best match first)
-  behind.sort((a, b) => a.score - b.score);
-  ahead.sort((a, b) => a.score - b.score);
+  // For destination: pick the FARTHEST well-aligned airport (that's where the flight is going)
+  // For origin: pick the NEAREST well-aligned airport behind (that's where it came from)
+  ahead.sort((a, b) => {
+    // First by angle (tighter = better), then by distance (farther = more likely destination)
+    if (Math.abs(a.angleDiff - b.angleDiff) > 10) return a.angleDiff - b.angleDiff;
+    return b.dist - a.dist; // Prefer farther for destination
+  });
+  behind.sort((a, b) => {
+    if (Math.abs(a.angleDiff - b.angleDiff) > 10) return a.angleDiff - b.angleDiff;
+    return a.dist - b.dist; // Prefer closer for origin
+  });
 
   const origin = behind.length > 0 ? behind[0].code : null;
   const dest = ahead.length > 0 ? ahead[0].code : null;
