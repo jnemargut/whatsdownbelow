@@ -299,19 +299,6 @@ const factsDB = [
     "location": "White Sands, New Mexico"
   },
   {
-    "id": "nm-002",
-    "lat": 33.3943,
-    "lng": -104.523,
-    "title": "Roswell: Where a Weather Balloon Became the World's Most Famous UFO",
-    "summary": "In 1947, something crashed on a ranch near Roswell, New Mexico. The Army initially said it was a flying disc, then changed the story to a weather balloon. Sixty-plus years of conspiracy theories followed.",
-    "fullText": "In June or July of 1947, rancher W.W. 'Mac' Brazel found unusual debris scattered across his property northwest of Roswell. The local Army Air Force base issued a press release stating they had recovered a 'flying disc,' which made front-page news worldwide. The next day, the military retracted the statement and said it was merely a weather balloon. Decades later, the Air Force revealed the debris was actually from Project Mogul, a classified program using high-altitude balloons to monitor Soviet nuclear tests. But by then, Roswell had become synonymous with UFO conspiracy theories, alleged alien bodies, and government cover-ups. The town fully embraced its extraterrestrial reputation, opening the International UFO Museum and Research Center and hosting an annual UFO Festival. Every July, the population of 48,000 roughly doubles as enthusiasts descend on the town to celebrate the anniversary of the incident that refuses to die.",
-    "category": "sighting",
-    "year": "1947",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Roswell_UFO_Museum%2C_Roswell%2C_New_Mexico.jpg/1280px-Roswell_UFO_Museum%2C_Roswell%2C_New_Mexico.jpg",
-    "videoUrl": "",
-    "location": "Roswell, New Mexico"
-  },
-  {
     "id": "nm-003",
     "lat": 32.8837,
     "lng": -105.9525,
@@ -2587,19 +2574,6 @@ const factsDB = [
     "location": "Memphis, Tennessee"
   },
   {
-    "id": "wa-001",
-    "lat": 47.6062,
-    "lng": -122.3321,
-    "title": "Seattle Gets Less Rain Than New York",
-    "summary": "Despite its reputation, Seattle gets only 37 inches of rain per year, less than New York, Houston, Miami, and most East Coast cities. The difference is that Seattle's rain falls as a persistent grey drizzle for months.",
-    "fullText": "Seattle's reputation as a rain-soaked city is one of the great misconceptions in American geography. The city receives about 37 inches of precipitation per year, which is less than New York (49 inches), Houston (50 inches), Miami (62 inches), and even Atlanta (50 inches). The reason Seattle feels so rainy is the character of the precipitation rather than the quantity. Rain falls as a fine, persistent drizzle on about 150 days per year, and the cloud cover persists for much of the fall, winter, and spring. The result is a city that feels perpetually damp even though it receives moderate rainfall. Seattleites embrace this reputation, partly because it discourages people from moving there. The flip side is that Seattle's summers, from July through September, are among the most glorious in the country -- warm, dry, sunny days with temperatures in the 70s and spectacular views of the Cascades and Olympics.",
-    "category": "science",
-    "year": "ongoing",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Seattle, Washington"
-  },
-  {
     "id": "ny-001",
     "lat": 40.7484,
     "lng": -73.9967,
@@ -2847,19 +2821,6 @@ const factsDB = [
     "location": "Enterprise, Alabama"
   },
   {
-    "id": "south-al-007",
-    "lat": 34.6059,
-    "lng": -86.9833,
-    "title": "Dismals Canyon Glows in the Dark",
-    "summary": "This privately owned canyon in northwest Alabama is home to 'dismalites' -- bioluminescent insect larvae that light up the canyon walls at night like tiny blue stars. Only two places on Earth have them.",
-    "fullText": "Dismals Canyon near Phil Campbell, Alabama is a sandstone gorge designated a National Natural Landmark, but its real claim to fame comes out after dark. The canyon walls are home to dismalites (Orfelia fultoni), bioluminescent larvae of a fungus gnat species that emit a soft blue-green glow. These creatures are found in only two known locations on Earth: here and in select caves in New Zealand and Australia (a closely related species). The canyon itself is lush with old-growth forest, including trees over 200 years old, and features waterfalls, natural bridges, and rock shelters. Night tours allow visitors to see the canyon walls come alive with thousands of tiny blue lights. The privately owned preserve has been welcoming visitors since the 1960s.",
-    "category": "nature",
-    "year": "1960s",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Phil Campbell, Alabama"
-  },
-  {
     "id": "south-al-010",
     "lat": 34.1826,
     "lng": -87.3444,
@@ -2910,19 +2871,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Oxford, Mississippi"
-  },
-  {
-    "id": "south-ms-003",
-    "lat": 33.4221,
-    "lng": -90.9066,
-    "title": "The Crossroads Where Robert Johnson Sold His Soul",
-    "summary": "According to legend, blues musician Robert Johnson sold his soul to the devil at a crossroads in Clarksdale, Mississippi in exchange for his guitar skills. The intersection is now marked with giant guitar signs.",
-    "fullText": "At the intersection of Highways 61 and 49 in Clarksdale, Mississippi stands a marker commemorating the most famous legend in American music. According to Delta blues mythology, a young Robert Johnson brought his guitar to a crossroads at midnight and met the devil, who tuned his instrument and granted him supernatural musical ability in exchange for his soul. Johnson went on to record only 29 songs before dying at age 27 under mysterious circumstances in 1938, but those recordings essentially invented modern blues and rock and roll. Whether the crossroads story is literally true matters less than its power -- it has become the founding myth of the blues. Clarksdale's Ground Zero Blues Club, co-owned by actor Morgan Freeman, sits nearby. The intersection features giant guitar-shaped signs marking the spot.",
-    "category": "culture",
-    "year": "1930s",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Clarksdale, Mississippi"
   },
   {
     "id": "south-ms-007",
@@ -4511,19 +4459,6 @@ const factsDB = [
     "location": "Christmas Valley, Oregon"
   },
   {
-    "id": "wa-001",
-    "lat": 46.1914,
-    "lng": -122.1956,
-    "title": "The Mountain That Blew Its Own Top Off",
-    "summary": "Mount St. Helens erupted on May 18, 1980, with the force of 26,000 Hiroshima bombs. It blew 1,300 feet off its summit and killed 57 people in the deadliest volcanic event in US history.",
-    "fullText": "At 8:32 AM on May 18, 1980, a massive earthquake triggered the largest landslide in recorded history on the north face of Mount St. Helens. The landslide exposed the pressurized magma inside, which exploded laterally at 670 mph with temperatures reaching 680 degrees Fahrenheit. The blast flattened 230 square miles of forest, killed 57 people, destroyed 200 homes, and wiped out 47 bridges. The eruption column rose 80,000 feet into the atmosphere and dropped ash across 11 states. The mountain lost 1,300 feet of elevation in an instant, leaving a horseshoe-shaped crater visible from space. Among the dead was Harry R. Truman, an 83-year-old lodge owner who refused to evacuate and was buried under 150 feet of debris. The blast zone has been left to recover naturally and today serves as a massive outdoor laboratory for studying ecological succession.",
-    "category": "nature",
-    "year": "1980",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Mount St. Helens, Washington"
-  },
-  {
     "id": "wa-003",
     "lat": 47.5442,
     "lng": -122.3745,
@@ -4925,19 +4860,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "White Sands, New Mexico"
-  },
-  {
-    "id": "nm-002",
-    "lat": 32.3668,
-    "lng": -106.4743,
-    "title": "White Sands Is Made of Gypsum, Not Sand",
-    "summary": "White Sands National Park contains the world's largest gypsum dune field. The dunes are blindingly white and cover 275 square miles of the Tularosa Basin.",
-    "fullText": "White Sands National Park in southern New Mexico protects the largest gypsum dune field on Earth, covering 275 square miles of the Tularosa Basin. Unlike typical sand dunes, which are made of quartz, these dunes are composed of gypsum crystals, the same mineral used in drywall and plaster of Paris. Gypsum is water-soluble, so gypsum dune fields are extremely rare; the White Sands dunes exist only because the Tularosa Basin has no outlet to the sea, trapping the dissolved gypsum in seasonal Lake Lucero, where it crystallizes and is blown into dunes by prevailing winds. The dunes are blindingly white and reflect so much sunlight that they can be seen from space. Some animals, including certain lizards and mice, have evolved lighter coloration to camouflage against the white sand. The dune field is surrounded by the White Sands Missile Range, and the park occasionally closes when missile tests are conducted nearby.",
-    "category": "nature",
-    "year": "Present",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Alamogordo, New Mexico"
   },
   {
     "id": "nm-004",
@@ -5486,19 +5408,6 @@ const factsDB = [
     "location": "Twin Falls, Idaho"
   },
   {
-    "id": "id-008",
-    "lat": 43.9333,
-    "lng": -115.0667,
-    "title": "Sun Valley Was America's First Destination Ski Resort",
-    "summary": "Sun Valley, Idaho opened in 1936 as the first purpose-built ski resort in the United States. It featured the world's first chairlift, adapted from a banana-loading mechanism.",
-    "fullText": "Sun Valley Lodge opened on December 21, 1936 as the first purpose-built destination ski resort in the United States. It was the brainchild of Averell Harriman, chairman of the Union Pacific Railroad, who wanted to create an American version of the great European Alpine resorts to boost winter passenger traffic on his railroad. Harriman hired an Austrian count to scout locations across the West, and Ketchum, Idaho was chosen for its reliable snow, moderate climate, and dramatic mountain scenery. Sun Valley introduced the world's first chairlift, designed by Union Pacific engineer James Curran, who adapted the mechanism from a system used to load bananas onto ships. The resort quickly became a celebrity playground; Ernest Hemingway finished For Whom the Bell Tolls in Suite 206 of the Sun Valley Lodge and later lived in nearby Ketchum until his death in 1961. From the air, the ski runs on Bald Mountain are visible as white stripes through the dark forest.",
-    "category": "history",
-    "year": "1936",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Sun Valley, Idaho"
-  },
-  {
     "id": "mt-007",
     "lat": 47.4944,
     "lng": -111.2831,
@@ -5941,19 +5850,6 @@ const factsDB = [
     "location": "Weatherford, Oklahoma"
   },
   {
-    "id": "mw-ks-005",
-    "lat": 37.751,
-    "lng": -100.0171,
-    "title": "Dodge City Was Actually That Wild",
-    "summary": "Dodge City, Kansas really was one of the wildest towns in the Old West. Wyatt Earp and Bat Masterson both served as lawmen here, and the cemetery was called Boot Hill because men died with their boots on.",
-    "fullText": "From 1872 to about 1885, Dodge City, Kansas was one of the most lawless towns in America. It was the endpoint of the Western Cattle Trail, where cowboys drove longhorns up from Texas and blew their pay on gambling, drinking, and fighting. The town had a literal deadline marked by railroad tracks: south of the tracks, almost anything went. Wyatt Earp served as assistant marshal from 1876 to 1879, and Bat Masterson was sheriff of Ford County. The cemetery was called Boot Hill because so many people were buried there after dying violently, still wearing their boots. Dodge City cleaned up in the late 1880s when the cattle trade shifted, but the legend lived on through TV shows and movies. Today the town leans into its wild past with a recreated Front Street tourist attraction.",
-    "category": "history",
-    "year": "1872",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Dodge City, Kansas"
-  },
-  {
     "id": "mw-ks-006",
     "lat": 38.0608,
     "lng": -97.9298,
@@ -6108,19 +6004,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Dyersville, Iowa"
-  },
-  {
-    "id": "mw-ia-002",
-    "lat": 43.3009,
-    "lng": -93.241,
-    "title": "The Day the Music Died",
-    "summary": "Buddy Holly, Ritchie Valens, and the Big Bopper died in a plane crash in a frozen Iowa cornfield on February 3, 1959. Don McLean immortalized it in 'American Pie' as the day the music died.",
-    "fullText": "On February 3, 1959, a small Beechcraft Bonanza plane crashed into a cornfield five miles northwest of Clear Lake, Iowa, killing rock and roll pioneers Buddy Holly, Ritchie Valens, and J.P. 'The Big Bopper' Richardson, along with pilot Roger Peterson. The musicians had chartered the flight to avoid a long, freezing bus ride to their next concert in Moorhead, Minnesota. The plane went down shortly after takeoff in poor weather conditions. Waylon Jennings, who gave up his seat to the Big Bopper, famously joked 'I hope your old bus freezes up' to Holly before the flight. The crash site is marked by a stainless steel guitar monument and three vinyl records. Don McLean's 1971 song 'American Pie' cemented February 3, 1959 as 'the day the music died.'",
-    "category": "event",
-    "year": "1959",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Clear Lake, Iowa"
   },
   {
     "id": "mw-ia-005",
@@ -7722,19 +7605,6 @@ const factsDB = [
     "location": "Cape Cod, Massachusetts"
   },
   {
-    "id": "ne-ma-005",
-    "lat": 42.443,
-    "lng": -71.229,
-    "title": "The Battle That Started a Revolution",
-    "summary": "The first shots of the American Revolution were fired in Lexington and Concord on April 19, 1775. Nobody knows who fired first, and the debate has never been settled.",
-    "fullText": "In the predawn hours of April 19, 1775, roughly 700 British regulars marched toward Concord, Massachusetts to seize colonial weapons stores. Paul Revere and William Dawes rode ahead to warn the countryside. At Lexington Green, 77 militiamen faced the British column. Someone fired a shot -- the shot heard round the world -- and within minutes, eight colonists lay dead. The British continued to Concord, where they were met by a larger force of minutemen at the North Bridge and forced to retreat. The running battle back to Boston cost the British 73 killed and 174 wounded, compared to 49 killed and 39 wounded for the colonists. The identity of who fired the first shot at Lexington has never been determined and remains one of the most debated questions in American history.",
-    "category": "history",
-    "year": "1775",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Lexington, Massachusetts"
-  },
-  {
     "id": "ne-ma-006",
     "lat": 42.7118,
     "lng": -73.2037,
@@ -8957,19 +8827,6 @@ const factsDB = [
     "location": "Joseph, Oregon"
   },
   {
-    "id": "w2b-or-009",
-    "lat": 42.106,
-    "lng": -121.7558,
-    "title": "Klamath Falls: The Town Heated by Volcanoes",
-    "summary": "Buildings in Klamath Falls, Oregon are heated by geothermal energy piped from hot water beneath the town. Some sidewalks stay snow-free in winter thanks to underground heat.",
-    "fullText": "Klamath Falls sits atop a geothermal hotspot that provides natural hot water at temperatures up to 230 degrees Fahrenheit. Hundreds of homes, businesses, and public buildings use geothermal heat directly, tapping into the hot water through wells. The Oregon Institute of Technology campus has been heated geothermally since 1964, and the system also heats downtown sidewalks to keep them clear of snow and ice. The geothermal district heating system is one of the largest in the United States. The hot water comes from deep faults related to the same volcanic activity that created nearby Crater Lake. Klamath Falls has been using geothermal resources since the early 1900s, when residents first discovered they could heat their homes by drilling shallow wells. From the air, the town sits at the southern end of Upper Klamath Lake, the largest freshwater lake in Oregon.",
-    "category": "science",
-    "year": "1900",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Klamath Falls, Oregon"
-  },
-  {
     "id": "w2b-or-010",
     "lat": 44.7972,
     "lng": -121.2338,
@@ -8994,19 +8851,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Fort Rock, Oregon"
-  },
-  {
-    "id": "w2b-or-012",
-    "lat": 45.0775,
-    "lng": -117.1867,
-    "title": "Hells Canyon: Deeper Than the Grand Canyon",
-    "summary": "Hells Canyon on the Oregon-Idaho border is the deepest river gorge in North America. At 7,993 feet deep, it beats the Grand Canyon by over 2,000 feet.",
-    "fullText": "Hells Canyon, carved by the Snake River along the Oregon-Idaho border, is the deepest river gorge in North America at 7,993 feet measured from the river to the summit of He Devil Peak in the Seven Devils Mountains. That makes it over 2,000 feet deeper than the Grand Canyon. Despite its superlative depth, Hells Canyon gets a fraction of the attention because it lacks the Grand Canyon's colorful horizontal rock layers, instead presenting dark walls of basalt. The canyon is extremely remote and there are no roads through its deepest sections. Jet boats and rafts are the only way to navigate the whitewater river through the gorge. Evidence of human habitation in the canyon dates back at least 8,000 years. From the air, the Snake River appears as a thin silver thread at the bottom of an impossibly deep V-shaped cleft in the dark volcanic landscape.",
-    "category": "nature",
-    "year": "Present",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Imnaha, Oregon"
   },
   {
     "id": "w2b-wa-001",
@@ -9581,19 +9425,6 @@ const factsDB = [
     "location": "Supai, Arizona"
   },
   {
-    "id": "w2b-az-011",
-    "lat": 31.9218,
-    "lng": -109.8915,
-    "title": "Tombstone: The Town Too Tough to Die",
-    "summary": "Tombstone, Arizona is frozen in 1881, the year of the Gunfight at the O.K. Corral. The town embraces its violent past with daily reenactments and costumed saloon workers.",
-    "fullText": "Tombstone was founded in 1877 after a silver strike in the desert of southeastern Arizona. By 1881, it had 10,000 residents and a reputation as one of the wildest towns in the West. On October 26, 1881, the Earps and Doc Holliday confronted the Clantons and McLaurys near the O.K. Corral in a gunfight that lasted about 30 seconds and left three men dead. The fight made Tombstone nationally famous. When the silver mines flooded in the 1880s, the population crashed. The town survived by leaning into its reputation, billing itself as the Town Too Tough to Die. Today it is a tourist destination where daily gunfight reenactments, stagecoach rides, and costumed characters keep the 1880s alive. The Bird Cage Theatre, a former saloon and dance hall, still has bullet holes in the ceiling. From the air, Tombstone is a small grid of buildings in the brown San Pedro Valley, surrounded by desert and ranch land.",
-    "category": "history",
-    "year": "1881",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Tombstone, Arizona"
-  },
-  {
     "id": "w2b-az-012",
     "lat": 35.7432,
     "lng": -109.2773,
@@ -9659,19 +9490,6 @@ const factsDB = [
     "location": "Taos, New Mexico"
   },
   {
-    "id": "w2b-nm-007",
-    "lat": 34.4765,
-    "lng": -108.043,
-    "title": "The VLA: The Giant Ears Listening to the Universe",
-    "summary": "The Very Large Array near Socorro is a collection of 27 radio antennas on railroad tracks spread across the Plains of San Agustin. It appeared in the movie Contact and does real science daily.",
-    "fullText": "The Karl G. Jansky Very Large Array is a radio astronomy observatory on the Plains of San Agustin in central New Mexico. It consists of 27 radio antennas, each 82 feet in diameter and weighing 230 tons, arranged in a Y-shaped pattern that can span up to 22 miles. The antennas are mounted on railroad tracks so they can be repositioned into different configurations. Working together, the 27 dishes function as a single telescope with the resolution of an antenna 22 miles across. The VLA has made fundamental discoveries about black holes, distant galaxies, and the magnetic fields of planets. It famously appeared in the 1997 film Contact starring Jodie Foster. The site was chosen because the Plains of San Agustin are flat, isolated, and have very low radio interference. From the air, the white dishes against the brown desert floor create one of the most visually striking scientific installations on Earth.",
-    "category": "science",
-    "year": "1980",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Socorro, New Mexico"
-  },
-  {
     "id": "w2b-nm-008",
     "lat": 36.7167,
     "lng": -105.5728,
@@ -9724,19 +9542,6 @@ const factsDB = [
     "location": "Taos, New Mexico"
   },
   {
-    "id": "w2b-nm-013",
-    "lat": 32.4284,
-    "lng": -106.745,
-    "title": "Spaceport America: The World's First Purpose-Built Commercial Spaceport",
-    "summary": "A futuristic building rises from the New Mexico desert as the world's first commercial spaceport. Virgin Galactic uses it for suborbital tourist flights.",
-    "fullText": "Spaceport America is a commercial space launch facility in the Jornada del Muerto desert of southern New Mexico. Designed by Foster + Partners and completed in 2011, the main terminal and hangar facility features a swooping modernist design that looks like a spaceship partially buried in the desert. The facility was built with $209 million in New Mexico taxpayer money, primarily to serve as Virgin Galactic's operating base for suborbital space tourism flights. The spaceport sits in one of the most remote and desolate stretches of desert in the state, with no nearby towns. The nearest community is Truth or Consequences, about 30 miles north. Other tenants include SpaceX, which has tested rocket engines at the site, and various smaller launch companies. From the air, the terminal building is a striking sight, a silver crescent rising from the brown desert floor with a long runway stretching into the empty landscape.",
-    "category": "science",
-    "year": "2011",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Truth or Consequences, New Mexico"
-  },
-  {
     "id": "w2b-nm-015",
     "lat": 36.9564,
     "lng": -106.9765,
@@ -9787,19 +9592,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Acoma Pueblo, New Mexico"
-  },
-  {
-    "id": "w2b-ca-027",
-    "lat": 35.3525,
-    "lng": -117.9916,
-    "title": "Edwards Air Force Base: Where the Space Shuttle Came Home",
-    "summary": "Edwards Air Force Base on Rogers Dry Lake has been the site of more aviation firsts than anywhere else on Earth. Chuck Yeager broke the sound barrier here in 1947.",
-    "fullText": "Edwards Air Force Base sits on Rogers Dry Lake in the western Mojave Desert, a natural lakebed so flat and expansive that it served as the world's most forgiving runway. Chuck Yeager broke the sound barrier here on October 14, 1947, in the Bell X-1. The X-15 reached the edge of space from here. Virtually every major American military and civilian aircraft has been tested at Edwards. The dry lakebed provided natural emergency landing strips for the Space Shuttle, which landed at Edwards 54 times when weather conditions at Kennedy Space Center were unfavorable. The base covers about 470 square miles of desert. The distinctive scribed circles on Rogers Dry Lake, runway markings visible from satellite imagery, are among the most recognizable features in aerial photographs of the Mojave. From commercial altitude, the bright white lakebed with its geometric markings is unmistakable against the brown desert.",
-    "category": "science",
-    "year": "1947",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Edwards, California"
   },
   {
     "id": "w2b-ca-028",
@@ -10816,32 +10608,6 @@ const factsDB = [
     "location": "Leavenworth, Indiana"
   },
   {
-    "id": "w2c-oh-001",
-    "lat": 40.5148,
-    "lng": -81.6152,
-    "title": "The World's Largest Amish Community",
-    "summary": "Holmes County, Ohio is home to the largest Amish community on Earth. On any given road, you are more likely to encounter a horse and buggy than a traffic light.",
-    "fullText": "Holmes County, Ohio and the surrounding area contain the world's largest Amish settlement, with over 80,000 Amish residents spread across five counties. The community has been growing steadily because Amish families average seven children. The town of Berlin, Ohio has a population of about 1,100 but draws millions of tourists annually for its Amish-made furniture, quilts, and food. Heini's Cheese Chalet and Lehman's Hardware, which sells non-electric appliances and tools, are major destinations. The roads in Holmes County have wide shoulders specifically designed for buggy traffic. The Amish here are primarily Old Order and speak a German dialect called Pennsylvania Dutch at home. Many work in construction, furniture making, and farming. Despite the tourist appeal, the Amish generally prefer to be left alone and do not appreciate having their photos taken.",
-    "category": "culture",
-    "year": "1808",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Berlin, Ohio"
-  },
-  {
-    "id": "w2c-oh-003",
-    "lat": 39.4443,
-    "lng": -83.4304,
-    "title": "The Great Serpent Mound Mystery",
-    "summary": "The Great Serpent Mound in Adams County is a 1,348-foot-long earthen effigy of a snake. Nobody is entirely sure who built it or why.",
-    "fullText": "The Great Serpent Mound in rural Adams County, Ohio is the largest surviving effigy mound in the world. It stretches 1,348 feet along a ridge above Brush Creek and depicts an uncoiling serpent with an oval shape at its head that may represent an egg, the sun, or a frog. The mound is about three feet high and was not used for burial. Archaeologists have debated for over a century whether it was built by the Adena culture around 300 BC or the Fort Ancient culture around 1070 AD. Recent radiocarbon dating suggests the later date, which coincides with Halley's Comet and a supernova visible from Earth. The site sits on a cryptoexplosion structure, a geological anomaly that may be an ancient meteor impact crater. The mound is aligned to the summer solstice sunset, adding to its astronomical intrigue.",
-    "category": "history",
-    "year": "1070",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Peebles, Ohio"
-  },
-  {
     "id": "w2c-oh-004",
     "lat": 39.932,
     "lng": -83.8088,
@@ -10894,19 +10660,6 @@ const factsDB = [
     "location": "Mackinac Island, Michigan"
   },
   {
-    "id": "w2c-mi-003",
-    "lat": 47.2361,
-    "lng": -88.4531,
-    "title": "The Copper Country Ghost Towns",
-    "summary": "Michigan's Upper Peninsula was once the copper capital of the world. Dozens of mining towns boomed and busted, leaving ghost towns scattered through the forests of the Keweenaw Peninsula.",
-    "fullText": "The Keweenaw Peninsula in Michigan's Upper Peninsula was the site of America's first major mining boom in the 1840s, decades before the California Gold Rush. The copper deposits here were so pure that miners found chunks of native copper weighing tons, already in metallic form. Towns like Calumet, Houghton, and Hancock boomed with immigrants from Cornwall, Finland, Italy, and Croatia. At its peak, the Keweenaw produced over 90% of America's copper. By the mid-1900s, most mines had closed as cheaper copper was found out West. Ghost towns and abandoned mine shafts dot the peninsula's forests. The Italian Hall disaster of 1913, where 73 people died in a stampede during a Christmas party for striking miners' families, remains one of the worst tragedies in Michigan history. Woody Guthrie wrote a song about it.",
-    "category": "history",
-    "year": "1843",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Calumet, Michigan"
-  },
-  {
     "id": "w2c-mi-005",
     "lat": 42.3072,
     "lng": -84.0667,
@@ -10957,19 +10710,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Spring Green, Wisconsin"
-  },
-  {
-    "id": "w2c-wi-004",
-    "lat": 46.7086,
-    "lng": -90.7904,
-    "title": "The Apostle Islands Ice Caves",
-    "summary": "In cold enough winters, Lake Superior freezes near the Apostle Islands, allowing people to walk across the ice to explore stunning sea caves filled with icicles and frozen waterfalls.",
-    "fullText": "The Apostle Islands National Lakeshore in northern Wisconsin contains 21 islands and 12 miles of mainland Lake Superior shoreline. The sea caves, carved by wave action over thousands of years, are spectacular year-round, but in sufficiently cold winters, the lake freezes enough to allow visitors to walk across the ice to the mainland caves. When accessible, the caves fill with massive icicles, frozen waterfalls, and ice formations in blues and whites. In 2014, the caves were accessible by ice for the first time in five years, and an estimated 138,000 people visited in just a few weeks. The phenomenon has become less frequent due to warming temperatures. In summer, the caves are accessible only by kayak. The Apostle Islands also feature six historic lighthouses, old-growth forests, black bears, and some of the most pristine freshwater beaches in the Great Lakes.",
-    "category": "nature",
-    "year": "2014",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Bayfield, Wisconsin"
   },
   {
     "id": "w2c-wi-005",
@@ -11050,19 +10790,6 @@ const factsDB = [
     "location": "Austin, Minnesota"
   },
   {
-    "id": "w2c-ia-002",
-    "lat": 42.0322,
-    "lng": -94.8358,
-    "title": "The Field of Dreams Is Real",
-    "summary": "The baseball diamond from the 1989 movie Field of Dreams is still in a cornfield near Dyersville, Iowa. Visitors still come to play catch where Kevin Costner heard the voice.",
-    "fullText": "The farmhouse and baseball diamond used in the 1989 film Field of Dreams still stand in a cornfield outside Dyersville, Iowa. The site attracts about 100,000 visitors per year who come to run the bases, play catch, and walk into the corn where the ghost players disappeared. In 2021, Major League Baseball held an actual regular-season game at a purpose-built stadium adjacent to the movie site, and Tim Anderson of the White Sox hit a walk-off home run in a moment that seemed scripted by Hollywood. The game was so successful that MLB returned for additional seasons. The original farm was owned by the Lansing family, and for years the property was split between two owners who feuded over the attraction. Don Lansing, who maintained the diamond side, kept the experience free and uncommercial for decades. The movie was based on W.P. Kinsella's novel Shoeless Joe.",
-    "category": "culture",
-    "year": "1989",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Dyersville, Iowa"
-  },
-  {
     "id": "w2c-ia-003",
     "lat": 41.6699,
     "lng": -93.7448,
@@ -11087,19 +10814,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Clear Lake, Iowa"
-  },
-  {
-    "id": "w2c-mo-001",
-    "lat": 37.7415,
-    "lng": -90.7762,
-    "title": "The New Madrid Earthquakes Rang Church Bells in Boston",
-    "summary": "In 1811-1812, a series of massive earthquakes centered in Missouri were felt across two-thirds of the country. The Mississippi River temporarily flowed backwards.",
-    "fullText": "Between December 1811 and February 1812, a series of at least three major earthquakes with estimated magnitudes of 7.5 to 8.0 struck near New Madrid, Missouri. The quakes were so powerful that they were felt in Boston, over 1,000 miles away, where they rang church bells. The Mississippi River temporarily flowed backwards, creating Reelfoot Lake in Tennessee. Entire islands in the Mississippi disappeared, and the town of New Madrid was largely destroyed. Sand blows erupted from the ground across hundreds of square miles. The New Madrid Seismic Zone remains active, and geologists warn that another major earthquake is possible. The zone is particularly dangerous because the bedrock in the central US transmits seismic energy much more efficiently than the fractured rock in California. A repeat of the 1811-1812 events today would affect millions of people and cause catastrophic damage.",
-    "category": "science",
-    "year": "1811",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "New Madrid, Missouri"
   },
   {
     "id": "w2c-mo-002",
@@ -11336,19 +11050,6 @@ const factsDB = [
     "location": "Johnstown, Pennsylvania"
   },
   {
-    "id": "w2c-pa-005",
-    "lat": 40.9506,
-    "lng": -76.8847,
-    "title": "Centralia Has Been on Fire Since 1962",
-    "summary": "An underground coal mine fire has been burning beneath Centralia, Pennsylvania since 1962. The town was evacuated, and the fire could burn for 250 more years.",
-    "fullText": "In May 1962, a fire in a coal mine beneath Centralia, Pennsylvania ignited a vast network of underground coal seams. Despite numerous attempts to extinguish it, the fire has been burning ever since and has consumed an estimated 3,700 acres of underground coal. The fire produces toxic gases and ground temperatures exceeding 900 degrees in places. Roads crack and steam rises from fissures. By the 1980s, the state and federal government relocated most residents. The town's population dropped from about 1,000 to fewer than a dozen holdouts who refused to leave. In 1992, the state claimed the property through eminent domain. The fire is estimated to have enough coal to burn for 250 more years. Route 61, which passed through Centralia, was abandoned after the road buckled from heat, and a bypass was built. Centralia inspired the setting of the Silent Hill horror video game and film franchise. The few remaining residents have lifetime agreements to stay until they leave or die.",
-    "category": "event",
-    "year": "1962",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Centralia, Pennsylvania"
-  },
-  {
     "id": "w2c-pa-006",
     "lat": 41.2033,
     "lng": -77.1945,
@@ -11388,19 +11089,6 @@ const factsDB = [
     "location": "Pine Barrens, New Jersey"
   },
   {
-    "id": "w2c-nj-002",
-    "lat": 40.7537,
-    "lng": -74.1848,
-    "title": "Thomas Edison's Menlo Park Laboratory",
-    "summary": "Thomas Edison built his 'invention factory' in Menlo Park, New Jersey, where he invented the phonograph and perfected the light bulb. The lab was the world's first industrial research facility.",
-    "fullText": "Thomas Edison established his Menlo Park laboratory in 1876 in what was then a rural area of Middlesex County, New Jersey. It was the world's first dedicated research and development facility, a concept Edison called an 'invention factory.' At Menlo Park, Edison and his team invented the phonograph in 1877 and developed a practical incandescent light bulb in 1879. The lab also produced improvements to the telegraph, telephone, and electric power distribution. Edison's approach of employing teams of specialists to solve technical problems systematically was revolutionary and became the model for corporate research labs worldwide. The original Menlo Park lab was dismantled and moved to Greenfield Village in Dearborn, Michigan by Henry Ford in 1929. The Edison Tower and Menlo Park Museum in Edison Township (renamed in his honor) mark the original site. Edison later moved to a larger facility in West Orange, now preserved as Thomas Edison National Historical Park.",
-    "category": "science",
-    "year": "1876",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Edison, New Jersey"
-  },
-  {
     "id": "w2c-ma-001",
     "lat": 42.0434,
     "lng": -71.1831,
@@ -11438,19 +11126,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "North Woods, Maine"
-  },
-  {
-    "id": "w2c-me-002",
-    "lat": 44.3386,
-    "lng": -68.2733,
-    "title": "Acadia Is the First National Park East of the Mississippi",
-    "summary": "Acadia National Park on Mount Desert Island was the first national park east of the Mississippi. It is where the mountains meet the sea along Maine's rocky coast.",
-    "fullText": "Acadia National Park, established in 1919 as Lafayette National Park and renamed in 1929, was the first national park east of the Mississippi River. It occupies most of Mount Desert Island and portions of the Schoodic Peninsula along the coast of Down East Maine. The park features Cadillac Mountain, which at 1,530 feet is the tallest mountain on the US Atlantic coast and one of the first places in the United States to see the sunrise from October through March. The park's 45 miles of carriage roads were built by John D. Rockefeller Jr. between 1913 and 1940, using granite bridges and copper gates. The roads are open only to horses, bicycles, and pedestrians. The park's 158 miles of hiking trails range from easy lakeside walks to cliff-face scrambles with iron rungs. Bass Harbor Head Light, perched on the rocky shore, is one of the most photographed lighthouses in the world. The park receives about 3.5 million visitors per year.",
-    "category": "nature",
-    "year": "1919",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Bar Harbor, Maine"
   },
   {
     "id": "w2c-me-003",
@@ -11542,19 +11217,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Springfield, Missouri"
-  },
-  {
-    "id": "w2c-ok-005",
-    "lat": 34.3634,
-    "lng": -96.4286,
-    "title": "The Chickasaw Cultural Center Tells an Untold Story",
-    "summary": "The Chickasaw Cultural Center in Sulphur, Oklahoma is one of the largest tribal cultural centers in the country, telling the story of a nation forcibly removed from the Southeast.",
-    "fullText": "The Chickasaw Cultural Center in Sulphur, Oklahoma covers 109 acres and cost $80 million to build, making it one of the largest and most comprehensive Native American cultural centers in the United States. The Chickasaw Nation was forcibly removed from its homeland in Mississippi, Alabama, and Tennessee during the 1830s and relocated to Indian Territory in what is now Oklahoma. The removal, part of the broader Trail of Tears, resulted in thousands of deaths. Despite the devastation, the Chickasaw Nation rebuilt and today operates one of the most successful tribal governments in the country, with diversified business interests including gaming, manufacturing, and media. The cultural center features traditional Chickasaw village recreations, a theater, museum galleries, and extensive grounds. Oklahoma has the largest Native American population of any state, with 39 tribal nations headquartered there. The word 'Oklahoma' itself comes from Choctaw words meaning 'red people.'",
-    "category": "culture",
-    "year": "2010",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Sulphur, Oklahoma"
   },
   {
     "id": "w2c-ct-005",
@@ -11737,19 +11399,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Milton, Wisconsin"
-  },
-  {
-    "id": "w2c-ok-006",
-    "lat": 36.7295,
-    "lng": -95.985,
-    "title": "Oklahoma Has More Man-Made Lakes Than Any State",
-    "summary": "Oklahoma has over 200 man-made lakes, more than any other state. The state has more miles of shoreline than the Atlantic and Gulf coasts combined.",
-    "fullText": "Oklahoma claims more than 200 man-made lakes and reservoirs, giving it more artificial lakes than any other state. The state also claims more miles of shoreline than the combined Atlantic and Gulf coasts, a statistic that sounds absurd until you consider the convoluted shorelines of all those reservoirs. The lakes were built primarily for flood control, water supply, and hydroelectric power, beginning in the 1930s under New Deal programs. Grand Lake o' the Cherokees, Lake Texoma, and Lake Eufaula are among the largest. Before the dams were built, Oklahoma's rivers flooded catastrophically, and the state had few natural lakes. The construction of these reservoirs transformed Oklahoma's landscape and economy, creating a tourism and recreation industry centered on boating, fishing, and lakeside living. The Corps of Engineers manages most of the major lakes. The irony is that Oklahoma, typically associated with dust bowls and dry prairies, has become one of the most water-recreated states in the country thanks to these artificial bodies of water.",
-    "category": "nature",
-    "year": "1940",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Northeastern Oklahoma"
   },
   {
     "id": "w2c-ct-006",
@@ -12168,19 +11817,6 @@ const factsDB = [
     "location": "Terlingua, Texas"
   },
   {
-    "id": "w2a-tx-011",
-    "lat": 32.2344,
-    "lng": -101.4784,
-    "title": "The World's Largest Rattlesnake Roundup",
-    "summary": "Sweetwater, Texas hosts the largest rattlesnake roundup on the planet. Hunters bring in tens of thousands of pounds of western diamondbacks every March for a festival that includes snake-eating contests.",
-    "fullText": "Since 1958, the town of Sweetwater, Texas, has hosted the World's Largest Rattlesnake Roundup every March. Hunters fan out across the mesquite-covered ranch land of Nolan County and return with staggering hauls of western diamondback rattlesnakes, sometimes totaling over 10,000 pounds in a single weekend. The festival features guided snake-handling demonstrations, a Miss Snake Charmer pageant, and a cook shack where visitors can eat deep-fried rattlesnake. The event draws roughly 25,000 visitors annually to a town of about 10,000 people. Animal rights groups have protested the roundup for decades, but organizers maintain it serves as pest control. The rattlesnake population in the surrounding area remains robust despite the annual harvest.",
-    "category": "culture",
-    "year": "1958",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Sweetwater, Texas"
-  },
-  {
     "id": "w2a-tx-012",
     "lat": 32.4543,
     "lng": -99.7384,
@@ -12480,19 +12116,6 @@ const factsDB = [
     "location": "Breaux Bridge, Louisiana"
   },
   {
-    "id": "w2a-la-004",
-    "lat": 29.661,
-    "lng": -91.1071,
-    "title": "The Atchafalaya Basin Is America's Biggest Swamp",
-    "summary": "The Atchafalaya Basin is the largest river swamp in the United States, covering nearly one million acres of bayous, backwater lakes, and flooded forests between Lafayette and Baton Rouge.",
-    "fullText": "The Atchafalaya Basin stretches across roughly 930,000 acres of south-central Louisiana, making it the largest river swamp in the United States. It receives about 30 percent of the combined flow of the Mississippi and Red Rivers through the Old River Control Structure. The basin is a labyrinth of bayous, oxbow lakes, cypress-tupelo swamps, and flooded hardwood forests. It supports an extraordinary concentration of wildlife including black bears, alligators, bald eagles, and over 270 species of birds. The basin also produces a massive crawfish harvest each spring. Interstate 10 crosses the basin on an 18-mile elevated bridge, one of the longest over-water highway stretches in the world. Without the Army Corps of Engineers' control structures, the Mississippi River would naturally shift its course into the Atchafalaya, abandoning New Orleans and Baton Rouge entirely.",
-    "category": "nature",
-    "year": "1963",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Henderson, Louisiana"
-  },
-  {
     "id": "w2a-la-005",
     "lat": 30.0021,
     "lng": -91.8143,
@@ -12584,19 +12207,6 @@ const factsDB = [
     "location": "Cameron, Louisiana"
   },
   {
-    "id": "w2a-ms-001",
-    "lat": 33.5043,
-    "lng": -90.1787,
-    "title": "The Crossroads Where Robert Johnson Sold His Soul",
-    "summary": "According to blues legend, Robert Johnson sold his soul to the devil at a crossroads near Clarksdale, Mississippi, in exchange for mastery of the guitar. The intersection is now marked with giant guitar signs.",
-    "fullText": "The most enduring legend in American music holds that blues musician Robert Johnson went to a crossroads at midnight, where he met the Devil and traded his soul for supernatural guitar skills. The most commonly cited location is the intersection of Highways 61 and 49 in Clarksdale, Mississippi, now marked with oversized guitar signs. Johnson's real life was mysterious enough to fuel the legend: he appeared to gain extraordinary musical ability in a short period after disappearing from the Delta music scene for about a year. He recorded only 29 songs before dying at age 27 in 1938, possibly poisoned by a jealous husband. Those 29 recordings influenced virtually every major rock, blues, and pop artist who followed. Three different graves in Mississippi claim to hold his remains. Clarksdale has embraced the legend and markets itself as the home of the blues.",
-    "category": "culture",
-    "year": "1936",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Clarksdale, Mississippi"
-  },
-  {
     "id": "w2a-ms-002",
     "lat": 34.2576,
     "lng": -90.007,
@@ -12634,19 +12244,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Jackson, Mississippi"
-  },
-  {
-    "id": "w2a-ms-011",
-    "lat": 31.5589,
-    "lng": -89.1173,
-    "title": "Hattiesburg's Freedom Summer Training Ground",
-    "summary": "Hattiesburg was a major site during Freedom Summer 1964. Over 600 volunteers were trained here to register Black voters across Mississippi, facing beatings, bombings, and murder.",
-    "fullText": "In the summer of 1964, Hattiesburg, Mississippi, became a critical staging ground for the Freedom Summer voter registration campaign. The city's Forrest County had a Black population of over 50 percent, yet fewer than a dozen Black citizens were registered to vote due to literacy tests and violent intimidation. Civil rights workers, including Vernon Dahmer, led voter registration drives despite constant threats. Dahmer was murdered in January 1966 when the Ku Klux Klan firebombed his home. Over 600 volunteers, many of them Northern college students, spread across Mississippi that summer to register voters and establish Freedom Schools. Three civil rights workers -- James Chaney, Andrew Goodman, and Michael Schwerner -- were murdered by Klansmen in nearby Neshoba County. The sacrifices of Freedom Summer helped build the momentum that led to the passage of the Voting Rights Act of 1965.",
-    "category": "history",
-    "year": "1964",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Hattiesburg, Mississippi"
   },
   {
     "id": "w2a-ms-013",
@@ -13037,19 +12634,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "DeRidder, Louisiana"
-  },
-  {
-    "id": "w2a-ms-015",
-    "lat": 30.396,
-    "lng": -89.03,
-    "title": "The World's Largest Shrimp",
-    "summary": "A 3,699-pound shrimp sculpture made of concrete and steel stands outside a seafood restaurant in Pass Christian, Mississippi. It survived Hurricane Katrina in 2005 when most of the town did not.",
-    "fullText": "The World's Largest Shrimp, a massive concrete and steel sculpture standing approximately 12 feet tall, sits outside a seafood restaurant along the beach road in Pass Christian, Mississippi. The sculpture weighs 3,699 pounds and was built as a roadside attraction to draw motorists along the Gulf Coast. When Hurricane Katrina's storm surge devastated Pass Christian on August 29, 2005, destroying nearly every structure in town, the giant shrimp survived. The storm surge here exceeded 30 feet, the highest recorded in the United States at the time. Pass Christian lost its historic downtown, its waterfront homes, and many of its residents. The surviving shrimp became a symbol of resilience for the rebuilding community. Pass Christian, founded in 1699, is one of the oldest communities on the Gulf Coast. Its name derives from a French explorer's Christian name and the pass, or channel, between the barrier islands offshore.",
-    "category": "landmark",
-    "year": "2005",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Pass Christian, Mississippi"
   },
   {
     "id": "w2a-ms-016",
@@ -13806,19 +13390,6 @@ const factsDB = [
     "location": "Water Valley, Mississippi"
   },
   {
-    "id": "w2a-al-027",
-    "lat": 33.7606,
-    "lng": -87.7425,
-    "title": "Natural Bridge Is Alabama's Longest",
-    "summary": "Natural Bridge in Winston County is the longest natural bridge east of the Rockies, spanning 148 feet across a ravine. It was a sacred site for the Cherokee and is now surrounded by a quiet park.",
-    "fullText": "Natural Bridge, located in Winston County in northwest Alabama, is the longest natural rock bridge east of the Rocky Mountains. The sandstone arch spans 148 feet across a deep ravine and rises 60 feet above the ground. The bridge was formed over millions of years as water eroded the softer rock beneath a harder capstone layer. The Cherokee people considered the site sacred, and it was used as a gathering place long before European settlement. Winston County itself has a unique history: during the Civil War, the county was so opposed to secession that it considered separating from Alabama and was known as the Free State of Winston. The natural bridge is now the centerpiece of a small park and tourist attraction. The surrounding Bankhead National Forest adds to the natural beauty of the area, and the bridge is easily accessible via a short trail from the parking area.",
-    "category": "nature",
-    "year": "1800",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Natural Bridge, Alabama"
-  },
-  {
     "id": "w2a-tx-075",
     "lat": 30.0474,
     "lng": -99.7808,
@@ -13923,19 +13494,6 @@ const factsDB = [
     "location": "Alexandria, Indiana"
   },
   {
-    "id": "w3a-jfk-lax-013",
-    "lat": 39.4667,
-    "lng": -87.4139,
-    "title": "Terre Haute's Execution Chamber",
-    "summary": "The federal death chamber at the U.S. Penitentiary in Terre Haute is the only place where federal executions happen. Timothy McVeigh and the Boston Bomber were both put to death here.",
-    "fullText": "The United States Penitentiary in Terre Haute, Indiana houses the federal government's only execution chamber. Built in 1940, the high-security prison became the site of all federal executions after the death chamber was constructed in 1995. Timothy McVeigh, the Oklahoma City bomber, was executed here in 2001 in the first federal execution in 38 years. Dzhokhar Tsarnaev, the Boston Marathon bomber, was also sentenced to die here. Between 2020 and 2021, thirteen federal executions were carried out at the facility in rapid succession. The execution chamber itself is a small, clinical room with a gurney and viewing windows. Terre Haute's residents have a complicated relationship with their city's grim distinction.",
-    "category": "crime",
-    "year": "1995",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Terre Haute, Indiana"
-  },
-  {
     "id": "w3a-jfk-lax-016",
     "lat": 38.8814,
     "lng": -94.8191,
@@ -13947,19 +13505,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Olathe, Kansas"
-  },
-  {
-    "id": "w3a-jfk-lax-017",
-    "lat": 38.751,
-    "lng": -97.2211,
-    "title": "The Geographic Center of the Lower 48",
-    "summary": "A small stone marker near Lebanon, Kansas marks the geographic center of the contiguous United States. There is almost nothing else around for miles.",
-    "fullText": "A modest stone cairn and a small chapel mark the geographic center of the contiguous United States near Lebanon, Kansas. The exact center point, calculated by the Coast and Geodetic Survey in 1918, sits in a hog farm about a mile northwest of the marker, but the landowner got tired of visitors, so the monument was placed at a more accessible spot. Lebanon, population around 200, sits in Smith County in north-central Kansas, surrounded by an ocean of wheat and grassland. The nearest city of any real size is over an hour away. Visitors who make the pilgrimage often find themselves struck by just how empty the center of America truly is. A small motel and cafe serve the trickle of geographic pilgrims.",
-    "category": "landmark",
-    "year": "1918",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Lebanon, Kansas"
   },
   {
     "id": "w3a-jfk-lax-019",
@@ -14025,19 +13570,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Ephraim, Utah"
-  },
-  {
-    "id": "w3a-jfk-lax-026",
-    "lat": 38.5733,
-    "lng": -115.1685,
-    "title": "The Extraterrestrial Highway",
-    "summary": "Nevada State Route 375 near Rachel, Nevada was officially named the Extraterrestrial Highway in 1996. It runs past Area 51 and has more UFO sightings per mile than any road in America.",
-    "fullText": "Nevada State Route 375 earned the official designation Extraterrestrial Highway in 1996 after years of UFO sightings along its 98-mile length. The road runs through the Nevada desert near the tiny community of Rachel, population roughly 50, and skirts the restricted airspace around Area 51 and the Nevada Test Site. The Little A'Le'Inn in Rachel serves as the unofficial headquarters for alien enthusiasts and conspiracy theorists who come from around the world to watch the skies. Many of the UFO sightings along the highway can likely be attributed to classified military aircraft tested at the nearby Groom Lake facility. But true believers remain unconvinced. The state of Nevada installed special highway signs featuring a flying saucer, which are regularly stolen by souvenir hunters.",
-    "category": "weird",
-    "year": "1996",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Rachel, Nevada"
   },
   {
     "id": "w3a-atl-lax-011",
@@ -14155,19 +13687,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Winnemucca, Nevada"
-  },
-  {
-    "id": "w3a-ord-sfo-013",
-    "lat": 39.8283,
-    "lng": -117.6185,
-    "title": "Battle Mountain: The Armpit of America",
-    "summary": "In 2001, the Washington Post declared Battle Mountain, Nevada the Armpit of America. Instead of getting mad, the town threw a festival celebrating the dubious honor.",
-    "fullText": "In 2001, Washington Post humor columnist Gene Weingarten declared Battle Mountain, Nevada the Armpit of America after what he described as an exhaustive search for the worst town in the country. He cited the town's isolation, its cluster of fast-food restaurants and gas stations along Interstate 80, and a general lack of charm. Rather than taking offense, Battle Mountain leaned into the designation with remarkable good humor. The town organized an annual Armpit of America Festival featuring an armpit beauty contest and a deodorant toss. The Chamber of Commerce sold Armpit of America T-shirts. Battle Mountain, population roughly 3,000, is actually a mining town surrounded by gold, copper, and turquoise operations, and its residents have a blue-collar toughness that turns insults into opportunities. The festival ran for several years and brought more attention to the town than it had ever received.",
-    "category": "weird",
-    "year": "2001",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Battle Mountain, Nevada"
   },
   {
     "id": "w3a-ord-sfo-015",
@@ -14545,19 +14064,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Tribune, Kansas"
-  },
-  {
-    "id": "w3a-fill-030",
-    "lat": 39.5501,
-    "lng": -105.7821,
-    "title": "The Eisenhower Tunnel Blasts Through the Continental Divide",
-    "summary": "The Eisenhower Tunnel on Interstate 70 in Colorado is the highest vehicular tunnel in the world at 11,158 feet. It punches through the Continental Divide beneath the flight path to LAX.",
-    "fullText": "The Eisenhower-Johnson Memorial Tunnel on Interstate 70 in Colorado is the highest vehicular tunnel in the world, with its eastern portal at 11,158 feet above sea level. The twin-bore tunnel pierces the Continental Divide beneath the rugged mountains of the Front Range, 60 miles west of Denver. The first bore opened in 1973 after six years of construction through extremely challenging rock that was under enormous geologic pressure. Workers encountered multiple geological hazards, including faults, water intrusions, and rock bursts. The second bore, named for Governor Edwin C. Johnson, opened in 1979. The tunnel carries approximately 26,000 vehicles per day and is the critical link in Colorado's east-west Interstate highway system. Before the tunnel was built, crossing the Continental Divide on the old Loveland Pass required navigating a steep, winding mountain road that was frequently closed by snow and avalanches. The tunnel is directly beneath the flight path of aircraft heading from Denver toward Salt Lake City and Los Angeles.",
-    "category": "landmark",
-    "year": "1973",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Clear Creek County, Colorado"
   },
   {
     "id": "w3a-fill-031",
@@ -15093,32 +14599,6 @@ const factsDB = [
     "location": "Houston, Texas"
   },
   {
-    "id": "w3b-desert-001",
-    "lat": 40.7342,
-    "lng": -113.8497,
-    "title": "The Bonneville Salt Flats",
-    "summary": "A 30,000-acre expanse of perfectly flat, blindingly white salt in Utah's desert. From the air it looks like a glitch in the matrix, a featureless white void surrounded by brown mountains.",
-    "fullText": "The Bonneville Salt Flats in northwestern Utah are what remains of ancient Lake Bonneville, which once covered most of the state. The salt crust is so flat that you can see the curvature of the Earth while standing on it. From a plane, the 30,000-acre expanse appears as a startling white rectangle in the brown desert, so bright it can be disorienting. This is where land speed records have been set since 1914, with cars exceeding 600 mph on the natural surface. The salt is slowly shrinking due to mineral extraction by nearby potash mines, losing an estimated one percent of its surface area per year. What took 15,000 years to deposit is being consumed in decades. The flatness is so extreme that some areas vary less than one inch per mile.",
-    "category": "nature",
-    "year": "",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Tooele County, Utah"
-  },
-  {
-    "id": "w3b-desert-003",
-    "lat": 32.8853,
-    "lng": -106.3264,
-    "title": "White Sands: A Desert Made of Gypsum",
-    "summary": "White Sands in New Mexico is the largest gypsum dune field on Earth, 275 square miles of pure white sand that looks like snow from the air. It sits next to the Trinity atomic bomb test site, because New Mexico is like that.",
-    "fullText": "White Sands National Park contains 275 square miles of brilliant white gypsum sand dunes, the largest such formation on Earth. From the air, it looks like a snowfield dropped into the desert, a surreal white expanse surrounded by brown mountains. The gypsum comes from ancient Lake Otero, which dried up thousands of years ago, leaving behind crystals that wind has ground into sand. The dunes move up to 30 feet per year, slowly burying everything in their path. Adjacent to the park is White Sands Missile Range, where the first atomic bomb was detonated in 1945. The military sometimes closes the highway through the dunes for missile testing. Only in New Mexico can you find the world's most beautiful desert next to the birthplace of nuclear weapons.",
-    "category": "nature",
-    "year": "",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Alamogordo, New Mexico"
-  },
-  {
     "id": "w3b-desert-004",
     "lat": 38.4747,
     "lng": -109.8109,
@@ -15169,32 +14649,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Flagstaff, Arizona"
-  },
-  {
-    "id": "w3b-volcano-006",
-    "lat": 37.8858,
-    "lng": -122.2343,
-    "title": "Mono Lake's Alien Towers",
-    "summary": "Mono Lake in eastern California is a 760,000-year-old alkaline lake filled with bizarre tufa towers that look like an alien landscape. The lake has no outlet, making it three times saltier than the ocean.",
-    "fullText": "Mono Lake near the eastern Sierra Nevada is one of the oldest continuously existing lakes in North America, at least 760,000 years old. It has no outlet, so minerals accumulate, making the water extremely alkaline and nearly three times as salty as the ocean. The lake's most famous features are its tufa towers, limestone formations created when calcium-rich freshwater springs interact with the alkaline lake water. When Los Angeles diverted the feeder streams starting in 1941, the lake level dropped 45 feet, exposing thousands of tufa towers that had formed underwater. From the air, the pale towers and the lake's strange greenish-blue water create a landscape that looks more like another planet. The lake supports trillions of brine shrimp and is a critical stop for millions of migratory birds. A legal battle in the 1990s forced LA to let the lake partially recover.",
-    "category": "nature",
-    "year": "",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Mono County, California"
-  },
-  {
-    "id": "w3b-volcano-007",
-    "lat": 43.9172,
-    "lng": -113.5076,
-    "title": "Craters of the Moon Lava Fields",
-    "summary": "A 618-square-mile field of black lava in southern Idaho looks so alien that NASA sent astronauts here to train for the Moon. From the air, the dark basalt is a stark void in the otherwise tan landscape.",
-    "fullText": "Craters of the Moon National Monument in central Idaho preserves 618 square miles of lava flows, cinder cones, and volcanic features that are among the youngest in the continental US. The most recent eruptions occurred just 2,000 years ago, and the area is expected to erupt again. The jet-black basalt lava fields are so barren and alien that NASA used them as a training ground for Apollo 14 astronauts in 1969. From the air, the dark lava flows look like someone spilled ink across the Snake River Plain, creating a stark contrast with the surrounding sagebrush steppe. The Great Rift, a 52-mile-long crack in the Earth's surface, runs through the monument. Beneath the surface are extensive lava tube caves. The area is so remote and dark that it is also one of the best stargazing locations in the country.",
-    "category": "nature",
-    "year": "",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Butte County, Idaho"
   },
   {
     "id": "w3b-weird-002",
@@ -15299,19 +14753,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Kern County, California"
-  },
-  {
-    "id": "w3b-manmade-007",
-    "lat": 47.654,
-    "lng": -117.426,
-    "title": "Grand Coulee Dam: The Largest Concrete Structure in the US",
-    "summary": "Grand Coulee Dam on the Columbia River in Washington is the largest concrete structure in North America and the largest hydroelectric producer in the US. From the air, the dam and its reservoir stretch for 150 miles.",
-    "fullText": "Grand Coulee Dam on the Columbia River contains nearly 12 million cubic yards of concrete, making it the largest concrete structure in North America. It is 550 feet tall and 5,223 feet long, generating up to 6,809 megawatts of electricity, more than any other US power facility. Franklin D. Roosevelt Lake, the reservoir behind it, stretches 150 miles upstream to the Canadian border. The dam's construction required the relocation of the town of Grand Coulee and flooding the ancestral fishing grounds of the Colville and Spokane tribes, permanently blocking salmon runs that had sustained the tribes for thousands of years. From the air, the massive white concrete face of the dam is visible from significant altitude, and the long blue finger of the reservoir cutting through the brown Columbia Plateau landscape is unmistakable. During World War II, the dam's electricity powered the Hanford nuclear site and the aluminum plants building Allied aircraft.",
-    "category": "landmark",
-    "year": "1942",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Grand Coulee, Washington"
   },
   {
     "id": "w3b-ag-001",
@@ -15444,19 +14885,6 @@ const factsDB = [
     "location": "Hooker County, Nebraska"
   },
   {
-    "id": "w3b-enviro-001",
-    "lat": 37.2431,
-    "lng": -76.5102,
-    "title": "The Chesapeake Bay Dead Zone",
-    "summary": "Every summer, a massive oxygen-depleted dead zone forms in the Chesapeake Bay, visible from the air as murky green water contrasting with clearer areas. Agricultural runoff from six states feeds the algae blooms that suffocate the bay.",
-    "fullText": "The Chesapeake Bay, America's largest estuary, develops a dead zone every summer that can cover up to 40 percent of the main channel. Nitrogen and phosphorus runoff from farms in six states feeds explosive algae growth that blocks sunlight and consumes dissolved oxygen as it decomposes. From the air, the dead zones are sometimes visible as areas of murky green or brown water sharply contrasting with clearer blue-gray areas. Fish, crabs, and oysters flee or die in the oxygen-depleted water. The bay once produced more seafood per acre than any other body of water on Earth. Now its famous blue crab and oyster harvests are fractions of their historical levels. Billions of dollars have been spent on cleanup efforts with modest results. From above, the bay looks serene and beautiful. The death is invisible unless you know where to look.",
-    "category": "nature",
-    "year": "",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Chesapeake Bay, Virginia"
-  },
-  {
     "id": "w3b-enviro-002",
     "lat": 43.5935,
     "lng": -110.004,
@@ -15507,19 +14935,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Fulton County, Kentucky"
-  },
-  {
-    "id": "w3b-geo-003",
-    "lat": 48.9986,
-    "lng": -104.0485,
-    "title": "The Northwest Angle: America's Strangest Border Glitch",
-    "summary": "Thanks to a mapping error in 1783, a small chunk of Minnesota sticks up above the 49th parallel into Canada. The only way to drive there from the US is through Manitoba. About 120 Americans live in this accidental exclave.",
-    "fullText": "The Northwest Angle is the northernmost point of the contiguous United States, and it exists entirely because of an 18th-century mapping error. The 1783 Treaty of Paris set the US-Canada border along a line from Lake of the Woods to the Mississippi River, but the mapmakers did not realize the Mississippi's source was south of the lake. The resulting boundary created a small chunk of Minnesota that juts above the 49th parallel into Manitoba, Canada. About 120 Americans live in this exclave, which is accessible by road only through Canada. Residents must check in at a videophone station when crossing back and forth. In winter, an ice road across the Lake of the Woods provides a direct route to the rest of Minnesota. From the air, the geometric border cuts arbitrarily through the lake-dotted forest, a visible monument to the limits of 18th-century cartography.",
-    "category": "weird",
-    "year": "1783",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Lake of the Woods County, Minnesota"
   },
   {
     "id": "w3b-geo-004",
@@ -15717,19 +15132,6 @@ const factsDB = [
     "location": "Pershing County, Nevada"
   },
   {
-    "id": "w3b-mil-003",
-    "lat": 32.1413,
-    "lng": -110.871,
-    "title": "The Boneyard: Where Planes Go to Die",
-    "summary": "Davis-Monthan Air Force Base in Tucson stores over 4,000 retired military aircraft in the desert. From the air, the endless rows of mothballed planes look like a giant military parking lot stretching for miles.",
-    "fullText": "The 309th Aerospace Maintenance and Regeneration Group at Davis-Monthan Air Force Base, commonly known as the Boneyard, is the largest aircraft storage facility in the world. Over 4,000 retired military aircraft sit in the dry Tucson desert, including B-52 bombers, F-16 fighters, cargo planes, and helicopters. The low humidity and hard-packed soil preserve the aircraft and prevent them from sinking into mud. From the air, the orderly rows of aircraft stretch across 2,600 acres, creating one of the most striking man-made patterns visible from a commercial flight. Some planes are harvested for parts, some are returned to service, and some are destroyed under treaty obligations. B-52s cut into pieces under the START treaty are arranged so that Russian satellites can verify compliance. The facility has been featured in countless films and is visible on Google Earth, where it is one of the most zoomed-in locations in the American Southwest.",
-    "category": "landmark",
-    "year": "1946",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Tucson, Arizona"
-  },
-  {
     "id": "w3b-mil-004",
     "lat": 38.9519,
     "lng": -77.1464,
@@ -15793,19 +15195,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Munising, Michigan"
-  },
-  {
-    "id": "w3b-water-005",
-    "lat": 44.7428,
-    "lng": -85.555,
-    "title": "Sleeping Bear Dunes' Perched Lakes",
-    "summary": "The Sleeping Bear Dunes on Lake Michigan's shore contain perched lakes, small bodies of water sitting hundreds of feet above the lake level on top of the sand dunes. From the air, these improbable lakes perched on sand bluffs are a geographic puzzle.",
-    "fullText": "Sleeping Bear Dunes National Lakeshore on Michigan's northwest coast features massive sand dunes rising up to 450 feet above Lake Michigan. Among the most unusual features are the perched lakes: small bodies of water sitting high atop the sand bluffs, maintained by groundwater seeping through layers of clay beneath the sand. From the air, these little lakes perched on the edge of enormous dunes overlooking the vast expanse of Lake Michigan create a mind-bending sight. The park was voted the Most Beautiful Place in America by viewers of Good Morning America in 2011. South and North Manitou Islands sit offshore, visible from above as forested outposts in the blue lake. The dunes themselves are constantly shifting, burying and revealing forests in cycles. Ghost forests of dead trees protruding from the sand are visible from the air as dark sticks against the pale dunes.",
-    "category": "nature",
-    "year": "",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Empire, Michigan"
   },
   {
     "id": "w3b-water-006",
@@ -15990,19 +15379,6 @@ const factsDB = [
     "location": "Riverside, California"
   },
   {
-    "id": "w3b-weird-012",
-    "lat": 34.0725,
-    "lng": -109.3639,
-    "title": "The Petrified Forest: Trees Turned to Stone",
-    "summary": "In eastern Arizona, entire tree trunks have turned to solid gemstone over 225 million years. The colorful petrified logs scattered across the badlands are visible from the air as dark shapes against the pale desert surface.",
-    "fullText": "The Petrified Forest National Park in eastern Arizona contains one of the world's largest concentrations of petrified wood, tree trunks that were buried by sediment 225 million years ago and slowly replaced by silica, transforming them into solid quartz and agate. The logs display vivid colors: reds, oranges, purples, and yellows from different mineral inclusions. From the air, the dark petrified logs are visible scattered across the pale badlands of the Chinle Formation. Some logs are over 200 feet long and six feet in diameter. The park loses an estimated 12 tons of petrified wood per year to theft despite heavy fines. A persistent legend says that stealing petrified wood brings bad luck, and the park receives hundreds of returned pieces in the mail each year from guilty thieves reporting car accidents, divorces, and illness. The visitor center displays the letters alongside the returned stones as both entertainment and deterrent.",
-    "category": "nature",
-    "year": "",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Holbrook, Arizona"
-  },
-  {
     "id": "w3b-weird-014",
     "lat": 35.9575,
     "lng": -84.3185,
@@ -16094,19 +15470,6 @@ const factsDB = [
     "location": "Merritt Island, Florida"
   },
   {
-    "id": "w3b-made-003",
-    "lat": 35.3859,
-    "lng": -97.6026,
-    "title": "The Oklahoma City Bombing Memorial",
-    "summary": "The Oklahoma City National Memorial sits where the Murrah Federal Building stood before Timothy McVeigh's truck bomb killed 168 people in 1995. From the air, the reflecting pool and field of 168 empty chairs are visible in the downtown block.",
-    "fullText": "The Oklahoma City National Memorial occupies the footprint of the Alfred P. Murrah Federal Building, which was destroyed on April 19, 1995 by a truck bomb detonated by Timothy McVeigh, killing 168 people including 19 children in the building's day care center. The memorial, designed by Hans and Torrey Butzer, features a shallow reflecting pool flanked by two bronze gates marked with the times 9:01 and 9:03, representing the minute before and after the bombing. A field of 168 empty bronze and glass chairs arranged in nine rows corresponding to the nine floors of the building occupies the building's footprint. From the air, the reflecting pool and the grid of chairs are visible within the surrounding city blocks. A survivor tree, an American elm that survived the blast despite extensive damage, stands on the south side. The memorial is one of the most powerful works of commemorative architecture in the US, conveying absence and loss through empty space.",
-    "category": "history",
-    "year": "1995",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Oklahoma City, Oklahoma"
-  },
-  {
     "id": "w3b-odd-001",
     "lat": 39.7836,
     "lng": -104.8812,
@@ -16146,19 +15509,6 @@ const factsDB = [
     "location": "Scottsbluff, Nebraska"
   },
   {
-    "id": "w3b-odd-006",
-    "lat": 36.0622,
-    "lng": -106.0713,
-    "title": "The Rio Grande Gorge Bridge",
-    "summary": "A steel bridge spans the Rio Grande Gorge near Taos, New Mexico, 650 feet above the river. From the air, the thin bridge over the deep slash in the flat plateau looks like a tightrope over an abyss.",
-    "fullText": "The Rio Grande Gorge Bridge near Taos, New Mexico carries US Route 64 across a dramatic rift in the Taos Plateau volcanic field. The bridge is 1,280 feet long and 650 feet above the Rio Grande, making it one of the highest bridges in the US. The gorge itself was carved by the Rio Grande over the past 3 million years through layers of basalt lava flows. From the air, the gorge appears as a sudden dark crack in the otherwise flat and featureless plateau, so narrow and deep that it is invisible until you are almost directly above it. The bridge appears as a thin line stretched across the void. The bridge has unfortunately attracted people intending self-harm, leading to the installation of crisis phones and barriers. On the positive side, the views from the bridge are among the most dramatic in New Mexico, with the Sangre de Cristo Mountains to the east and the flat volcanic plateau stretching to the west.",
-    "category": "landmark",
-    "year": "1965",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Taos, New Mexico"
-  },
-  {
     "id": "w3b-odd-008",
     "lat": 35.3948,
     "lng": -108.4303,
@@ -16196,19 +15546,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "West Yellowstone, Montana"
-  },
-  {
-    "id": "w3b-odd-019",
-    "lat": 37.2347,
-    "lng": -115.0109,
-    "title": "The Extraterrestrial Highway",
-    "summary": "Nevada State Route 375 was officially designated the Extraterrestrial Highway in 1996 due to numerous UFO sightings along the road near Area 51. From the air, it is one of the loneliest paved roads in America, cutting through empty desert for 98 miles.",
-    "fullText": "Nevada State Route 375 runs for 98 miles through the remote desert of south-central Nevada, passing near the restricted airspace around Area 51. The road was officially designated the Extraterrestrial Highway by the state of Nevada in 1996 in a ceremony attended by governor Bob Miller and a guest in an alien costume. The road is one of the loneliest in America, passing through vast stretches of empty basin-and-range desert with no services, no cell coverage, and no other traffic for miles. UFO sightings along the route are common, though skeptics attribute them to military aircraft from the nearby test ranges. The tiny town of Rachel, the only settlement along the highway, has a population of roughly 50 and hosts the Little A'Le'Inn, a flying-saucer-themed bar and restaurant. From the air, Route 375 appears as a thin gray line drawn ruler-straight across brown desert, ending in nothing and beginning from nothing. It is the most official recognition of UFO culture by any state government.",
-    "category": "weird",
-    "year": "1996",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Lincoln County, Nevada"
   },
   {
     "id": "w3b-odd-020",
@@ -16406,32 +15743,6 @@ const factsDB = [
     "location": "Pensacola, Florida"
   },
   {
-    "id": "w3b-extra-002",
-    "lat": 43.615,
-    "lng": -72.959,
-    "title": "The Covered Bridges of Vermont",
-    "summary": "Vermont has over 100 covered bridges, more per square mile than any other state. From the air in autumn, the red and white bridges crossing streams amid the blazing fall foliage make the state look like a living postcard.",
-    "fullText": "Vermont has over 100 covered bridges, the highest concentration per square mile of any state in the country. The bridges, mostly built in the 1800s, were covered to protect the wooden structural timbers from rot, effectively extending the bridge's lifespan from 10 to 80 years. From the air during fall foliage season, the red, white, and weathered gray bridges spanning streams and rivers amid the blazing oranges, reds, and yellows of Vermont's autumn forests create one of the most photographed landscapes in America. The oldest covered bridge in the state, the Pulp Mill Bridge in Middlebury, dates to 1820. The longest is the Scott Covered Bridge in Townshend at 277 feet. Each bridge has its own character and design, with various truss systems developed by different bridge builders. From altitude, the bridges are small but visible as distinctive angular shapes crossing the ribbons of streams. Vermont's covered bridges are a direct link to a time when craftsmanship and practicality produced structures that have outlasted their builders by two centuries.",
-    "category": "landmark",
-    "year": "",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Woodstock, Vermont"
-  },
-  {
-    "id": "w3b-extra-004",
-    "lat": 41.4925,
-    "lng": -81.5958,
-    "title": "The Cuyahoga River That Caught Fire",
-    "summary": "The Cuyahoga River in Cleveland was so polluted that it caught fire at least 13 times. The 1969 fire became a symbol of environmental degradation and helped launch the Clean Water Act and the EPA. From the air today, the recovered river winds through a surprisingly green city.",
-    "fullText": "The Cuyahoga River in Cleveland, Ohio caught fire at least 13 times between 1868 and 1969, the most infamous incident occurring on June 22, 1969 when oil and debris on the river surface ignited. The fire burned for only 30 minutes and was not even the largest Cuyahoga fire, but Time magazine's coverage turned it into a national symbol of environmental degradation. The public outrage helped pass the Clean Water Act of 1972 and create the Environmental Protection Agency. From the air today, the Cuyahoga winds through a Cleveland that has invested heavily in river restoration and green space. The river valley through the city is lined with parks and trails, and the water supports fish populations that had been absent for decades. The Flats entertainment district occupies the old industrial riverfront. It is one of the great American comeback stories, visible from above as a green corridor where an industrial sewer once ran. The river that symbolized environmental disaster now symbolizes what cleanup can accomplish.",
-    "category": "nature",
-    "year": "1969",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Cleveland, Ohio"
-  },
-  {
     "id": "w3b-extra-005",
     "lat": 39.8283,
     "lng": -98.5795,
@@ -16625,19 +15936,6 @@ const factsDB = [
     "imageUrl": "",
     "videoUrl": "",
     "location": "Irvine, California"
-  },
-  {
-    "id": "w3b-extra-030",
-    "lat": 36.2048,
-    "lng": -113.8154,
-    "title": "The Grand Canyon Skywalk",
-    "summary": "A horseshoe-shaped glass bridge extends 70 feet over the edge of the Grand Canyon on the Hualapai Reservation, allowing visitors to look straight down 4,000 feet through a transparent floor. From the air, the glass platform is a tiny glint on the canyon rim.",
-    "fullText": "The Grand Canyon Skywalk is a horseshoe-shaped cantilever bridge with a glass floor and sides that extends 70 feet beyond the rim of the Grand Canyon on the Hualapai Reservation's West Rim. Completed in 2007 at a cost of $30 million, the structure hangs 4,000 feet above the canyon floor and can support the weight of 71 fully loaded 747s. Visitors walk onto the glass platform and look straight down through the transparent floor to the Colorado River far below. The Skywalk was controversial, with critics arguing it was a commercialization of a sacred natural landmark and a visual intrusion on the canyon's beauty. Supporters, primarily the Hualapai Tribe, point to the economic benefits for the reservation. From the air, the Skywalk is visible as a small protrusion on the canyon rim, a tiny human gesture against the incomprehensible scale of the chasm. Cameras are not allowed on the walk, which means you can only remember the vertigo, not photograph it.",
-    "category": "landmark",
-    "year": "2007",
-    "imageUrl": "",
-    "videoUrl": "",
-    "location": "Grand Canyon West, Arizona"
   },
   {
     "id": "w3b-final-003",
