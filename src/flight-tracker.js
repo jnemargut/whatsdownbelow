@@ -1,14 +1,15 @@
 // OpenSky Network flight tracker
-// Direct browser access (OpenSky blocks cloud provider IPs so proxy won't work)
-// Anonymous: 400 credits/day. Cache aggressively, use small queries.
+// Routes through Cloudflare Worker proxy for authenticated access (4000 credits/day)
+// Cloudflare is NOT blocked by OpenSky (unlike Vercel/AWS)
 
 import routesDB from './routes-db.js';
 
 const OPENSKY_BASE = 'https://opensky-network.org/api';
+const PROXY_BASE = 'https://opensky-proxy.jontomato.workers.dev';
 
-// Cache to avoid burning credits
+// Cache responses
 const statesCache = { data: null, timestamp: 0 };
-const CACHE_TTL = 15000; // 15 seconds -- be conservative with credits
+const CACHE_TTL = 10000; // 10 seconds
 
 export async function openskyFetch(url) {
   // Check cache
@@ -18,7 +19,17 @@ export async function openskyFetch(url) {
     }
   }
 
-  const response = await fetch(url);
+  // Route through Cloudflare proxy for authenticated access
+  let fetchUrl = url;
+  if (url.includes('opensky-network.org')) {
+    const parsed = new URL(url);
+    const endpoint = parsed.pathname.replace('/api/', '');
+    const params = new URLSearchParams(parsed.searchParams);
+    params.set('endpoint', endpoint);
+    fetchUrl = `${PROXY_BASE}/?${params.toString()}`;
+  }
+
+  const response = await fetch(fetchUrl);
   if (response.status === 429) {
     throw new Error('Rate limited -- try again in a moment');
   }
@@ -204,8 +215,8 @@ export async function fetchFlightPosition(flightNumber) {
       KNOWN_ROUTES[callsign] = route;
     }
 
-    // On deployed site (with proxy), try to get real route from flights/aircraft
-    if (USE_PROXY && !knownRoute && flight[0]) {
+    // Try to get real route from flights/aircraft endpoint (via proxy)
+    if (!knownRoute && flight[0]) {
       fetchRealRoute(flight[0]).then(realRoute => {
         if (realRoute) {
           result.origin = realRoute.origin;
