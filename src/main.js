@@ -764,29 +764,12 @@ function setFactImage(el, fact) {
 }
 
 async function resolveImage(fact) {
-  // 1. Try the provided imageUrl
+  // Only use images explicitly in the database -- Wikipedia search returns
+  // random unrelated images (Biden for a hiking trail, airplanes for swimming holes)
   if (fact.imageUrl) {
     const works = await testImage(fact.imageUrl);
     if (works) return fact.imageUrl;
   }
-
-  // 2. Try Wikipedia -- one at a time from the browser (won't trigger rate limits
-  // like our batch script did). Search by title for the most relevant image.
-  try {
-    const query = encodeURIComponent(fact.title.replace(/[^\w\s]/g, '').substring(0, 60));
-    const url = `https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=${query}&gsrlimit=3&prop=pageimages&format=json&pithumbsize=600&origin=*`;
-    const res = await fetch(url);
-    if (res.ok) {
-      const data = await res.json();
-      const pages = data.query?.pages;
-      if (pages) {
-        for (const p of Object.values(pages)) {
-          if (p?.thumbnail?.source) return p.thumbnail.source;
-        }
-      }
-    }
-  } catch {}
-
   return null;
 }
 
