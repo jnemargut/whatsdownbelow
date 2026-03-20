@@ -493,16 +493,29 @@ function updateFlightProgress() {
   // ETA
   const now = new Date();
   const eta = new Date(now.getTime() + remainingMin * 60000);
-  const etaStr = eta.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  document.getElementById('flight-eta').textContent = `ETA ${etaStr}`;
 
-  // Estimate departure and arrival times
+  // Estimate departure time
   const elapsedHours = flownDist / speedMph;
   const elapsedMin = Math.round(elapsedHours * 60);
   const departTime = new Date(now.getTime() - elapsedMin * 60000);
-  const departStr = departTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  document.getElementById('progress-depart').textContent = departStr;
-  document.getElementById('progress-arrive').textContent = etaStr;
+
+  // Format times in each airport's local timezone
+  const originTz = originAirport.tz || undefined;
+  const destTz = destAirport.tz || undefined;
+  const tzShort = (tz) => {
+    try {
+      return new Date().toLocaleTimeString('en-US', { timeZone: tz, timeZoneName: 'short' }).split(' ').pop();
+    } catch { return ''; }
+  };
+
+  const departStr = departTime.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: originTz });
+  const departTzLabel = originTz ? ' ' + tzShort(originTz) : '';
+  const etaStr = eta.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: destTz });
+  const etaTzLabel = destTz ? ' ' + tzShort(destTz) : '';
+
+  document.getElementById('flight-eta').textContent = `ETA ${etaStr}`;
+  document.getElementById('progress-depart').textContent = departStr + departTzLabel;
+  document.getElementById('progress-arrive').textContent = etaStr + etaTzLabel;
 
   // Remaining time as a stat
   if (remainingMin > 60) {
@@ -520,8 +533,8 @@ function updateFlightProgress() {
     ? `${currentPosition.speed} kts (${Math.round(currentPosition.speed * 1.15078)} mph)` : '--';
   document.getElementById('stat-flown').textContent = `${Math.round(flownDist)} mi`;
   document.getElementById('stat-remaining').textContent = `${Math.round(remainingDist)} mi`;
-  document.getElementById('stat-departed').textContent = departStr;
-  document.getElementById('stat-arrival').textContent = etaStr;
+  document.getElementById('stat-departed').textContent = departStr + departTzLabel;
+  document.getElementById('stat-arrival').textContent = etaStr + etaTzLabel;
   document.getElementById('stat-heading').textContent = currentPosition.heading
     ? `${Math.round(currentPosition.heading)}deg ${headingToCardinal(currentPosition.heading)}` : '--';
   document.getElementById('stat-position').textContent =
