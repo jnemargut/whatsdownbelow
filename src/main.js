@@ -951,7 +951,7 @@ async function fetchLiveFlightSuggestions() {
         lon: s[5],
       };
 
-      if (route) {
+      if (routeLabel) {
         withRoutes.push(entry);
       } else {
         withoutRoutes.push(entry);
