@@ -764,12 +764,42 @@ function setFactImage(el, fact) {
 }
 
 async function resolveImage(fact) {
-  // Only use images explicitly in the database -- Wikipedia search returns
-  // random unrelated images (Biden for a hiking trail, airplanes for swimming holes)
+  // 1. Try the provided imageUrl
   if (fact.imageUrl) {
     const works = await testImage(fact.imageUrl);
     if (works) return fact.imageUrl;
   }
+
+  // 2. Try Wikipedia with an EXACT title match (not fuzzy search)
+  // This avoids the "Biden for a hiking trail" problem
+  try {
+    // First try exact article title
+    const exactQuery = encodeURIComponent(fact.title.replace(/[^\w\s]/g, '').substring(0, 60));
+    const exactUrl = `https://en.wikipedia.org/w/api.php?action=query&titles=${exactQuery}&prop=pageimages&format=json&pithumbsize=600&origin=*`;
+    const exactRes = await fetch(exactUrl);
+    if (exactRes.ok) {
+      const data = await exactRes.json();
+      const pages = data.query?.pages;
+      if (pages) {
+        const page = Object.values(pages)[0];
+        if (page?.thumbnail?.source) return page.thumbnail.source;
+      }
+    }
+
+    // Then try the location name (more likely to have a relevant Wikipedia article)
+    const locQuery = encodeURIComponent(fact.location.split(',')[0].trim());
+    const locUrl = `https://en.wikipedia.org/w/api.php?action=query&titles=${locQuery}&prop=pageimages&format=json&pithumbsize=600&origin=*`;
+    const locRes = await fetch(locUrl);
+    if (locRes.ok) {
+      const data = await locRes.json();
+      const pages = data.query?.pages;
+      if (pages) {
+        const page = Object.values(pages)[0];
+        if (page?.thumbnail?.source) return page.thumbnail.source;
+      }
+    }
+  } catch {}
+
   return null;
 }
 
