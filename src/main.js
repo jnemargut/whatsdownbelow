@@ -914,11 +914,15 @@ async function fetchLiveFlightSuggestions() {
   const container = document.getElementById('suggested-flights');
 
   try {
-    // Single query, same one tracking uses -- gets cached for 10s
-    const data = await openskyFetch(
-      'https://opensky-network.org/api/states/all?lamin=24&lamax=50&lomin=-130&lomax=-65'
-    );
-    if (!data.states) throw new Error('No data');
+    // Query 3 smaller regions in parallel (full US is too large and times out)
+    const regions = [
+      openskyFetch('https://opensky-network.org/api/states/all?lamin=30&lamax=42&lomin=-100&lomax=-82').catch(() => ({ states: [] })),
+      openskyFetch('https://opensky-network.org/api/states/all?lamin=32&lamax=45&lomin=-122&lomax=-100').catch(() => ({ states: [] })),
+      openskyFetch('https://opensky-network.org/api/states/all?lamin=28&lamax=42&lomin=-82&lomax=-70').catch(() => ({ states: [] })),
+    ];
+    const results = await Promise.all(regions);
+    const data = { states: results.flatMap(r => r?.states || []) };
+    if (!data.states.length) throw new Error('No data');
 
     const knownPrefixes = Object.keys(ICAO_TO_IATA);
     const cruiseFlights = data.states.filter(s => {

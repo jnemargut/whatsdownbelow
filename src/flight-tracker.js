@@ -173,7 +173,7 @@ export async function fetchFlightPosition(flightNumber) {
       const pad = 2.5;
       queryUrl = `${OPENSKY_BASE}/states/all?lamin=${lastKnownLat-pad}&lamax=${lastKnownLat+pad}&lomin=${lastKnownLng-pad}&lomax=${lastKnownLng+pad}`;
     } else {
-      queryUrl = `${OPENSKY_BASE}/states/all?lamin=24&lamax=50&lomin=-130&lomax=-65`;
+      queryUrl = `${OPENSKY_BASE}/states/all?lamin=25&lamax=50&lomin=-125&lomax=-65`;
     }
     const data = await openskyFetch(queryUrl);
     if (!data || !data.states || data.states.length === 0) {
