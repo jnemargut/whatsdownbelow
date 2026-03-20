@@ -211,16 +211,20 @@ export async function fetchFlightPosition(flightNumber) {
       lastKnownLng = flight[5];
     }
 
-    // Route priority:
-    // 1. Real route from OpenSky flights/aircraft (cached after first fetch)
-    // 2. Heading-based guess from current position
-    // 3. Static routes DB (least reliable -- flight numbers change routes daily)
-    const cachedRealRoute = KNOWN_ROUTES['_real_' + callsign];
-    const guessedRoute = guessRouteFromPosition(flight[6], flight[5], flight[10]);
-    const staticRoute = routesDB[callsign] || KNOWN_ROUTES[callsign];
-    const route = cachedRealRoute || guessedRoute || staticRoute;
+    // Route: use cached guess if we already have one (stable, don't flip),
+    // otherwise guess from heading, fall back to static DB
+    let route = KNOWN_ROUTES[callsign];
+    if (!route) {
+      route = guessRouteFromPosition(flight[6], flight[5], flight[10])
+        || routesDB[callsign]
+        || null;
+      // Cache the first guess so the route never changes mid-flight
+      if (route) {
+        KNOWN_ROUTES[callsign] = route;
+      }
+    }
 
-    const result = {
+    return {
       icao24: flight[0],
       callsign: (flight[1] || '').trim(),
       latitude: flight[6],
@@ -233,101 +237,10 @@ export async function fetchFlightPosition(flightNumber) {
       origin: route?.origin || null,
       destination: route?.dest || null,
     };
-
-    // Try real route from flights/aircraft endpoint -- but only use it if it's
-    // BETTER than what we already have (must have both origin AND destination,
-    // and both must be airports we recognize)
-    if (!cachedRealRoute && flight[0]) {
-      fetchRealRoute(flight[0]).then(realRoute => {
-        if (realRoute && realRoute.origin && realRoute.dest
-            && AIRPORTS[realRoute.origin] && AIRPORTS[realRoute.dest]) {
-          result.origin = realRoute.origin;
-          result.destination = realRoute.dest;
-          KNOWN_ROUTES['_real_' + callsign] = realRoute;
-        }
-      }).catch(() => {});
-    }
-
-    return result;
   } catch (err) {
     console.error('OpenSky fetch error:', err);
     throw err;
   }
-}
-
-function guessRoute(callsign) {
-  return KNOWN_ROUTES[callsign] || null;
-}
-
-/**
- * Fetch the real route for a flight using OpenSky's flights/aircraft endpoint.
- * This gives us estDepartureAirport and estArrivalAirport from actual ADS-B data.
- */
-const routeCache = new Map();
-
-async function fetchRealRoute(icao24) {
-  if (routeCache.has(icao24)) return routeCache.get(icao24);
-
-  try {
-    const now = Math.floor(Date.now() / 1000);
-    const begin = now - 43200; // 12 hours ago
-    const url = `${OPENSKY_BASE}/flights/aircraft?icao24=${icao24}&begin=${begin}&end=${now}`;
-    const flights = await openskyFetch(url);
-    if (!flights || flights.length === 0) return null;
-
-    // Find the CURRENT flight -- the one most recently seen and still in progress.
-    // Sort by lastSeen descending, prefer flights without an arrival (still flying).
-    // OpenSky returns flights where lastSeen is recent for in-progress flights.
-    const sorted = [...flights].sort((a, b) => (b.lastSeen || 0) - (a.lastSeen || 0));
-
-    // The current flight is the one with the most recent lastSeen
-    // that was seen within the last 10 minutes
-    const currentFlight = sorted.find(f => {
-      return f.estDepartureAirport && (now - (f.lastSeen || 0)) < 600;
-    }) || sorted[0];
-
-    if (!currentFlight || !currentFlight.estDepartureAirport) return null;
-
-    const depIcao = currentFlight.estDepartureAirport;
-    const arrIcao = currentFlight.estArrivalAirport;
-
-    const origin = icaoAirportToIata(depIcao);
-    const dest = arrIcao ? icaoAirportToIata(arrIcao) : null;
-
-    if (origin) {
-      const route = { origin, dest };
-      routeCache.set(icao24, route);
-      return route;
-    }
-    return null;
-  } catch {
-    return null;
-  }
-}
-
-/**
- * Convert ICAO airport code (KATL) to IATA (ATL).
- * US airports typically have K prefix, then the IATA code.
- */
-function icaoAirportToIata(icaoCode) {
-  if (!icaoCode) return null;
-  // US airports: KATL -> ATL, KJFK -> JFK, etc.
-  if (icaoCode.startsWith('K') && icaoCode.length === 4) {
-    const iata = icaoCode.substring(1);
-    // Check if we know this airport
-    if (AIRPORTS[iata]) return iata;
-  }
-  // Some US airports don't follow K-prefix (PHNL = HNL)
-  if (icaoCode.startsWith('PH') && icaoCode.length === 4) {
-    const iata = icaoCode.substring(1);
-    if (AIRPORTS[iata]) return iata;
-  }
-  // Try just stripping first char
-  const stripped = icaoCode.substring(1);
-  if (AIRPORTS[stripped]) return stripped;
-  // Try the full code
-  if (AIRPORTS[icaoCode]) return icaoCode;
-  return icaoCode; // Return as-is, won't match AIRPORTS but at least shows something
 }
 
 /**
