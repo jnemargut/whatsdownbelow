@@ -898,11 +898,16 @@ async function fetchLiveFlightSuggestions() {
   const container = document.getElementById('suggested-flights');
 
   try {
-    // With auth we can query the full US without hitting rate limits as fast
-    const data = await openskyFetch(
-      'https://opensky-network.org/api/states/all?lamin=25&lamax=50&lomin=-130&lomax=-65'
-    );
-    if (!data.states) throw new Error('No data');
+    // Query 3 small regions in parallel for speed (small = fast response + fewer credits)
+    const queries = [
+      openskyFetch('https://opensky-network.org/api/states/all?lamin=30&lamax=42&lomin=-100&lomax=-82').catch(() => null),
+      openskyFetch('https://opensky-network.org/api/states/all?lamin=32&lamax=44&lomin=-122&lomax=-104').catch(() => null),
+      openskyFetch('https://opensky-network.org/api/states/all?lamin=28&lamax=40&lomin=-82&lomax=-70').catch(() => null),
+    ];
+    const results = await Promise.all(queries);
+    const allStates = results.flatMap(r => r?.states || []);
+    const data = { states: allStates };
+    if (!data.states.length) throw new Error('No data');
 
     const knownPrefixes = Object.keys(ICAO_TO_IATA);
     const cruiseFlights = data.states.filter(s => {
