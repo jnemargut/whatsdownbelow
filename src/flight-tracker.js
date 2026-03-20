@@ -139,25 +139,38 @@ export async function fetchFlightPosition(flightNumber) {
 
     if (!flight) return null;
 
-    // Use heading-based guess first (it uses the actual plane position/direction),
-    // fall back to known routes DB for well-known flights
-    const route = guessRouteFromPosition(flight[6], flight[5], flight[10])
-      || routesDB[callsign]
-      || KNOWN_ROUTES[callsign];
+    // Try known routes first, then heading-based guess as fallback
+    const knownRoute = routesDB[callsign] || KNOWN_ROUTES[callsign];
+    const guessedRoute = guessRouteFromPosition(flight[6], flight[5], flight[10]);
+    const route = knownRoute || guessedRoute;
 
-    return {
+    const result = {
       icao24: flight[0],
       callsign: (flight[1] || '').trim(),
       latitude: flight[6],
       longitude: flight[5],
-      altitude: flight[7] ? Math.round(flight[7] * 3.28084) : null, // meters to feet
+      altitude: flight[7] ? Math.round(flight[7] * 3.28084) : null,
       onGround: flight[8],
-      speed: flight[9] ? Math.round(flight[9] * 1.94384) : null, // m/s to knots
+      speed: flight[9] ? Math.round(flight[9] * 1.94384) : null,
       heading: flight[10],
       verticalRate: flight[11],
       origin: route?.origin || null,
       destination: route?.dest || null,
     };
+
+    // Try to get real route from OpenSky flights/aircraft endpoint (async, updates later)
+    if (!knownRoute && flight[0]) {
+      fetchRealRoute(flight[0]).then(realRoute => {
+        if (realRoute) {
+          result.origin = realRoute.origin;
+          result.destination = realRoute.dest;
+          // Cache it so we don't keep querying
+          KNOWN_ROUTES[callsign] = realRoute;
+        }
+      }).catch(() => {});
+    }
+
+    return result;
   } catch (err) {
     console.error('OpenSky fetch error:', err);
     throw err;
@@ -166,6 +179,73 @@ export async function fetchFlightPosition(flightNumber) {
 
 function guessRoute(callsign) {
   return KNOWN_ROUTES[callsign] || null;
+}
+
+/**
+ * Fetch the real route for a flight using OpenSky's flights/aircraft endpoint.
+ * This gives us estDepartureAirport and estArrivalAirport from actual ADS-B data.
+ */
+const routeCache = new Map();
+
+async function fetchRealRoute(icao24) {
+  if (routeCache.has(icao24)) return routeCache.get(icao24);
+
+  try {
+    const now = Math.floor(Date.now() / 1000);
+    const begin = now - 43200; // 12 hours ago
+    const url = `${OPENSKY_BASE}/flights/aircraft?icao24=${icao24}&begin=${begin}&end=${now}`;
+    const response = await fetch(url);
+
+    if (!response.ok) return null;
+
+    const flights = await response.json();
+    if (!flights || flights.length === 0) return null;
+
+    // Get the most recent flight for this aircraft
+    const latest = flights[flights.length - 1];
+    const depIcao = latest.estDepartureAirport; // ICAO format like "KATL"
+    const arrIcao = latest.estArrivalAirport;   // ICAO format like "KSAN"
+
+    if (!depIcao) return null;
+
+    // Convert ICAO airport codes (KATL) to IATA (ATL)
+    const origin = icaoAirportToIata(depIcao);
+    const dest = arrIcao ? icaoAirportToIata(arrIcao) : null;
+
+    if (origin) {
+      const route = { origin, dest };
+      routeCache.set(icao24, route);
+      return route;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Convert ICAO airport code (KATL) to IATA (ATL).
+ * US airports typically have K prefix, then the IATA code.
+ */
+function icaoAirportToIata(icaoCode) {
+  if (!icaoCode) return null;
+  // US airports: KATL -> ATL, KJFK -> JFK, etc.
+  if (icaoCode.startsWith('K') && icaoCode.length === 4) {
+    const iata = icaoCode.substring(1);
+    // Check if we know this airport
+    if (AIRPORTS[iata]) return iata;
+  }
+  // Some US airports don't follow K-prefix (PHNL = HNL)
+  if (icaoCode.startsWith('PH') && icaoCode.length === 4) {
+    const iata = icaoCode.substring(1);
+    if (AIRPORTS[iata]) return iata;
+  }
+  // Try just stripping first char
+  const stripped = icaoCode.substring(1);
+  if (AIRPORTS[stripped]) return stripped;
+  // Try the full code
+  if (AIRPORTS[icaoCode]) return icaoCode;
+  return icaoCode; // Return as-is, won't match AIRPORTS but at least shows something
 }
 
 /**

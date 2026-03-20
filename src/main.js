@@ -550,8 +550,25 @@ function startPolling() {
           return;
         }
       }
-      currentPosition = pos;
-      updatePlanePosition(pos);
+      // Check if route info improved (async OpenSky lookup may have completed)
+      if (pos.origin && pos.destination &&
+          (!currentPosition.origin || !currentPosition.destination ||
+           currentPosition.origin !== pos.origin || currentPosition.destination !== pos.destination)) {
+        currentPosition = pos;
+        updateFlightBar();
+        // Redraw flight path with correct route
+        updateTraveledPath(pos);
+        prePopulateRouteFacts();
+      } else {
+        if (pos.origin) currentPosition.origin = pos.origin;
+        if (pos.destination) currentPosition.destination = pos.destination;
+        currentPosition.latitude = pos.latitude;
+        currentPosition.longitude = pos.longitude;
+        currentPosition.altitude = pos.altitude;
+        currentPosition.speed = pos.speed;
+        currentPosition.heading = pos.heading;
+      }
+      updatePlanePosition(currentPosition);
       updateFlightBar();
       checkForFacts();
     } catch (err) {
