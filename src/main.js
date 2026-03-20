@@ -113,20 +113,29 @@ async function startTracking() {
   inputError.textContent = '';
 
   try {
-    // Try real API first
+    // Try real API
     let position = null;
+    let apiError = null;
     try {
       position = await fetchFlightPosition(flightNumber);
     } catch (e) {
-      console.warn('OpenSky unavailable, falling back to simulation:', e.message);
+      apiError = e;
+      console.warn('OpenSky error:', e.message);
     }
 
     if (position && position.latitude) {
       useSimulation = false;
       currentPosition = position;
     } else {
-      // Flight not found -- show error, don't fake it
-      inputError.textContent = `Could not find flight ${flightNumber}. Make sure it's currently in the air and try again.`;
+      // Distinguish between "flight not found" and "API unavailable"
+      const isRateLimited = apiError && apiError.message && apiError.message.includes('Rate limited');
+      if (isRateLimited) {
+        inputError.textContent = 'Flight data temporarily unavailable (daily limit reached, resets at midnight UTC). Try again later.';
+      } else if (apiError) {
+        inputError.textContent = `Could not reach flight data service. Check your connection and try again.`;
+      } else {
+        inputError.textContent = `Could not find flight ${flightNumber}. Make sure it's currently in the air right now.`;
+      }
       trackBtn.textContent = "Let's Fly";
       trackBtn.classList.remove('loading');
       return;
@@ -968,15 +977,21 @@ async function fetchLiveFlightSuggestions() {
         <button class="flight-chip" data-flight="AA100">AA100 <span>JFK-LAX</span></button>
         <button class="flight-chip" data-flight="UA1">UA1 <span>SFO-EWR</span></button>
       `;
-      hint.textContent = 'Could not check live flights -- try these or enter your own';
+      hint.textContent = 'No flights found in this region -- try entering a flight number';
     }
   } catch(e) {
     console.warn('Could not fetch live flights:', e);
+    const isRateLimited = e.message && e.message.includes('Rate limited');
     container.innerHTML = `
-      <button class="flight-chip" data-flight="DL843">DL843 <span>ATL-SAN</span></button>
+      <button class="flight-chip" data-flight="DL401">DL401 <span>ATL-LAX</span></button>
       <button class="flight-chip" data-flight="AA100">AA100 <span>JFK-LAX</span></button>
       <button class="flight-chip" data-flight="UA1">UA1 <span>SFO-EWR</span></button>
+      <button class="flight-chip" data-flight="WN1234">WN1234 <span>MDW-LAS</span></button>
+      <button class="flight-chip" data-flight="B6523">B6523 <span>JFK-MCO</span></button>
+      <button class="flight-chip" data-flight="AS1234">AS1234 <span>SEA-LAX</span></button>
     `;
-    hint.textContent = 'Could not check live flights -- try these or enter your own';
+    hint.textContent = isRateLimited
+      ? 'Flight data temporarily unavailable (resets at midnight UTC) -- enter a flight number to try'
+      : 'Enter your flight number above, or try one of these popular routes';
   }
 }
