@@ -220,17 +220,19 @@ export async function fetchFlightPosition(flightNumber) {
       lastKnownLng = flight[5];
     }
 
-    // Route: use cached guess if we already have one (stable, don't flip),
-    // otherwise guess from heading, fall back to static DB
-    let route = KNOWN_ROUTES[callsign];
+    // Route priority:
+    // 1. Already cached from earlier this session (stable, never flip mid-flight)
+    // 2. Routes database (628 known airline routes -- actual data)
+    // 3. Heading-based guess (last resort only)
+    let route = KNOWN_ROUTES[callsign]
+      || routesDB[callsign]
+      || null;
     if (!route) {
-      route = guessRouteFromPosition(flight[6], flight[5], flight[10])
-        || routesDB[callsign]
-        || null;
-      // Cache the first guess so the route never changes mid-flight
-      if (route) {
-        KNOWN_ROUTES[callsign] = route;
-      }
+      route = guessRouteFromPosition(flight[6], flight[5], flight[10]) || null;
+    }
+    // Cache so route never changes mid-flight
+    if (route && !KNOWN_ROUTES[callsign]) {
+      KNOWN_ROUTES[callsign] = route;
     }
 
     return {
