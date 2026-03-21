@@ -162,7 +162,8 @@ export function iataToIcaoCallsign(flightNumber) {
   const [, airline, num] = match;
   const icao = AIRLINE_MAP[airline];
   if (!icao) return clean;
-  return icao + num;
+  // Strip leading zeros -- OpenSky uses "DAL725" not "DAL0725"
+  return icao + String(parseInt(num, 10));
 }
 
 // Track last known position so we can make tiny queries after the first one
@@ -174,7 +175,6 @@ let lastKnownLng = null;
  */
 export async function fetchFlightPosition(flightNumber) {
   const callsign = iataToIcaoCallsign(flightNumber);
-  const paddedCallsign = callsign.padEnd(8, ' ');
 
   try {
     // If we know where the plane is, query a tiny box around it (1 credit)
@@ -193,15 +193,24 @@ export async function fetchFlightPosition(flightNumber) {
     }
 
     // Find our flight by callsign match
-    // OpenSky state vector indices:
-    // 0: icao24, 1: callsign, 2: origin_country, 3: time_position,
-    // 4: last_contact, 5: longitude, 6: latitude, 7: baro_altitude,
-    // 8: on_ground, 9: velocity, 10: true_track, 11: vertical_rate,
-    // 12: sensors, 13: geo_altitude, 14: squawk, 15: spi, 16: position_source
-    const flight = data.states.find(s => {
+    // OpenSky uses callsigns like "DAL725 " (padded) -- try multiple formats
+    const findFlight = (states) => states.find(s => {
       const cs = (s[1] || '').trim().toUpperCase();
-      return cs === callsign || cs === paddedCallsign.trim();
+      return cs === callsign;
     });
+
+    let flight = findFlight(data.states);
+
+    // If not found with small box, retry with full US query
+    if (!flight && lastKnownLat && lastKnownLng) {
+      console.log('Flight not in small box, trying full US query...');
+      lastKnownLat = null;
+      lastKnownLng = null;
+      const fullData = await openskyFetch(`${OPENSKY_BASE}/states/all?lamin=25&lamax=50&lomin=-125&lomax=-65`);
+      if (fullData?.states) {
+        flight = findFlight(fullData.states);
+      }
+    }
 
     if (!flight) return null;
 
@@ -297,15 +306,22 @@ export function guessRouteFromPosition(lat, lng, heading) {
     }
   }
 
-  // Sort by angle alignment (tightest angle wins for both)
-  // For ties, destination prefers farther, origin prefers closer
-  ahead.sort((a, b) => a.angleDiff - b.angleDiff || b.dist - a.dist);
-  behind.sort((a, b) => {
-    // For behind: reverse the angle diff (180 is perfect behind)
-    const aScore = (180 - a.angleDiff);
-    const bScore = (180 - b.angleDiff);
-    return bScore - aScore || a.dist - b.dist;
-  });
+  // Major hubs get a bonus (these are more likely to be origin/dest than regional airports)
+  const majorHubs = new Set(['ATL','LAX','ORD','DFW','DEN','JFK','SFO','SEA','LAS','MCO','EWR','MIA','PHX','IAH','BOS','MSP','DTW','CLT','SLC','SAN','BNA','AUS','MSY','PDX','DCA','IAD','TPA','FLL','HNL']);
+
+  // Score: low = better. Penalize angle deviation, reward distance (farther = more likely dest),
+  // and give a bonus to major hubs
+  const scoreAirport = (a, isOrigin) => {
+    const hubBonus = majorHubs.has(a.code) ? -2 : 0;
+    const angleFactor = a.angleDiff / 15; // 0 at perfect alignment, 2 at 30deg
+    // Origin: prefer CLOSER well-aligned airports behind us
+    // Dest: prefer FARTHER well-aligned airports ahead
+    const distFactor = isOrigin ? (a.dist / 20) : -(a.dist / 20);
+    return angleFactor + distFactor + hubBonus;
+  };
+
+  ahead.sort((a, b) => scoreAirport(a, false) - scoreAirport(b, false));
+  behind.sort((a, b) => scoreAirport(a, true) - scoreAirport(b, true));
 
   const origin = behind.length > 0 ? behind[0].code : null;
   const dest = ahead.length > 0 ? ahead[0].code : null;
