@@ -912,9 +912,8 @@ async function fetchLiveFlightSuggestions() {
   const container = document.getElementById('suggested-flights');
 
   try {
-    // adsb.lol: free, no auth, one request covering the whole contiguous US
-    // (center of US, 1200nm radius)
-    const res = await fetch('https://api.adsb.lol/v2/lat/39.5/lon/-98.4/dist/1200');
+    // adsb.lol: free, no auth -- 250nm around center of US gives ~100 flights, plenty for suggestions
+    const res = await fetch('https://api.adsb.lol/v2/lat/39.5/lon/-98.4/dist/250');
     if (!res.ok) throw new Error('adsb.lol unavailable');
     const data = await res.json();
     const aircraft = data.ac || [];
