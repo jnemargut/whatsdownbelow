@@ -2,8 +2,6 @@
 // Routes through Cloudflare Worker proxy for authenticated access (4000 credits/day)
 // Cloudflare is NOT blocked by OpenSky (unlike Vercel/AWS)
 
-import routesDB from './routes-db.js';
-
 const OPENSKY_BASE = 'https://opensky-network.org/api';
 const PROXY_BASE = 'https://opensky-proxy.jontomato.workers.dev';
 
@@ -171,6 +169,23 @@ let lastKnownLat = null;
 let lastKnownLng = null;
 
 /**
+ * Look up scheduled route for a callsign from adsbdb.com (free, no auth).
+ * Returns { origin: 'ATL', dest: 'SAN' } or null.
+ */
+async function fetchRouteFromAdsbDB(callsign) {
+  try {
+    const res = await fetch(`https://api.adsbdb.com/v0/callsign/${callsign}`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    const route = data?.response?.flightroute;
+    if (!route?.origin?.iata_code || !route?.destination?.iata_code) return null;
+    return { origin: route.origin.iata_code, dest: route.destination.iata_code };
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Fetch all current flights from OpenSky and find ours by callsign
  */
 export async function fetchFlightPosition(flightNumber) {
@@ -222,11 +237,12 @@ export async function fetchFlightPosition(flightNumber) {
 
     // Route priority:
     // 1. Already cached from earlier this session (stable, never flip mid-flight)
-    // 2. Routes database (628 known airline routes -- actual data)
+    // 2. adsbdb.com -- free scheduled route lookup by callsign (most accurate)
     // 3. Heading-based guess (last resort only)
-    let route = KNOWN_ROUTES[callsign]
-      || routesDB[callsign]
-      || null;
+    let route = KNOWN_ROUTES[callsign] || null;
+    if (!route) {
+      route = await fetchRouteFromAdsbDB(callsign);
+    }
     if (!route) {
       route = guessRouteFromPosition(flight[6], flight[5], flight[10]) || null;
     }
