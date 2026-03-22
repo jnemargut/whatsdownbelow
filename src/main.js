@@ -912,26 +912,24 @@ async function fetchLiveFlightSuggestions() {
   const container = document.getElementById('suggested-flights');
 
   try {
-    // adsb.fi: free, open data API with CORS -- 250nm around center of US gives ~100 flights
-    const res = await fetch('https://opendata.adsb.fi/api/v2/lat/39.5/lon/-98.4/dist/250');
-    if (!res.ok) throw new Error('adsb.fi unavailable');
-    const data = await res.json();
-    const aircraft = data.aircraft || [];
+    // Single OpenSky query over the eastern US -- most traffic, already proxied, no CORS issues
+    const data = await openskyFetch('https://opensky-network.org/api/states/all?lamin=28&lamax=45&lomin=-95&lomax=-67');
+    if (!data?.states?.length) throw new Error('No data');
 
     const knownPrefixes = Object.keys(ICAO_TO_IATA);
-    const cruiseFlights = aircraft.filter(a => {
-      const cs = (a.flight || '').trim();
-      const alt = typeof a.alt_baro === 'number' ? a.alt_baro : 0;
-      return cs && alt > 25000 && a.lat && a.lon
+    const cruiseFlights = data.states.filter(s => {
+      const cs = (s[1] || '').trim();
+      const alt = s[7] ? s[7] * 3.28084 : 0;
+      return cs && !s[8] && alt > 25000 && s[6] && s[5]
         && knownPrefixes.some(p => cs.startsWith(p));
     });
 
-    const flights = cruiseFlights.map(a => {
-      const callsign = (a.flight || '').trim();
+    const flights = cruiseFlights.map(s => {
+      const callsign = (s[1] || '').trim();
       const prefix = knownPrefixes.find(p => callsign.startsWith(p));
       const iataAirline = ICAO_TO_IATA[prefix];
       const flightNum = callsign.replace(prefix, '');
-      return { iata: iataAirline + flightNum, lon: a.lon };
+      return { iata: iataAirline + flightNum, lon: s[5] };
     });
 
     // Pick geographically spread flights
