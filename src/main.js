@@ -912,11 +912,11 @@ async function fetchLiveFlightSuggestions() {
   const container = document.getElementById('suggested-flights');
 
   try {
-    // adsb.lol: free, no auth -- 250nm around center of US gives ~100 flights, plenty for suggestions
-    const res = await fetch('https://api.adsb.lol/v2/lat/39.5/lon/-98.4/dist/250');
-    if (!res.ok) throw new Error('adsb.lol unavailable');
+    // adsb.fi: free, open data API with CORS -- 250nm around center of US gives ~100 flights
+    const res = await fetch('https://opendata.adsb.fi/api/v2/lat/39.5/lon/-98.4/dist/250');
+    if (!res.ok) throw new Error('adsb.fi unavailable');
     const data = await res.json();
-    const aircraft = data.ac || [];
+    const aircraft = data.aircraft || [];
 
     const knownPrefixes = Object.keys(ICAO_TO_IATA);
     const cruiseFlights = aircraft.filter(a => {
